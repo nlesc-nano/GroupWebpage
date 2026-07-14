@@ -13,12 +13,14 @@ export type Project = {
 	link?: string;
 	linkLabel?: string;
 	tags?: string[];
+	logo?: string;
 };
 
 export type Person = {
 	name: string;
 	role: string;
 	focus: string;
+	photo?: string;
 };
 
 export type ProfileLink = {
@@ -30,6 +32,7 @@ export type Logo = {
 	name: string;
 	src: string;
 	alt: string;
+	href?: string;
 };
 
 export type SoftwareResource = {
@@ -38,6 +41,7 @@ export type SoftwareResource = {
 	link: string;
 	linkLabel: string;
 	tags: string[];
+	logo?: string;
 };
 
 export type NewsItem = {
@@ -69,12 +73,14 @@ export const logos: Logo[] = [
 	{
 		name: 'BCMaterials',
 		src: '/logos/bcmaterials-logo.png',
-		alt: 'BCMaterials logo'
+		alt: 'BCMaterials logo',
+		href: 'https://www.bcmaterials.net/en/research/research-lines/computational-materials-science'
 	},
 	{
 		name: 'Ikerbasque',
 		src: '/logos/ikerbasque-logo.jpg',
-		alt: 'Ikerbasque logo'
+		alt: 'Ikerbasque logo',
+		href: 'https://www.ikerbasque.net/en/ivan-infante'
 	}
 ];
 
@@ -118,7 +124,8 @@ export const projects: Project[] = [
 		status: 'Active',
 		link: 'https://www.quantumdotspace.org',
 		linkLabel: 'Open platform',
-		tags: ['Cloud platform', 'Visualisation', 'AI design']
+		tags: ['Cloud platform', 'Visualisation', 'AI design'],
+		logo: '/logos/quantumdotspace.png'
 	},
 	{
 		title: 'Orchestr.AI',
@@ -128,7 +135,8 @@ export const projects: Project[] = [
 		status: 'Active',
 		link: 'https://github.com/nlesc-nano/Orchestr.AI',
 		linkLabel: 'View repository',
-		tags: ['ML force fields', 'Active learning', 'HPC workflows']
+		tags: ['ML force fields', 'Active learning', 'HPC workflows'],
+		logo: '/logos/orchestrai.png'
 	},
 	{
 		title: 'QD Builder',
@@ -138,7 +146,8 @@ export const projects: Project[] = [
 		status: 'Active',
 		link: 'https://github.com/nlesc-nano/QD_Builder',
 		linkLabel: 'View repository',
-		tags: ['Wulff construction', 'Core-shell models', 'Ligand passivation']
+		tags: ['Wulff construction', 'Core-shell models', 'Ligand passivation'],
+		logo: '/logos/qd-builder.png'
 	},
 	{
 		title: 'miniBSE',
@@ -148,7 +157,8 @@ export const projects: Project[] = [
 		status: 'Active',
 		link: 'https://github.com/nlesc-nano/miniBSE',
 		linkLabel: 'View repository',
-		tags: ['Optical transitions', 'Excitonic properties', 'Finite QDs']
+		tags: ['Optical transitions', 'Excitonic properties', 'Finite QDs'],
+		logo: '/logos/minibse.png'
 	},
 	{
 		title: 'Large-scale atomistic simulations with classical force fields',
@@ -158,7 +168,8 @@ export const projects: Project[] = [
 		status: 'Active',
 		link: 'https://github.com/nlesc-nano/auto-FOX',
 		linkLabel: 'View auto-FOX',
-		tags: ['Classical force fields', 'PES descriptors', 'Large QDs']
+		tags: ['Classical force fields', 'PES descriptors', 'Large QDs'],
+		logo: '/logos/auto-fox.png'
 	},
 	{
 		title: 'Origin of trap states in colloidal quantum dots',
@@ -174,42 +185,50 @@ export const people: Person[] = [
 	{
 		name: 'Prof. Ivan Infante',
 		role: 'Principal Investigator',
-		focus: 'Ikerbasque Research Professor at BCMaterials'
+		focus: 'Ikerbasque Research Professor at BCMaterials',
+		photo: '/photos/ivan-infante.jpg'
 	},
 	{
 		name: 'Vikas Kumar',
 		role: 'Postdoc',
-		focus: 'ML force fields development for low bandgap materials'
+		focus: 'ML force fields development for low bandgap materials',
+		photo: '/photos/vikas-kumar.jpg'
 	},
 	{
 		name: 'Zain Ul Abideen',
 		role: 'PhD student',
-		focus: 'Developer of the Orchestr.AI platform'
+		focus: 'Developer of the Orchestr.AI platform',
+		photo: '/photos/zain-ul-abideen.jpg'
 	},
 	{
 		name: 'Abdessamad El Adel',
 		role: 'PhD student',
-		focus: 'Atomistic large-scale simulations of quantum dots'
+		focus: 'Atomistic large-scale simulations of quantum dots',
+		photo: '/photos/abdessamad-el-adel.jpg'
 	},
 	{
 		name: 'Shehla Gul',
 		role: 'PhD student',
-		focus: 'Electronic structure of quantum dots'
+		focus: 'Electronic structure of quantum dots',
+		photo: '/photos/shehla-gul.jpg'
 	},
 	{
 		name: 'Masuma Suleymanova',
 		role: 'PhD student',
-		focus: 'MLFF and active learning of CdSe quantum dots'
+		focus: 'MLFF and active learning of CdSe quantum dots',
+		photo: '/photos/masuma-suleymanova.jpg'
 	},
 	{
 		name: 'Uxman Mohammed',
 		role: 'PhD student',
-		focus: 'MLFF and universal ML models of quantum dots'
+		focus: 'MLFF and universal ML models of quantum dots',
+		photo: '/photos/uxman-mohammed.jpg'
 	},
 	{
 		name: 'Camilo Rodriguez Quintero',
 		role: 'PhD student',
-		focus: 'Developing ML models for reactive quantum dots'
+		focus: 'Developing ML models for reactive quantum dots',
+		photo: '/photos/camilo-rodriguez-quintero.jpg'
 	}
 ];
 
@@ -217,22 +236,26 @@ export const alumni: Person[] = [
 	{
 		name: 'Jordi Llusar',
 		role: 'Postdoc',
-		focus: 'Electronic structure and surface traps of core-only and core-shell quantum dots'
+		focus: 'Electronic structure and surface traps of core-only and core-shell quantum dots',
+		photo: '/photos/jordi-llusar.jpg'
 	},
 	{
 		name: 'Mario Fernandez-Pendas',
 		role: 'Postdoc',
-		focus: 'Developer of the Orchestr.AI platform'
+		focus: 'Developer of the Orchestr.AI platform',
+		photo: '/photos/mario-fernandez-pendas.jpg'
 	},
 	{
 		name: 'Roberta Pascazio',
 		role: 'PhD student',
-		focus: 'Atomistic large-scale simulations of quantum dots'
+		focus: 'Atomistic large-scale simulations of quantum dots',
+		photo: '/photos/roberta-pascazio.jpg'
 	},
 	{
 		name: 'Juliette Zito',
 		role: 'PhD student',
-		focus: 'Electronic structure of quantum dots'
+		focus: 'Electronic structure of quantum dots',
+		photo: '/photos/juliette-zito.jpg'
 	},
 	{
 		name: 'Francesco Zaccaria',
@@ -247,7 +270,8 @@ export const alumni: Person[] = [
 	{
 		name: 'Stephanie ten Brinck',
 		role: 'PhD student',
-		focus: 'Electronic structure of quantum dots'
+		focus: 'Electronic structure of quantum dots',
+		photo: '/photos/stephanie-ten-brinck.jpg'
 	}
 ];
 
@@ -270,9 +294,9 @@ export const news: NewsItem[] = [
 	},
 	{
 		date: '2026',
-		title: 'QuantumDotSpace and AI-driven quantum dot discovery',
+		title: 'QuantumDotSpace platform launched',
 		description:
-			'Replace this item with a precise project launch, grant, collaboration, or platform announcement.'
+			'The QuantumDotSpace cloud platform for AI-accelerated quantum dot discovery is now publicly available, enabling collaborative model construction and simulation workflows.'
 	},
 	{
 		date: '2025',
@@ -289,7 +313,8 @@ export const software: SoftwareResource[] = [
 			'Cloud platform for constructing, simulating, visualising, and designing colloidal quantum dots with first-principles simulations and artificial intelligence. It is the public-facing environment for connecting model construction, simulation workflows, and AI-assisted materials discovery.',
 		link: 'https://www.quantumdotspace.org',
 		linkLabel: 'Open platform',
-		tags: ['Cloud platform', 'First-principles workflows', 'AI design']
+		tags: ['Cloud platform', 'First-principles workflows', 'AI design'],
+		logo: '/logos/quantumdotspace.png'
 	},
 	{
 		name: 'Orchestr.AI',
@@ -297,7 +322,8 @@ export const software: SoftwareResource[] = [
 			'Unified, modular, engine-agnostic framework for training machine-learning force fields for quantum dots. It supports multiple ML engines, including SchNet, PaiNN, SO3net, FieldSchNet, NequIP, Allegro, and MACE, with workflows for preprocessing, training, inference, benchmarking, and HPC execution.',
 		link: 'https://github.com/nlesc-nano/Orchestr.AI',
 		linkLabel: 'GitHub repository',
-		tags: ['SchNet / PaiNN', 'NequIP / Allegro', 'MACE', 'SLURM workflows']
+		tags: ['SchNet / PaiNN', 'NequIP / Allegro', 'MACE', 'SLURM workflows'],
+		logo: '/logos/orchestrai.png'
 	},
 	{
 		name: 'QD Builder',
@@ -305,7 +331,8 @@ export const software: SoftwareResource[] = [
 			'Python package for building and passivating atomistic quantum-dot models from CIF files. It supports Wulff and spherical cuts, core-shell particles, facet-specific surface energies, coordination-aware ligand passivation, charge-balance logic, and experimental Janus heterostructure workflows.',
 		link: 'https://github.com/nlesc-nano/QD_Builder',
 		linkLabel: 'GitHub repository',
-		tags: ['Wulff cuts', 'Core-shell QDs', 'Janus structures', 'Ligand passivation']
+		tags: ['Wulff cuts', 'Core-shell QDs', 'Janus structures', 'Ligand passivation'],
+		logo: '/logos/qd-builder.png'
 	},
 	{
 		name: 'miniBSE',
@@ -313,7 +340,8 @@ export const software: SoftwareResource[] = [
 			'Post-processing package for electronic structure calculations of finite quantum dots and excited-state analysis.',
 		link: 'https://github.com/nlesc-nano/miniBSE',
 		linkLabel: 'GitHub repository',
-		tags: ['Optical transitions', 'Excitons', 'Transition dipoles']
+		tags: ['Optical transitions', 'Excitons', 'Transition dipoles'],
+		logo: '/logos/minibse.png'
 	},
 	{
 		name: 'auto-FOX',
@@ -321,12 +349,12 @@ export const software: SoftwareResource[] = [
 			'Automated Forcefield Optimization Extension for analyzing potential energy surfaces and constructing force-field parameters. The toolkit includes multi-XYZ trajectory handling, RDF/ADF, RMSD/RMSF, shell-structure descriptors for nanocrystals, and Monte Carlo force-field parameter optimization.',
 		link: 'https://github.com/nlesc-nano/auto-FOX',
 		linkLabel: 'GitHub repository',
-		tags: ['PES analysis', 'RDF / ADF', 'Shell descriptors', 'Force-field optimization']
+		tags: ['PES analysis', 'RDF / ADF', 'Shell descriptors', 'Force-field optimization'],
+		logo: '/logos/auto-fox.png'
 	}
 ];
 
 export const openQuestions = [
 	'Individual profile URLs for current members and alumni, if desired',
-	'Current group member and alumni photos',
 	'Recent news items, grants, talks, openings, or collaborations'
 ];

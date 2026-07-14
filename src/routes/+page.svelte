@@ -4,7 +4,6 @@
 		group,
 		logos,
 		news,
-		openQuestions,
 		people,
 		profiles,
 		projects,
@@ -25,6 +24,24 @@
 		{ href: '#software', label: 'Software' },
 		{ href: '#contact', label: 'Contact' }
 	];
+
+	// Photos and logos are dropped in later; hide the image if the file is not there yet
+	// so the initials avatar / index number fallback shows instead of a broken image.
+	function hideMissing(event: Event) {
+		const image = event.currentTarget as HTMLImageElement;
+		image.style.display = 'none';
+	}
+
+	function initials(name: string) {
+		return name
+			.replace(/^(Prof\.|Dr\.)\s+/i, '')
+			.split(/\s+/)
+			.map((part) => part[0])
+			.filter(Boolean)
+			.slice(0, 2)
+			.join('')
+			.toUpperCase();
+	}
 </script>
 
 <svelte:head>
@@ -39,7 +56,18 @@
 	<div class="header-right">
 		<div class="header-logos" aria-label="Affiliations">
 			{#each logos as logo}
-				<img src={logo.src} alt={logo.alt} />
+				{#if logo.href}
+					<a
+						href={logo.href}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={`Visit ${logo.name} website`}
+					>
+						<img src={logo.src} alt={logo.alt} />
+					</a>
+				{:else}
+					<img src={logo.src} alt={logo.alt} />
+				{/if}
 			{/each}
 		</div>
 		<nav aria-label="Primary navigation">
@@ -62,7 +90,18 @@
 			</p>
 			<div class="affiliation-logos" aria-label="Affiliations">
 				{#each logos as logo}
-					<img src={logo.src} alt={logo.alt} />
+					{#if logo.href}
+						<a
+							href={logo.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label={`Visit ${logo.name} website`}
+						>
+							<img src={logo.src} alt={logo.alt} />
+						</a>
+					{:else}
+						<img src={logo.src} alt={logo.alt} />
+					{/if}
 				{/each}
 			</div>
 			<p class="hero-description">{group.description}</p>
@@ -70,17 +109,6 @@
 				<a class="button primary" href="#research">Explore research</a>
 				<a class="button secondary" href="#contact">Get in touch</a>
 			</div>
-		</div>
-
-		<div class="hero-visual" aria-hidden="true">
-			<div class="orbital orbital-a"></div>
-			<div class="orbital orbital-b"></div>
-			<div class="orbital orbital-c"></div>
-			<div class="node node-a"></div>
-			<div class="node node-b"></div>
-			<div class="node node-c"></div>
-			<div class="node node-d"></div>
-			<div class="spectrum"></div>
 		</div>
 	</section>
 
@@ -135,7 +163,12 @@
 		<div class="project-list">
 			{#each projects as project, index}
 				<article class="project-card">
-					<span class="project-index">0{index + 1}</span>
+					<span class="project-media">
+						<span class="project-index">0{index + 1}</span>
+						{#if project.logo}
+							<img src={project.logo} alt={`${project.title} logo`} loading="lazy" onerror={hideMissing} />
+						{/if}
+					</span>
 					<div>
 						<p>{project.application} / {project.status}</p>
 						<h3>{project.title}</h3>
@@ -170,7 +203,12 @@
 		<div class="people-grid">
 			{#each people as member}
 				<article class="person-card">
-					<div class="avatar" aria-hidden="true">{member.name.slice(0, 1)}</div>
+					<div class="avatar">
+						<span aria-hidden="true">{initials(member.name)}</span>
+						{#if member.photo}
+							<img src={member.photo} alt={member.name} loading="lazy" onerror={hideMissing} />
+						{/if}
+					</div>
 					<p>{member.role}</p>
 					<h3>{member.name}</h3>
 					<span>{member.focus}</span>
@@ -185,9 +223,17 @@
 			<div class="alumni-grid">
 				{#each alumni as member}
 					<article class="alumni-card">
-						<p>{member.role}</p>
-						<h3>{member.name}</h3>
-						<span>{member.focus}</span>
+						<div class="avatar avatar-small">
+							<span aria-hidden="true">{initials(member.name)}</span>
+							{#if member.photo}
+								<img src={member.photo} alt={member.name} loading="lazy" onerror={hideMissing} />
+							{/if}
+						</div>
+						<div>
+							<p>{member.role}</p>
+							<h3>{member.name}</h3>
+							<span>{member.focus}</span>
+						</div>
 					</article>
 				{/each}
 			</div>
@@ -233,8 +279,18 @@
 		<div class="software-stack">
 			{#each software as item}
 				<a class="software-card" href={item.link} target="_blank" rel="noreferrer">
-					<span>{item.linkLabel}</span>
-					<h3>{item.name}</h3>
+					<div class="software-head">
+						<span class="software-logo">
+							<span aria-hidden="true">{item.name.slice(0, 1)}</span>
+							{#if item.logo}
+								<img src={item.logo} alt={`${item.name} logo`} loading="lazy" onerror={hideMissing} />
+							{/if}
+						</span>
+						<div>
+							<span>{item.linkLabel}</span>
+							<h3>{item.name}</h3>
+						</div>
+					</div>
 					<p>{item.description}</p>
 					<ul class="tag-list" aria-label={`${item.name} capabilities`}>
 						{#each item.tags as tag}
@@ -289,27 +345,23 @@
 			</div>
 			<div class="contact-logos" aria-label="Affiliation logos">
 				{#each logos as logo}
-					<img src={logo.src} alt={logo.alt} />
+					{#if logo.href}
+						<a
+							href={logo.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label={`Visit ${logo.name} website`}
+						>
+							<img src={logo.src} alt={logo.alt} />
+						</a>
+					{:else}
+						<img src={logo.src} alt={logo.alt} />
+					{/if}
 				{/each}
 			</div>
 		</div>
 	</section>
 
-	<section class="section missing-info" aria-labelledby="missing-info-title">
-		<div class="section-heading">
-			<p class="eyebrow">To complete next</p>
-			<h2 id="missing-info-title">Missing details</h2>
-			<p>
-				These are the next pieces of information needed to turn the draft into a complete
-				public group webpage.
-			</p>
-		</div>
-		<ul>
-			{#each openQuestions as question}
-				<li>{question}</li>
-			{/each}
-		</ul>
-	</section>
 </main>
 
 <footer>
@@ -378,6 +430,28 @@
 		gap: 12px;
 	}
 
+	.header-logos a,
+	.affiliation-logos a,
+	.contact-logos a {
+		display: inline-flex;
+		border-radius: 6px;
+		transition: opacity 0.2s ease, transform 0.2s ease;
+	}
+
+	.header-logos a:hover,
+	.affiliation-logos a:hover,
+	.contact-logos a:hover {
+		transform: translateY(-2px);
+		opacity: 0.82;
+	}
+
+	.header-logos a:focus-visible,
+	.affiliation-logos a:focus-visible,
+	.contact-logos a:focus-visible {
+		outline: 3px solid color-mix(in srgb, var(--teal) 45%, transparent);
+		outline-offset: 4px;
+	}
+
 	.header-logos img {
 		width: auto;
 		max-width: 150px;
@@ -391,16 +465,14 @@
 	}
 
 	.hero {
-		display: grid;
-		grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-		gap: clamp(32px, 6vw, 96px);
+		display: flex;
 		align-items: center;
 		min-height: calc(100vh - 78px);
 		padding: clamp(44px, 7vw, 96px) clamp(20px, 6vw, 88px) clamp(28px, 4vw, 56px);
 	}
 
 	.hero-copy {
-		max-width: 760px;
+		width: 100%;
 	}
 
 	.eyebrow {
@@ -424,7 +496,6 @@
 		font-size: clamp(3.3rem, 8vw, 7.5rem);
 		line-height: 0.92;
 		letter-spacing: 0;
-		max-width: 880px;
 	}
 
 	h2 {
@@ -508,86 +579,6 @@
 		background: rgba(255, 255, 255, 0.55);
 	}
 
-	.hero-visual {
-		position: relative;
-		min-height: 560px;
-		border-left: 1px solid var(--line);
-		background:
-			linear-gradient(90deg, rgba(23, 32, 28, 0.08) 1px, transparent 1px),
-			linear-gradient(rgba(23, 32, 28, 0.08) 1px, transparent 1px);
-		background-size: 42px 42px;
-	}
-
-	.orbital,
-	.node,
-	.spectrum {
-		position: absolute;
-	}
-
-	.orbital {
-		border: 1px solid rgba(23, 110, 114, 0.4);
-		border-radius: 50%;
-		transform: rotate(-22deg);
-	}
-
-	.orbital-a {
-		inset: 12% 8% 18% 6%;
-	}
-
-	.orbital-b {
-		inset: 23% 20% 28% 16%;
-		border-color: rgba(187, 111, 79, 0.45);
-		transform: rotate(28deg);
-	}
-
-	.orbital-c {
-		inset: 36% 10% 14% 38%;
-		border-color: rgba(201, 154, 63, 0.55);
-	}
-
-	.node {
-		width: 18px;
-		height: 18px;
-		border-radius: 50%;
-		background: var(--teal);
-		box-shadow: 0 0 0 10px rgba(23, 110, 114, 0.12);
-	}
-
-	.node-a {
-		left: 24%;
-		top: 24%;
-	}
-
-	.node-b {
-		right: 18%;
-		top: 40%;
-		background: var(--clay);
-	}
-
-	.node-c {
-		left: 42%;
-		bottom: 18%;
-		background: var(--gold);
-	}
-
-	.node-d {
-		right: 34%;
-		bottom: 36%;
-		background: var(--sage);
-	}
-
-	.spectrum {
-		right: 8%;
-		bottom: 8%;
-		width: min(220px, 42vw);
-		height: 120px;
-		border-bottom: 2px solid var(--ink);
-		background:
-			linear-gradient(to top, rgba(23, 110, 114, 0.24), transparent),
-			repeating-linear-gradient(90deg, transparent 0 12px, rgba(23, 32, 28, 0.35) 12px 14px);
-		clip-path: polygon(0 100%, 5% 80%, 10% 88%, 16% 40%, 22% 75%, 31% 18%, 40% 78%, 51% 28%, 62% 92%, 73% 54%, 85% 86%, 100% 62%, 100% 100%);
-	}
-
 	.intro-band {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -639,6 +630,23 @@
 		border: 1px solid var(--line);
 		border-radius: var(--radius);
 		background: rgba(255, 255, 255, 0.72);
+	}
+
+	.research-card,
+	.project-card,
+	.person-card {
+		transition:
+			transform 160ms ease,
+			border-color 160ms ease,
+			box-shadow 160ms ease;
+	}
+
+	.research-card:hover,
+	.project-card:hover,
+	.person-card:hover {
+		transform: translateY(-3px);
+		border-color: rgba(23, 110, 114, 0.45);
+		box-shadow: 0 18px 40px -28px rgba(23, 32, 28, 0.5);
 	}
 
 	.research-card {
@@ -713,6 +721,28 @@
 		padding: 24px;
 	}
 
+	.project-media {
+		position: relative;
+		display: grid;
+		width: 72px;
+		height: 72px;
+		place-items: center;
+		overflow: hidden;
+		border-radius: 12px;
+		background: #f2f1ea;
+		box-shadow: inset 0 0 0 1px var(--line);
+	}
+
+	.project-media img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		padding: 8px;
+		object-fit: contain;
+		background: #ffffff;
+	}
+
 	.project-index {
 		color: var(--clay);
 		font-size: 1.6rem;
@@ -767,6 +797,9 @@
 	}
 
 	.alumni-card {
+		display: flex;
+		align-items: flex-start;
+		gap: 14px;
 		border-top: 1px solid var(--line);
 		padding: 18px 0;
 	}
@@ -786,16 +819,36 @@
 	}
 
 	.avatar {
+		position: relative;
 		display: grid;
-		width: 72px;
-		height: 72px;
+		width: 84px;
+		height: 84px;
 		margin-bottom: 22px;
 		place-items: center;
+		overflow: hidden;
 		border-radius: 50%;
-		background: #d8dfd2;
+		background: linear-gradient(150deg, #d8dfd2, #c3d3c9);
+		box-shadow: inset 0 0 0 1px rgba(23, 32, 28, 0.08);
 		color: var(--ink);
-		font-size: 1.5rem;
+		font-size: 1.6rem;
 		font-weight: 900;
+		letter-spacing: 0.02em;
+	}
+
+	.avatar img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.avatar-small {
+		width: 52px;
+		height: 52px;
+		margin-bottom: 0;
+		flex: 0 0 auto;
+		font-size: 1rem;
 	}
 
 	.publications-section {
@@ -853,12 +906,56 @@
 		color: inherit;
 		transition:
 			transform 160ms ease,
-			border-color 160ms ease;
+			border-color 160ms ease,
+			box-shadow 160ms ease;
 	}
 
 	.software-card:hover {
 		border-color: var(--teal);
 		transform: translateY(-2px);
+		box-shadow: 0 18px 40px -28px rgba(23, 32, 28, 0.5);
+	}
+
+	.software-head {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 16px;
+	}
+
+	.software-head > div {
+		display: grid;
+		gap: 2px;
+	}
+
+	.software-head h3 {
+		margin-bottom: 0;
+	}
+
+	.software-logo {
+		position: relative;
+		display: grid;
+		width: 54px;
+		height: 54px;
+		flex: 0 0 auto;
+		place-items: center;
+		overflow: hidden;
+		border-radius: 12px;
+		background: #f2f1ea;
+		box-shadow: inset 0 0 0 1px var(--line);
+		color: var(--teal);
+		font-size: 1.35rem;
+		font-weight: 900;
+	}
+
+	.software-logo img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		padding: 7px;
+		object-fit: contain;
+		background: #ffffff;
 	}
 
 	.timeline article {
@@ -904,8 +1001,7 @@
 		margin-top: 28px;
 	}
 
-	.profile-links a,
-	.missing-info li {
+	.profile-links a {
 		border: 1px solid var(--line);
 		border-radius: 999px;
 		background: rgba(255, 255, 255, 0.68);
@@ -932,23 +1028,6 @@
 		mix-blend-mode: multiply;
 	}
 
-	.missing-info {
-		background: #eeeee6;
-	}
-
-	.missing-info ul {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 10px;
-		padding: 0;
-		margin: 0;
-		list-style: none;
-	}
-
-	.missing-info li {
-		padding: 10px 14px;
-		color: #405049;
-	}
 
 	footer {
 		display: flex;
@@ -975,7 +1054,6 @@
 			justify-content: flex-start;
 		}
 
-		.hero,
 		.split,
 		.two-column {
 			grid-template-columns: 1fr;
@@ -983,12 +1061,6 @@
 
 		.hero {
 			min-height: auto;
-		}
-
-		.hero-visual {
-			min-height: 380px;
-			border-left: 0;
-			border-top: 1px solid var(--line);
 		}
 
 		.research-grid,
@@ -1032,10 +1104,6 @@
 
 		.button {
 			width: 100%;
-		}
-
-		.hero-visual {
-			min-height: 300px;
 		}
 
 		.intro-band,
