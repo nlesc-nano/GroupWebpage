@@ -27,15 +27,3 @@ Square images work best (they are cropped to a circle). ~400×400px is plenty.
 
 To change a filename, edit the matching `photo:` path in
 `src/lib/content/site.ts`.
-
-## Group gallery
-
-Put full group and event photos in a `group` subfolder, then add each image to
-the `galleryPhotos` list at the bottom of `src/lib/content/site.ts`. For example:
-
-```ts
-{ src: '/photos/group/conference-2026.jpg', caption: 'InfanteLab at [conference]' }
-```
-
-The gallery uses the available member portraits until at least one dedicated
-group photo is listed.

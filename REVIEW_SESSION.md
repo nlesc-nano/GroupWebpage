@@ -82,7 +82,7 @@ The repository already contained uncommitted user changes before this note was a
 
 # Implementation session handoff
 
-Date: 2026-07-14
+Last updated: 2026-07-15
 
 ## Completed
 
@@ -91,12 +91,27 @@ Date: 2026-07-14
 - Removed the public-facing "Missing details" draft section and replaced the placeholder platform
   announcement.
 - Made BCMaterials and Ikerbasque affiliation logos link to their relevant external pages.
+- Replaced the circular header badge with `static/logos/InfanteLab.png` on both site pages and made
+  the same image the favicon and Apple touch icon.
 - Removed the decorative orbital circles, colored nodes, and spectrum graphic from the homepage
   hero; the heading now reflows across the full available width instead of retaining the old visual
   column's empty space.
 - Removed the experimental group-photo carousel, its discovery code, and the
   `static/photos/group_photos/` directory after review; the People section now ends after the
   alumni list.
+- Replaced the draft public news item with the InfanteLab website launch announcement.
+- Differentiated scientific research programmes from the reusable tools listed under Software.
+- Added a shared compact mobile navigation menu and a keyboard-accessible skip link.
+- Added optimized, reproducible logo derivatives; original artwork now lives in
+  `assets/source-logos/` and `npm run assets:build` regenerates public assets.
+- Reduced the public brand header image from 2.1 MB to 63 KB and generated dedicated favicon and
+  social preview variants.
+- Clarified that the publication record belongs to Ivan Infante and comes from the Scopus export
+  dated 9 July 2026; corrected `ZnCl2in` to `ZnCl2 in` in the BibTeX source and generated JSON.
+- Added Open Graph, Twitter card, Schema.org ResearchOrganization, theme, robots, and conditional
+  canonical metadata. `PUBLIC_SITE_URL` controls production canonical URLs.
+- Replaced the Svelte starter README with project-specific editing, asset, publication, validation,
+  and deployment documentation.
 
 ## Validation
 

@@ -13,7 +13,6 @@ export type Project = {
 	link?: string;
 	linkLabel?: string;
 	tags?: string[];
-	logo?: string;
 };
 
 export type Person = {
@@ -53,7 +52,7 @@ export type NewsItem = {
 export const group = {
 	name: 'Computational and Predictive Nanochemistry Group',
 	shortName: 'InfanteLab',
-	logoMark: 'IL',
+	logo: '/logos/infantelab-header.png',
 	tagline:
 		'We develop computational methods, artificial intelligence, and open software to understand and accelerate the discovery of colloidal quantum dots, bridging atomistic simulations with data-driven materials design.',
 	pi: 'Prof. Ivan Infante',
@@ -117,67 +116,36 @@ export const researchAreas: ResearchArea[] = [
 
 export const projects: Project[] = [
 	{
-		title: 'QuantumDotSpace',
+		title: 'AI-accelerated quantum dot discovery',
 		description:
-			'An integrated cloud platform for constructing, simulating, visualising, and designing colloidal quantum dots using first-principles simulations and artificial intelligence.',
-		application: 'Digital materials discovery',
+			'We develop active-learning strategies and transferable machine-learning force fields that extend realistic quantum-dot simulations to experimentally relevant sizes and time scales.',
+		application: 'Predictive materials design',
 		status: 'Active',
-		link: 'https://www.quantumdotspace.org',
-		linkLabel: 'Open platform',
-		tags: ['Cloud platform', 'Visualisation', 'AI design'],
-		logo: '/logos/quantumdotspace.png'
+		tags: ['Active learning', 'Universal ML potentials', 'Uncertainty quantification']
 	},
 	{
-		title: 'Orchestr.AI',
+		title: 'Realistic surfaces, defects, and trap states',
 		description:
-			'A machine-learning framework for developing universal force fields for semiconductor quantum dots through active learning, uncertainty quantification, and large-scale molecular dynamics simulations.',
-		application: 'AI-driven atomistic simulations',
-		status: 'Active',
-		link: 'https://github.com/nlesc-nano/Orchestr.AI',
-		linkLabel: 'View repository',
-		tags: ['ML force fields', 'Active learning', 'HPC workflows'],
-		logo: '/logos/orchestrai.png'
-	},
-	{
-		title: 'QD Builder',
-		description:
-			'An automated platform for generating realistic atomistic models of colloidal quantum dots, including crystal structure, morphology, ligand passivation, surface reconstruction, and heterostructures.',
-		application: 'Atomistic model generation',
-		status: 'Active',
-		link: 'https://github.com/nlesc-nano/QD_Builder',
-		linkLabel: 'View repository',
-		tags: ['Wulff construction', 'Core-shell models', 'Ligand passivation'],
-		logo: '/logos/qd-builder.png'
-	},
-	{
-		title: 'miniBSE',
-		description:
-			'A computational package for post-processing electronic structure calculations of finite quantum dots. The software enables efficient analysis of optical transitions, excitonic properties, transition dipoles, and excited-state characteristics.',
-		application: 'Optical spectroscopy and excited-state analysis',
-		status: 'Active',
-		link: 'https://github.com/nlesc-nano/miniBSE',
-		linkLabel: 'View repository',
-		tags: ['Optical transitions', 'Excitonic properties', 'Finite QDs'],
-		logo: '/logos/minibse.png'
-	},
-	{
-		title: 'Large-scale atomistic simulations with classical force fields',
-		description:
-			'We continue to use classical force-field simulations to study realistic, large colloidal quantum dots beyond the length and time scales accessible to first-principles methods. The auto-FOX engine supports force-field construction through potential-energy-surface descriptors, structural analysis, and Monte Carlo parameter optimization.',
-		application: 'Large-scale molecular dynamics',
-		status: 'Active',
-		link: 'https://github.com/nlesc-nano/auto-FOX',
-		linkLabel: 'View auto-FOX',
-		tags: ['Classical force fields', 'PES descriptors', 'Large QDs'],
-		logo: '/logos/auto-fox.png'
-	},
-	{
-		title: 'Origin of trap states in colloidal quantum dots',
-		description:
-			'We investigate how surface defects, ligand binding, oxidation, reconstructions, and core/shell interfaces create or suppress trap states. The goal is to connect atomistic structure with charge localization, excitonic properties, and photoluminescence losses in realistic quantum dots.',
+			'We connect ligand binding, oxidation, surface reconstruction, and under-coordinated sites with charge localization, non-radiative losses, and photoluminescence efficiency.',
 		application: 'Surface electronic structure',
 		status: 'Active',
-		tags: ['Surface defects', 'Charge localization', 'Photoluminescence']
+		tags: ['Surface chemistry', 'Trap states', 'Photoluminescence']
+	},
+	{
+		title: 'Core/shell and heterostructured nanocrystals',
+		description:
+			'We investigate how composition, morphology, strain, interfaces, and ligand environments control carrier confinement and excited-state properties in complex nanocrystals.',
+		application: 'Interface engineering',
+		status: 'Active',
+		tags: ['Core/shell QDs', 'Heterostructures', 'Excited states']
+	},
+	{
+		title: 'Digital twins for colloidal nanomaterials',
+		description:
+			'We connect reproducible atomistic construction, simulation, analysis, and data-driven optimization in digital workflows designed to bridge computational predictions and experiment.',
+		application: 'Open computational nanochemistry',
+		status: 'Active',
+		tags: ['Digital twins', 'Reproducible workflows', 'Theory–experiment bridge']
 	}
 ];
 
@@ -219,7 +187,7 @@ export const people: Person[] = [
 		photo: '/photos/masuma-suleymanova.jpg'
 	},
 	{
-		name: 'Uxman Mohammed',
+		name: 'Muhammad Usman',
 		role: 'PhD student',
 		focus: 'MLFF and universal ML models of quantum dots',
 		photo: '/photos/uxman-mohammed.jpg'
@@ -288,9 +256,9 @@ export const profiles: ProfileLink[] = [
 export const news: NewsItem[] = [
 	{
 		date: 'Jul 2026',
-		title: 'QDLab website draft launched',
+		title: 'InfanteLab research website launched',
 		description:
-			'A first version of the Computational Quantum Dot Nanochemistry Group webpage is ready for content refinement.'
+			'Our new group website brings together current research programmes, open scientific software, team profiles, and the publication record in one place.'
 	},
 	{
 		date: '2026',
@@ -314,7 +282,7 @@ export const software: SoftwareResource[] = [
 		link: 'https://www.quantumdotspace.org',
 		linkLabel: 'Open platform',
 		tags: ['Cloud platform', 'First-principles workflows', 'AI design'],
-		logo: '/logos/quantumdotspace.png'
+		logo: '/logos/quantumdotspace-web.png'
 	},
 	{
 		name: 'Orchestr.AI',
@@ -323,7 +291,7 @@ export const software: SoftwareResource[] = [
 		link: 'https://github.com/nlesc-nano/Orchestr.AI',
 		linkLabel: 'GitHub repository',
 		tags: ['SchNet / PaiNN', 'NequIP / Allegro', 'MACE', 'SLURM workflows'],
-		logo: '/logos/orchestrai.png'
+		logo: '/logos/orchestrai-web.png'
 	},
 	{
 		name: 'QD Builder',
@@ -332,7 +300,7 @@ export const software: SoftwareResource[] = [
 		link: 'https://github.com/nlesc-nano/QD_Builder',
 		linkLabel: 'GitHub repository',
 		tags: ['Wulff cuts', 'Core-shell QDs', 'Janus structures', 'Ligand passivation'],
-		logo: '/logos/qd-builder.png'
+		logo: '/logos/qd-builder-web.png'
 	},
 	{
 		name: 'miniBSE',
@@ -341,7 +309,7 @@ export const software: SoftwareResource[] = [
 		link: 'https://github.com/nlesc-nano/miniBSE',
 		linkLabel: 'GitHub repository',
 		tags: ['Optical transitions', 'Excitons', 'Transition dipoles'],
-		logo: '/logos/minibse.png'
+		logo: '/logos/minibse-web.png'
 	},
 	{
 		name: 'auto-FOX',
@@ -350,11 +318,6 @@ export const software: SoftwareResource[] = [
 		link: 'https://github.com/nlesc-nano/auto-FOX',
 		linkLabel: 'GitHub repository',
 		tags: ['PES analysis', 'RDF / ADF', 'Shell descriptors', 'Force-field optimization'],
-		logo: '/logos/auto-fox.png'
+		logo: '/logos/auto-fox-web.png'
 	}
-];
-
-export const openQuestions = [
-	'Individual profile URLs for current members and alumni, if desired',
-	'Recent news items, grants, talks, openings, or collaborations'
 ];

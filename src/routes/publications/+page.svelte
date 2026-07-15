@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { group, logos } from '$lib/content/site';
+	import SiteHeader from '$lib/components/SiteHeader.svelte';
+	import { group } from '$lib/content/site';
 	import rawPublications from '$lib/content/publications.json';
 	import { formatVenue, type PublicationRecord } from '$lib/content/publicationTypes';
 
@@ -19,37 +20,27 @@
 
 <svelte:head>
 	<title>Publications | {group.shortName}</title>
+	<meta
+		name="description"
+		content="Ivan Infante's publication record from the Scopus export dated 9 July 2026."
+	/>
+	<meta property="og:title" content={`Publications | ${group.shortName}`} />
+	<meta
+		property="og:description"
+		content="Ivan Infante's publication record from the Scopus export dated 9 July 2026."
+	/>
+	<meta name="twitter:title" content={`Publications | ${group.shortName}`} />
 </svelte:head>
 
-<header class="site-header">
-	<a class="brand" href="/" aria-label="{group.name} home">
-		<span class="brand-mark">{group.logoMark}</span>
-		<span>{group.shortName}</span>
-	</a>
-	<div class="header-right">
-		<div class="header-logos" aria-label="Affiliations">
-			{#each logos as logo}
-				<img src={logo.src} alt={logo.alt} />
-			{/each}
-		</div>
-		<nav aria-label="Primary navigation">
-			<a href="/#research">Research</a>
-			<a href="/#projects">Projects</a>
-			<a href="/#people">People</a>
-			<a aria-current="page" href="/publications">Publications</a>
-			<a href="/#software">Software</a>
-			<a href="/#contact">Contact</a>
-		</nav>
-	</div>
-</header>
+<SiteHeader currentPage="publications" />
 
-<main>
+<main id="main-content">
 	<section class="page-hero">
 		<p class="eyebrow">Publication record</p>
 		<h1>Publications</h1>
 		<p>
-			Full publication list generated from the Scopus BibTeX export. Records are grouped by year
-			and sorted newest first.
+			Ivan Infante's publication record, generated from a Scopus BibTeX export dated 9 July
+			2026. Records are grouped by year and sorted newest first.
 		</p>
 		<div class="publication-stats">
 			<div>
@@ -112,73 +103,8 @@
 </footer>
 
 <style>
-	.site-header {
-		position: sticky;
-		top: 0;
-		z-index: 10;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 24px;
-		padding: 18px clamp(18px, 4vw, 56px);
-		border-bottom: 1px solid rgba(23, 32, 28, 0.08);
-		background: rgba(247, 246, 241, 0.9);
-		backdrop-filter: blur(18px);
-	}
-
-	.brand {
-		display: inline-flex;
-		align-items: center;
-		gap: 10px;
-		font-weight: 800;
-		white-space: nowrap;
-	}
-
-	.brand-mark {
-		display: grid;
-		width: 40px;
-		height: 40px;
-		place-items: center;
-		border: 1px solid var(--ink);
-		border-radius: 50%;
-		font-size: 0.72rem;
-		letter-spacing: 0.08em;
-	}
-
-	nav {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-end;
-		gap: 8px 18px;
-		color: var(--muted);
-		font-size: 0.94rem;
-	}
-
-	nav a:hover,
-	nav a[aria-current='page'],
 	footer a:hover {
 		color: var(--teal);
-	}
-
-	.header-right {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		gap: 22px;
-	}
-
-	.header-logos {
-		display: flex;
-		align-items: center;
-		gap: 12px;
-	}
-
-	.header-logos img {
-		width: auto;
-		max-width: 150px;
-		max-height: 32px;
-		object-fit: contain;
-		mix-blend-mode: multiply;
 	}
 
 	.page-hero {
@@ -349,21 +275,6 @@
 	}
 
 	@media (max-width: 900px) {
-		.site-header {
-			align-items: flex-start;
-			flex-direction: column;
-		}
-
-		.header-right {
-			align-items: flex-start;
-			flex-direction: column;
-			gap: 12px;
-		}
-
-		nav {
-			justify-content: flex-start;
-		}
-
 		.publication-stats,
 		.year-group {
 			grid-template-columns: 1fr;
@@ -375,20 +286,6 @@
 	}
 
 	@media (max-width: 640px) {
-		.site-header {
-			padding: 14px 18px;
-		}
-
-		nav {
-			gap: 8px 12px;
-			font-size: 0.86rem;
-		}
-
-		.header-logos img {
-			max-width: 120px;
-			max-height: 28px;
-		}
-
 		h1 {
 			font-size: clamp(3rem, 18vw, 4.5rem);
 		}

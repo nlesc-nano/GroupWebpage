@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SiteHeader from '$lib/components/SiteHeader.svelte';
 	import {
 		alumni,
 		group,
@@ -15,15 +16,6 @@
 
 	const allPublications = rawPublications as PublicationRecord[];
 	const highlightedPublications = allPublications.filter((publication) => publication.highlighted);
-
-	const navItems = [
-		{ href: '#research', label: 'Research' },
-		{ href: '#projects', label: 'Projects' },
-		{ href: '#people', label: 'People' },
-		{ href: '/publications', label: 'Publications' },
-		{ href: '#software', label: 'Software' },
-		{ href: '#contact', label: 'Contact' }
-	];
 
 	// Photos and logos are dropped in later; hide the image if the file is not there yet
 	// so the initials avatar / index number fallback shows instead of a broken image.
@@ -48,37 +40,9 @@
 	<title>{group.name}</title>
 </svelte:head>
 
-<header class="site-header">
-	<a class="brand" href="#top" aria-label="{group.name} home">
-		<span class="brand-mark">{group.logoMark}</span>
-		<span>{group.shortName}</span>
-	</a>
-	<div class="header-right">
-		<div class="header-logos" aria-label="Affiliations">
-			{#each logos as logo}
-				{#if logo.href}
-					<a
-						href={logo.href}
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label={`Visit ${logo.name} website`}
-					>
-						<img src={logo.src} alt={logo.alt} />
-					</a>
-				{:else}
-					<img src={logo.src} alt={logo.alt} />
-				{/if}
-			{/each}
-		</div>
-		<nav aria-label="Primary navigation">
-			{#each navItems as item}
-				<a href={item.href}>{item.label}</a>
-			{/each}
-		</nav>
-	</div>
-</header>
+<SiteHeader />
 
-<main id="top">
+<main id="main-content">
 	<section class="hero" aria-labelledby="hero-title">
 		<div class="hero-copy">
 			<p class="eyebrow">Computational molecular science</p>
@@ -155,9 +119,10 @@
 	<section class="section split" id="projects">
 		<div class="section-heading sticky-heading">
 			<p class="eyebrow">Current work</p>
-			<h2>Featured projects</h2>
+			<h2>Research programmes</h2>
 			<p>
-				Current platforms and methods for computational quantum dot nanochemistry.
+				Scientific questions that connect our atomistic methods, machine learning, and
+				experiment-facing nanomaterials research.
 			</p>
 		</div>
 		<div class="project-list">
@@ -165,9 +130,6 @@
 				<article class="project-card">
 					<span class="project-media">
 						<span class="project-index">0{index + 1}</span>
-						{#if project.logo}
-							<img src={project.logo} alt={`${project.title} logo`} loading="lazy" onerror={hideMissing} />
-						{/if}
 					</span>
 					<div>
 						<p>{project.application} / {project.status}</p>
@@ -245,8 +207,8 @@
 			<p class="eyebrow">Selected outputs</p>
 			<h2>Highlighted publications</h2>
 			<p>
-				A curated selection from the full Scopus publication export. The complete list is
-				available in the publications tab.
+				A curated selection from Ivan Infante's Scopus publication export dated 9 July 2026.
+				The complete record is available on the publications page.
 			</p>
 		</div>
 		<div class="publication-list">
@@ -366,71 +328,14 @@
 
 <footer>
 	<span>{group.name}</span>
-	<a href="#top">Back to top</a>
+	<a href="#main-content">Back to top</a>
 </footer>
 
 <style>
-	.site-header {
-		position: sticky;
-		top: 0;
-		z-index: 10;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 24px;
-		padding: 18px clamp(18px, 4vw, 56px);
-		border-bottom: 1px solid rgba(23, 32, 28, 0.08);
-		background: rgba(247, 246, 241, 0.9);
-		backdrop-filter: blur(18px);
-	}
-
-	.brand {
-		display: inline-flex;
-		align-items: center;
-		gap: 10px;
-		font-weight: 800;
-		white-space: nowrap;
-	}
-
-	.brand-mark {
-		display: grid;
-		width: 40px;
-		height: 40px;
-		place-items: center;
-		border: 1px solid var(--ink);
-		border-radius: 50%;
-		font-size: 0.72rem;
-		letter-spacing: 0.08em;
-	}
-
-	nav {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-end;
-		gap: 8px 18px;
-		color: var(--muted);
-		font-size: 0.94rem;
-	}
-
-	nav a:hover,
 	footer a:hover {
 		color: var(--teal);
 	}
 
-	.header-right {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		gap: 22px;
-	}
-
-	.header-logos {
-		display: flex;
-		align-items: center;
-		gap: 12px;
-	}
-
-	.header-logos a,
 	.affiliation-logos a,
 	.contact-logos a {
 		display: inline-flex;
@@ -438,26 +343,16 @@
 		transition: opacity 0.2s ease, transform 0.2s ease;
 	}
 
-	.header-logos a:hover,
 	.affiliation-logos a:hover,
 	.contact-logos a:hover {
 		transform: translateY(-2px);
 		opacity: 0.82;
 	}
 
-	.header-logos a:focus-visible,
 	.affiliation-logos a:focus-visible,
 	.contact-logos a:focus-visible {
 		outline: 3px solid color-mix(in srgb, var(--teal) 45%, transparent);
 		outline-offset: 4px;
-	}
-
-	.header-logos img {
-		width: auto;
-		max-width: 150px;
-		max-height: 32px;
-		object-fit: contain;
-		mix-blend-mode: multiply;
 	}
 
 	main {
@@ -467,7 +362,7 @@
 	.hero {
 		display: flex;
 		align-items: center;
-		min-height: calc(100vh - 78px);
+		min-height: clamp(580px, 78vh, 760px);
 		padding: clamp(44px, 7vw, 96px) clamp(20px, 6vw, 88px) clamp(28px, 4vw, 56px);
 	}
 
@@ -492,9 +387,10 @@
 	}
 
 	h1 {
+		max-width: 1500px;
 		margin-bottom: 24px;
-		font-size: clamp(3.3rem, 8vw, 7.5rem);
-		line-height: 0.92;
+		font-size: clamp(3.3rem, 6.4vw, 6.75rem);
+		line-height: 0.95;
 		letter-spacing: 0;
 	}
 
@@ -731,16 +627,6 @@
 		border-radius: 12px;
 		background: #f2f1ea;
 		box-shadow: inset 0 0 0 1px var(--line);
-	}
-
-	.project-media img {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		padding: 8px;
-		object-fit: contain;
-		background: #ffffff;
 	}
 
 	.project-index {
@@ -1039,21 +925,6 @@
 	}
 
 	@media (max-width: 980px) {
-		.site-header {
-			align-items: flex-start;
-			flex-direction: column;
-		}
-
-		.header-right {
-			align-items: flex-start;
-			flex-direction: column;
-			gap: 12px;
-		}
-
-		nav {
-			justify-content: flex-start;
-		}
-
 		.split,
 		.two-column {
 			grid-template-columns: 1fr;
@@ -1075,20 +946,6 @@
 	}
 
 	@media (max-width: 640px) {
-		.site-header {
-			padding: 14px 18px;
-		}
-
-		nav {
-			gap: 8px 12px;
-			font-size: 0.86rem;
-		}
-
-		.header-logos img {
-			max-width: 120px;
-			max-height: 28px;
-		}
-
 		.hero {
 			padding-top: 38px;
 		}
