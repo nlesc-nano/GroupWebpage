@@ -65,7 +65,10 @@ export const group = {
 	description:
 		'InfanteLab develops computational nanochemistry, artificial intelligence, and digital platforms for realistic colloidal quantum dots and semiconductor nanocrystals.',
 	heroNote:
-		'We welcome collaborations across theory, simulation, synthesis, spectroscopy, device physics, and data-driven materials discovery.'
+		'We welcome collaborations across theory, simulation, synthesis, spectroscopy, device physics, and data-driven materials discovery.',
+	// Formspree endpoint for the collaboration contact form. Create a free form at
+	// https://formspree.io, then replace this with the "Your Form Endpoint" URL it gives you.
+	contactFormEndpoint: 'https://formspree.io/f/xaqrqkkw'
 };
 
 export const logos: Logo[] = [

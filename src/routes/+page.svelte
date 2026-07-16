@@ -1,5 +1,6 @@
 <script lang="ts">
 	import SiteHeader from '$lib/components/SiteHeader.svelte';
+	import ContactForm from '$lib/components/ContactForm.svelte';
 	import {
 		alumni,
 		group,
@@ -321,6 +322,7 @@
 					{/if}
 				{/each}
 			</div>
+			<ContactForm />
 		</div>
 	</section>
 
