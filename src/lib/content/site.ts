@@ -65,10 +65,20 @@ export const group = {
 	description:
 		'InfanteLab develops computational nanochemistry, artificial intelligence, and digital platforms for realistic colloidal quantum dots and semiconductor nanocrystals.',
 	heroNote:
-		'We welcome collaborations across theory, simulation, synthesis, spectroscopy, device physics, and data-driven materials discovery.',
-	// Formspree endpoint for the collaboration contact form. Create a free form at
-	// https://formspree.io, then replace this with the "Your Form Endpoint" URL it gives you.
-	contactFormEndpoint: 'https://formspree.io/f/xaqrqkkw'
+		'We welcome collaborations across theory, simulation, synthesis, spectroscopy, device physics, and data-driven materials discovery.'
+};
+
+// Formbricks setup for the collaboration contact form (Settings -> Workspace for
+// workspaceId/apiHost; each question's "Question ID" is under Advanced Settings on
+// its card in the survey editor).
+export const contactForm = {
+	apiHost: 'https://app.formbricks.com',
+	workspaceId: 'cmrnne0jz53y701wxnai3lez9',
+	surveyId: 'cmrnnkbai54w301wx3pqu6sgn',
+	// Contact Info card: answer is an ordered array [firstName, lastName, email, phone, company].
+	contactInfoQuestionId: 'fri028sai593dn234lecdsmf',
+	// Open-text "Message" question.
+	messageQuestionId: 'j53itwm31kmennccbdfn4f3w'
 };
 
 export const logos: Logo[] = [
@@ -322,5 +332,14 @@ export const software: SoftwareResource[] = [
 		linkLabel: 'GitHub repository',
 		tags: ['PES analysis', 'RDF / ADF', 'Shell descriptors', 'Force-field optimization'],
 		logo: '/logos/auto-fox-web.png'
+	},
+	{
+		name: 'miniCAT',
+		description:
+			'Lightweight tool for attaching chemical ligands to nanocrystal and quantum-dot surfaces directly from SMILES strings. It uses RDKit-based functional-group detection to anchor ligands on dummy sites, with configurable multi-ligand, multi-pass passivation ratios and spatial distributions.',
+		link: 'https://github.com/nlesc-nano/miniCAT',
+		linkLabel: 'GitHub repository',
+		tags: ['SMILES ligands', 'RDKit', 'Multi-pass passivation', 'Surface anchoring'],
+		logo: '/logos/mini-cat-web.png'
 	}
 ];

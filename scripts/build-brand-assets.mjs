@@ -44,7 +44,8 @@ const softwareLogos = [
 	{ source: 'orchestrai.png', output: 'orchestrai-web.png', width: 512, height: 342, sourceWidth: 3169, sourceHeight: 2118 },
 	{ source: 'qd-builder.png', output: 'qd-builder-web.png', width: 463, height: 512, sourceWidth: 9852, sourceHeight: 10902 },
 	{ source: 'minibse.png', output: 'minibse-web.png', width: 512, height: 240, sourceWidth: 10632, sourceHeight: 4980 },
-	{ source: 'auto-fox.png', output: 'auto-fox-web.png', width: 512, height: 512, sourceWidth: 5225, sourceHeight: 5225 }
+	{ source: 'auto-fox.png', output: 'auto-fox-web.png', width: 512, height: 512, sourceWidth: 5225, sourceHeight: 5225 },
+	{ source: 'mini-cat.png', output: 'mini-cat-web.png', width: 512, height: 470, sourceWidth: 2272, sourceHeight: 2086 }
 ];
 
 await Promise.all(

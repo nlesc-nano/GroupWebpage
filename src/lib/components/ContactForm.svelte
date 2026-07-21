@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { group } from '$lib/content/site';
+	import { contactForm, group } from '$lib/content/site';
 
 	let firstName = $state('');
 	let lastName = $state('');
@@ -8,23 +8,27 @@
 	let message = $state('');
 	let status: 'idle' | 'submitting' | 'success' | 'error' = $state('idle');
 
-	const endpointConfigured = !group.contactFormEndpoint.includes('REPLACE_WITH_FORM_ID');
-
 	async function handleSubmit(event: SubmitEvent) {
 		event.preventDefault();
-		if (!endpointConfigured) {
-			status = 'error';
-			return;
-		}
-
 		status = 'submitting';
 
 		try {
-			const response = await fetch(group.contactFormEndpoint, {
-				method: 'POST',
-				headers: { Accept: 'application/json' },
-				body: new FormData(event.currentTarget as HTMLFormElement)
-			});
+			const response = await fetch(
+				`${contactForm.apiHost}/api/v1/client/${contactForm.workspaceId}/responses`,
+				{
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						surveyId: contactForm.surveyId,
+						finished: true,
+						data: {
+							// Contact Info card expects [firstName, lastName, email, phone, company].
+							[contactForm.contactInfoQuestionId]: [firstName, lastName, email, '', institute],
+							[contactForm.messageQuestionId]: message
+						}
+					})
+				}
+			);
 
 			if (response.ok) {
 				status = 'success';
@@ -67,7 +71,7 @@
 	</label>
 
 	<button class="submit-button" type="submit" disabled={status === 'submitting'}>
-		{status === 'submitting' ? 'Sending…' : 'Send message'}
+		{status === 'submitting' ? 'Sending…' : "Let's Collaborate !"}
 	</button>
 
 	{#if status === 'success'}
