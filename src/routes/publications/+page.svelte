@@ -1,5 +1,6 @@
 <script lang="ts">
 	import SiteHeader from '$lib/components/SiteHeader.svelte';
+	import { reveal } from '$lib/actions/reveal';
 	import { group } from '$lib/content/site';
 	import rawPublications from '$lib/content/publications.json';
 	import { formatVenue, type PublicationRecord } from '$lib/content/publicationTypes';
@@ -43,15 +44,15 @@
 			2026. Records are grouped by year and sorted newest first.
 		</p>
 		<div class="publication-stats">
-			<div>
+			<div class="reveal" use:reveal>
 				<span>{publications.length}</span>
 				<p>Total records</p>
 			</div>
-			<div>
+			<div class="reveal" use:reveal style="transition-delay: 70ms">
 				<span>{publications.filter((publication) => publication.highlighted).length}</span>
 				<p>Highlighted on homepage</p>
 			</div>
-			<div>
+			<div class="reveal" use:reveal style="transition-delay: 140ms">
 				<span>{group.shortName}</span>
 				<p>{group.affiliation}</p>
 			</div>
@@ -66,8 +67,13 @@
 					<span>{yearPublications.length} publications</span>
 				</div>
 				<div class="publication-list">
-					{#each yearPublications as publication}
-						<article class:highlighted={publication.highlighted} class="publication-card">
+					{#each yearPublications as publication, index}
+						<article
+							class:highlighted={publication.highlighted}
+							class="publication-card reveal"
+							use:reveal
+							style="transition-delay: {Math.min(index, 5) * 60}ms"
+						>
 							<div class="publication-meta">
 								<span>{publication.type}</span>
 								{#if publication.highlighted}
@@ -152,13 +158,14 @@
 
 	.publication-stats div {
 		padding: 22px;
-		background: #edece4;
+		background: var(--noise), var(--panel-strong);
+		backdrop-filter: var(--glass);
 	}
 
 	.publication-stats span {
 		display: block;
 		margin-bottom: 8px;
-		color: var(--ink);
+		color: var(--fg);
 		font-size: clamp(1.7rem, 3vw, 2.5rem);
 		font-weight: 900;
 		line-height: 1;
@@ -209,15 +216,19 @@
 	}
 
 	.publication-card {
-		border: 1px solid var(--line);
+		border: 1px solid rgba(255, 255, 255, 0.6);
 		border-radius: var(--radius);
 		padding: clamp(20px, 3vw, 30px);
-		background: rgba(255, 255, 255, 0.72);
+		background: var(--noise), var(--panel);
+		backdrop-filter: var(--glass);
+		box-shadow:
+			inset 0 1px 0 rgba(255, 255, 255, 0.5),
+			0 12px 30px -22px rgba(23, 32, 28, 0.35);
 	}
 
 	.publication-card.highlighted {
-		border-color: rgba(23, 110, 114, 0.45);
-		background: #eef5ef;
+		border-color: color-mix(in srgb, var(--teal) 45%, transparent);
+		background: color-mix(in srgb, var(--teal) 16%, var(--panel));
 	}
 
 	.publication-meta {
@@ -246,7 +257,7 @@
 	}
 
 	.ivan {
-		color: var(--ink);
+		color: var(--fg);
 		font-weight: 900;
 	}
 
@@ -272,6 +283,27 @@
 		padding: 28px clamp(20px, 6vw, 88px);
 		border-top: 1px solid var(--line);
 		color: var(--muted);
+	}
+
+	.reveal {
+		opacity: 0;
+		transform: translateY(26px);
+		transition:
+			opacity 640ms ease,
+			transform 640ms ease;
+	}
+
+	.reveal:global(.is-visible) {
+		opacity: 1;
+		transform: none;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.reveal {
+			opacity: 1;
+			transform: none;
+			transition: none;
+		}
 	}
 
 	@media (max-width: 900px) {

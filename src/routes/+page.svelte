@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SiteHeader from '$lib/components/SiteHeader.svelte';
 	import ContactForm from '$lib/components/ContactForm.svelte';
+	import { reveal } from '$lib/actions/reveal';
 	import {
 		alumni,
 		group,
@@ -78,22 +79,22 @@
 	</section>
 
 	<section class="intro-band" aria-label="Research positioning">
-		<div>
+		<div class="reveal" use:reveal>
 			<span class="metric">4</span>
 			<span>Quantum dot research pillars</span>
 		</div>
-		<div>
+		<div class="reveal" use:reveal>
 			<span class="metric">5</span>
 			<span>Active software and platform projects</span>
 		</div>
-		<div>
+		<div class="reveal" use:reveal>
 			<span class="metric">BCMaterials</span>
 			<span>UPV/EHU Science Park, Leioa</span>
 		</div>
 	</section>
 
 	<section class="section" id="research">
-		<div class="section-heading">
+		<div class="section-heading reveal" use:reveal>
 			<p class="eyebrow">Activities</p>
 			<h2>Research themes</h2>
 			<p>
@@ -102,8 +103,12 @@
 			</p>
 		</div>
 		<div class="research-grid">
-			{#each researchAreas as area}
-				<article class="research-card">
+			{#each researchAreas as area, index}
+				<article
+					class="research-card reveal"
+					use:reveal
+					style="transition-delay: {Math.min(index, 6) * 70}ms"
+				>
 					<p>{area.kicker}</p>
 					<h3>{area.title}</h3>
 					<span>{area.description}</span>
@@ -128,7 +133,11 @@
 		</div>
 		<div class="project-list">
 			{#each projects as project, index}
-				<article class="project-card">
+				<article
+					class="project-card reveal"
+					use:reveal
+					style="transition-delay: {Math.min(index, 6) * 70}ms"
+				>
 					<span class="project-media">
 						<span class="project-index">0{index + 1}</span>
 					</span>
@@ -155,7 +164,7 @@
 	</section>
 
 	<section class="section" id="people">
-		<div class="section-heading">
+		<div class="section-heading reveal" use:reveal>
 			<p class="eyebrow">Team</p>
 			<h2>People</h2>
 			<p>
@@ -164,8 +173,12 @@
 			</p>
 		</div>
 		<div class="people-grid">
-			{#each people as member}
-				<article class="person-card">
+			{#each people as member, index}
+				<article
+					class="person-card reveal"
+					use:reveal
+					style="transition-delay: {Math.min(index, 6) * 70}ms"
+				>
 					<div class="avatar">
 						<span aria-hidden="true">{initials(member.name)}</span>
 						{#if member.photo}
@@ -179,13 +192,17 @@
 			{/each}
 		</div>
 		<div class="alumni-block">
-			<div class="section-heading compact-heading">
+			<div class="section-heading compact-heading reveal" use:reveal>
 				<p class="eyebrow">Former members</p>
 				<h2>Alumni</h2>
 			</div>
 			<div class="alumni-grid">
-				{#each alumni as member}
-					<article class="alumni-card">
+				{#each alumni as member, index}
+					<article
+						class="alumni-card reveal"
+						use:reveal
+						style="transition-delay: {Math.min(index, 6) * 60}ms"
+					>
 						<div class="avatar avatar-small">
 							<span aria-hidden="true">{initials(member.name)}</span>
 							{#if member.photo}
@@ -204,7 +221,7 @@
 	</section>
 
 	<section class="section publications-section" id="publications">
-		<div class="section-heading">
+		<div class="section-heading reveal" use:reveal>
 			<p class="eyebrow">Selected outputs</p>
 			<h2>Highlighted publications</h2>
 			<p>
@@ -213,8 +230,12 @@
 			</p>
 		</div>
 		<div class="publication-list">
-			{#each highlightedPublications as publication}
-				<article class="publication">
+			{#each highlightedPublications as publication, index}
+				<article
+					class="publication reveal"
+					use:reveal
+					style="transition-delay: {Math.min(index, 6) * 70}ms"
+				>
 					<span>{publication.year}</span>
 					<div>
 						<h3>{publication.title}</h3>
@@ -231,7 +252,7 @@
 	</section>
 
 	<section class="section two-column" id="software">
-		<div>
+		<div class="reveal" use:reveal>
 			<p class="eyebrow">Reusable science</p>
 			<h2>Software and resources</h2>
 			<p>
@@ -240,8 +261,15 @@
 			</p>
 		</div>
 		<div class="software-stack">
-			{#each software as item}
-				<a class="software-card" href={item.link} target="_blank" rel="noreferrer">
+			{#each software as item, index}
+				<a
+					class="software-card reveal"
+					use:reveal
+					style="transition-delay: {Math.min(index, 6) * 70}ms"
+					href={item.link}
+					target="_blank"
+					rel="noreferrer"
+				>
 					<div class="software-head">
 						<span class="software-logo">
 							<span aria-hidden="true">{item.name.slice(0, 1)}</span>
@@ -266,12 +294,12 @@
 	</section>
 
 	<section class="section two-column news-contact">
-		<div id="news">
+		<div id="news" class="reveal" use:reveal>
 			<p class="eyebrow">Updates</p>
 			<h2>News</h2>
 			<div class="timeline">
-				{#each news as item}
-					<article>
+				{#each news as item, index}
+					<article class="reveal" use:reveal style="transition-delay: {Math.min(index, 6) * 70}ms">
 						<span>{item.date}</span>
 						<h3>{item.title}</h3>
 						<p>{item.description}</p>
@@ -279,7 +307,7 @@
 				{/each}
 			</div>
 		</div>
-		<div class="contact-panel" id="contact">
+		<div class="contact-panel reveal" use:reveal id="contact">
 			<p class="eyebrow">Contact</p>
 			<h2>Work with us</h2>
 			<p>{group.heroNote}</p>
@@ -412,7 +440,7 @@
 	.lede {
 		max-width: 690px;
 		margin-bottom: 18px;
-		color: #31413a;
+		color: var(--fg);
 		font-size: clamp(1.35rem, 2.4vw, 2rem);
 		line-height: 1.22;
 	}
@@ -430,7 +458,7 @@
 	.pi-line {
 		max-width: 620px;
 		margin-bottom: 18px;
-		color: #31413a;
+		color: var(--fg);
 		font-weight: 800;
 	}
 
@@ -474,7 +502,8 @@
 
 	.button.secondary {
 		border: 1px solid var(--line);
-		background: rgba(255, 255, 255, 0.55);
+		background: var(--noise), var(--panel);
+		backdrop-filter: var(--glass);
 	}
 
 	.intro-band {
@@ -482,7 +511,8 @@
 		grid-template-columns: repeat(3, 1fr);
 		border-top: 1px solid var(--line);
 		border-bottom: 1px solid var(--line);
-		background: #edece4;
+		background: var(--noise), var(--panel);
+		backdrop-filter: var(--glass);
 	}
 
 	.intro-band div {
@@ -498,7 +528,7 @@
 	}
 
 	.metric {
-		color: var(--ink);
+		color: var(--fg);
 		font-size: clamp(1.7rem, 3vw, 2.6rem);
 		font-weight: 900;
 		line-height: 1;
@@ -525,9 +555,13 @@
 	.person-card,
 	.software-card,
 	.contact-panel {
-		border: 1px solid var(--line);
+		border: 1px solid rgba(255, 255, 255, 0.6);
 		border-radius: var(--radius);
-		background: rgba(255, 255, 255, 0.72);
+		background: var(--noise), var(--panel);
+		backdrop-filter: var(--glass);
+		box-shadow:
+			inset 0 1px 0 rgba(255, 255, 255, 0.5),
+			0 12px 30px -22px rgba(23, 32, 28, 0.35);
 	}
 
 	.research-card,
@@ -586,11 +620,11 @@
 	}
 
 	.research-card li {
-		border: 1px solid var(--line);
+		border: 1px solid rgba(255, 255, 255, 0.6);
 		border-radius: 999px;
 		padding: 7px 10px;
-		background: #f7f6f1;
-		color: #405049;
+		background: var(--noise), rgba(255, 255, 255, 0.32);
+		color: var(--muted);
 		font-size: 0.82rem;
 	}
 
@@ -627,8 +661,8 @@
 		place-items: center;
 		overflow: hidden;
 		border-radius: 12px;
-		background: #f2f1ea;
-		box-shadow: inset 0 0 0 1px var(--line);
+		background: var(--noise), rgba(255, 255, 255, 0.32);
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 	}
 
 	.project-index {
@@ -647,11 +681,11 @@
 	}
 
 	.tag-list li {
-		border: 1px solid var(--line);
+		border: 1px solid rgba(255, 255, 255, 0.6);
 		border-radius: 999px;
 		padding: 7px 10px;
-		background: #f7f6f1;
-		color: #405049;
+		background: var(--noise), rgba(255, 255, 255, 0.32);
+		color: var(--muted);
 		font-size: 0.8rem;
 	}
 
@@ -739,20 +773,16 @@
 		font-size: 1rem;
 	}
 
-	.publications-section {
-		background: #17201c;
-		color: white;
-	}
-
-	.publications-section .eyebrow,
-	.publications-section .section-heading p {
-		color: #a6d5ca;
-	}
-
 	.publication-list {
 		display: grid;
-		gap: 1px;
-		background: rgba(255, 255, 255, 0.16);
+		border: 1px solid rgba(255, 255, 255, 0.6);
+		border-radius: var(--radius);
+		padding: 4px clamp(20px, 3vw, 32px);
+		background: var(--noise), var(--panel);
+		backdrop-filter: var(--glass);
+		box-shadow:
+			inset 0 1px 0 rgba(255, 255, 255, 0.5),
+			0 12px 30px -22px rgba(23, 32, 28, 0.35);
 	}
 
 	.publication {
@@ -760,24 +790,28 @@
 		grid-template-columns: 110px 1fr;
 		gap: 24px;
 		padding: 24px 0;
-		background: #17201c;
+		border-top: 1px solid var(--line);
+	}
+
+	.publication:first-child {
+		border-top: 0;
 	}
 
 	.publication > span {
-		color: #a6d5ca;
+		color: var(--teal);
 		font-weight: 900;
 	}
 
 	.publication a,
 	.publication-link {
-		color: #a6d5ca;
+		color: var(--teal);
 		font-weight: 900;
 	}
 
 	.publication-link {
 		display: inline-flex;
 		margin-top: 26px;
-		border: 1px solid rgba(166, 213, 202, 0.45);
+		border: 1px solid var(--line);
 		border-radius: 999px;
 		padding: 11px 15px;
 	}
@@ -829,8 +863,8 @@
 		place-items: center;
 		overflow: hidden;
 		border-radius: 12px;
-		background: #f2f1ea;
-		box-shadow: inset 0 0 0 1px var(--line);
+		background: var(--noise), rgba(255, 255, 255, 0.32);
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 		color: var(--teal);
 		font-size: 1.35rem;
 		font-weight: 900;
@@ -860,7 +894,7 @@
 
 	.contact-panel {
 		padding: clamp(24px, 4vw, 40px);
-		background: #e8eadf;
+		background: var(--noise), var(--panel-strong);
 	}
 
 	dl {
@@ -924,6 +958,27 @@
 		padding: 28px clamp(20px, 6vw, 88px);
 		border-top: 1px solid var(--line);
 		color: var(--muted);
+	}
+
+	.reveal {
+		opacity: 0;
+		transform: translateY(26px);
+		transition:
+			opacity 640ms ease,
+			transform 640ms ease;
+	}
+
+	.reveal:global(.is-visible) {
+		opacity: 1;
+		transform: none;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.reveal {
+			opacity: 1;
+			transform: none;
+			transition: none;
+		}
 	}
 
 	@media (max-width: 980px) {

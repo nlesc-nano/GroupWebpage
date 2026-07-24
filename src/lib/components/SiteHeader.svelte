@@ -79,9 +79,9 @@
 		justify-content: space-between;
 		gap: 24px;
 		padding: 12px clamp(18px, 4vw, 56px);
-		border-bottom: 1px solid rgba(23, 32, 28, 0.08);
-		background: rgba(247, 246, 241, 0.94);
-		backdrop-filter: blur(18px);
+		border-bottom: 1px solid var(--line);
+		background: var(--noise), var(--panel-strong);
+		backdrop-filter: var(--glass);
 	}
 
 	.brand {
@@ -166,7 +166,7 @@
 		place-items: center;
 		border: 1px solid var(--line);
 		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.7);
+		background: var(--noise), var(--panel);
 		cursor: pointer;
 	}
 
@@ -175,7 +175,7 @@
 		width: 18px;
 		height: 2px;
 		margin: 2px 0;
-		background: var(--ink);
+		background: var(--fg);
 		transition: transform 160ms ease, opacity 160ms ease;
 	}
 
@@ -210,7 +210,7 @@
 			border-top: 1px solid var(--line);
 			border-bottom: 1px solid var(--line);
 			padding: 20px clamp(18px, 4vw, 56px) 24px;
-			background: rgba(247, 246, 241, 0.98);
+			background: var(--noise), var(--panel-strong);
 			box-shadow: 0 18px 30px rgba(23, 32, 28, 0.1);
 			flex-direction: column;
 		}

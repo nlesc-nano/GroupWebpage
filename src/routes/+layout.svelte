@@ -61,5 +61,22 @@
 	{@html structuredDataMarkup}
 </svelte:head>
 
+<div class="site-backdrop" aria-hidden="true"></div>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 {@render children()}
+
+<style>
+	.site-backdrop {
+		position: fixed;
+		inset: 0;
+		z-index: -1;
+		background-color: #eae8de;
+		background-image:
+			radial-gradient(120% 100% at 0% -10%, rgba(88, 130, 98, 0.55), transparent 60%),
+			radial-gradient(110% 95% at 105% 0%, rgba(23, 110, 114, 0.48), transparent 58%),
+			radial-gradient(130% 110% at 50% 55%, rgba(224, 178, 90, 0.4), transparent 65%),
+			radial-gradient(110% 95% at -5% 105%, rgba(201, 154, 63, 0.42), transparent 58%),
+			radial-gradient(120% 100% at 105% 105%, rgba(187, 111, 79, 0.5), transparent 60%);
+		pointer-events: none;
+	}
+</style>
