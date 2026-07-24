@@ -151,15 +151,23 @@
 	.publication-stats {
 		display: grid;
 		grid-template-columns: 0.6fr 0.8fr 1.4fr;
-		gap: 1px;
 		margin-top: 36px;
-		background: var(--line);
+		border: 1px solid rgba(255, 255, 255, 0.6);
+		border-radius: var(--radius);
+		background: var(--noise), var(--panel-strong);
+		backdrop-filter: var(--glass);
+		box-shadow:
+			inset 0 1px 0 rgba(255, 255, 255, 0.5),
+			0 12px 30px -22px rgba(23, 32, 28, 0.35);
 	}
 
 	.publication-stats div {
 		padding: 22px;
-		background: var(--noise), var(--panel-strong);
-		backdrop-filter: var(--glass);
+		border-right: 1px solid var(--line);
+	}
+
+	.publication-stats div:last-child {
+		border-right: 0;
 	}
 
 	.publication-stats span {
@@ -310,6 +318,15 @@
 		.publication-stats,
 		.year-group {
 			grid-template-columns: 1fr;
+		}
+
+		.publication-stats div {
+			border-right: 0;
+			border-bottom: 1px solid var(--line);
+		}
+
+		.publication-stats div:last-child {
+			border-bottom: 0;
 		}
 
 		.year-heading {
