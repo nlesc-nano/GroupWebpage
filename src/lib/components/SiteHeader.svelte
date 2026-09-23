@@ -8,9 +8,9 @@
 	const home = resolve('/');
 	const navItems = [
 		{ href: `${home}#research`, label: 'Research' },
+		{ href: `${home}#software`, label: 'Software' },
 		{ href: `${home}#people`, label: 'People' },
 		{ href: resolve('/publications/'), label: 'Publications', page: 'publications' },
-		{ href: `${home}#software`, label: 'Software' },
 		{ href: `${home}#contact`, label: 'Contact' }
 	];
 

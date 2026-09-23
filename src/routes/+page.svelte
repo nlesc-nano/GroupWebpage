@@ -100,8 +100,8 @@
 			<span>Active software and platform projects</span>
 		</div>
 		<div class="reveal" use:reveal>
-			<span class="metric">BCMaterials</span>
-			<span>UPV/EHU Science Park, Leioa</span>
+			<span class="metric">{people.length}</span>
+			<span>People in the group</span>
 		</div>
 	</section>
 
@@ -151,6 +151,48 @@
 						</ul>
 					</div>
 				</article>
+			{/each}
+		</div>
+	</section>
+
+	<section class="section two-column" id="software">
+		<div class="reveal" use:reveal>
+			<p class="eyebrow">Reusable science</p>
+			<h2>Software and resources</h2>
+			<p>
+				Open platforms and computational tools developed by the group for model construction,
+				force-field training, excited-state analysis, and large-scale simulations.
+			</p>
+		</div>
+		<div class="software-stack">
+			{#each software as item, index}
+				<a
+					class="software-card reveal"
+					use:reveal
+					style="transition-delay: {Math.min(index, 6) * 70}ms"
+					href={item.link}
+					target="_blank"
+					rel="noreferrer"
+				>
+					<div class="software-head">
+						<span class="software-logo">
+							<span aria-hidden="true">{item.name.slice(0, 1)}</span>
+							{#if item.logo}
+								<img src={asset(item.logo)} alt={`${item.name} logo`} loading="lazy" onerror={hideMissing} />
+							{/if}
+						</span>
+						<div>
+							<span>{item.linkLabel}</span>
+							<h3>{item.name}</h3>
+						</div>
+					</div>
+					<p>{item.description}</p>
+					<ul class="tag-list" aria-label={`${item.name} capabilities`}>
+						{#each item.tags as tag}
+							<li>{tag}</li>
+						{/each}
+					</ul>
+				</a>
 			{/each}
 		</div>
 	</section>
@@ -241,48 +283,6 @@
 			{/each}
 		</div>
 		<a class="publication-link" href={resolve('/publications/')}>View all {allPublications.length} publications</a>
-	</section>
-
-	<section class="section two-column" id="software">
-		<div class="reveal" use:reveal>
-			<p class="eyebrow">Reusable science</p>
-			<h2>Software and resources</h2>
-			<p>
-				Open platforms and computational tools developed by the group for model construction,
-				force-field training, excited-state analysis, and large-scale simulations.
-			</p>
-		</div>
-		<div class="software-stack">
-			{#each software as item, index}
-				<a
-					class="software-card reveal"
-					use:reveal
-					style="transition-delay: {Math.min(index, 6) * 70}ms"
-					href={item.link}
-					target="_blank"
-					rel="noreferrer"
-				>
-					<div class="software-head">
-						<span class="software-logo">
-							<span aria-hidden="true">{item.name.slice(0, 1)}</span>
-							{#if item.logo}
-								<img src={asset(item.logo)} alt={`${item.name} logo`} loading="lazy" onerror={hideMissing} />
-							{/if}
-						</span>
-						<div>
-							<span>{item.linkLabel}</span>
-							<h3>{item.name}</h3>
-						</div>
-					</div>
-					<p>{item.description}</p>
-					<ul class="tag-list" aria-label={`${item.name} capabilities`}>
-						{#each item.tags as tag}
-							<li>{tag}</li>
-						{/each}
-					</ul>
-				</a>
-			{/each}
-		</div>
 	</section>
 
 	<section class="section two-column news-contact">
@@ -406,7 +406,9 @@
 		height: auto;
 		max-height: min(520px, 70vh);
 		object-fit: contain;
-		filter: drop-shadow(0 18px 36px rgba(40, 55, 45, 0.12));
+		filter: drop-shadow(0 12px 28px rgba(40, 55, 45, 0.08));
+		-webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 48%, #000 42%, transparent 78%);
+		mask-image: radial-gradient(ellipse 72% 70% at 50% 48%, #000 42%, transparent 78%);
 	}
 
 	.eyebrow {
