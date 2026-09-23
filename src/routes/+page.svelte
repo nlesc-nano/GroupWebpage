@@ -406,7 +406,7 @@
 		height: auto;
 		max-height: min(520px, 70vh);
 		object-fit: contain;
-		filter: drop-shadow(0 28px 48px rgba(23, 32, 28, 0.22));
+		filter: drop-shadow(0 18px 36px rgba(40, 55, 45, 0.12));
 	}
 
 	.eyebrow {
