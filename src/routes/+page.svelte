@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { resolve, asset } from '$app/paths';
+	import SiteHeader from '$lib/components/SiteHeader.svelte';
+	import ContactForm from '$lib/components/ContactForm.svelte';
+	import { reveal } from '$lib/actions/reveal';
 	import {
 		alumni,
 		group,
 		logos,
 		news,
-		openQuestions,
 		people,
 		profiles,
 		projects,
@@ -18,40 +20,32 @@
 	const allPublications = rawPublications as PublicationRecord[];
 	const highlightedPublications = allPublications.filter((publication) => publication.highlighted);
 
-	const navItems = [
-		{ href: '#research', label: 'Research' },
-		{ href: '#projects', label: 'Projects' },
-		{ href: '#people', label: 'People' },
-		{ href: resolve('/publications/'), label: 'Publications' },
-		{ href: '#software', label: 'Software' },
-		{ href: '#contact', label: 'Contact' }
-	];
+	// Photos and logos are dropped in later; hide the image if the file is not there yet
+	// so the initials avatar / index number fallback shows instead of a broken image.
+	function hideMissing(event: Event) {
+		const image = event.currentTarget as HTMLImageElement;
+		image.style.display = 'none';
+	}
+
+	function initials(name: string) {
+		return name
+			.replace(/^(Prof\.|Dr\.)\s+/i, '')
+			.split(/\s+/)
+			.map((part) => part[0])
+			.filter(Boolean)
+			.slice(0, 2)
+			.join('')
+			.toUpperCase();
+	}
 </script>
 
 <svelte:head>
 	<title>{group.name}</title>
 </svelte:head>
 
-<header class="site-header">
-	<a class="brand" href="#top" aria-label="{group.name} home">
-		<span class="brand-mark">{group.logoMark}</span>
-		<span>{group.shortName}</span>
-	</a>
-	<div class="header-right">
-		<div class="header-logos" aria-label="Affiliations">
-			{#each logos as logo}
-				<img src={asset(logo.src)} alt={logo.alt} />
-			{/each}
-		</div>
-		<nav aria-label="Primary navigation">
-			{#each navItems as item}
-				<a href={item.href}>{item.label}</a>
-			{/each}
-		</nav>
-	</div>
-</header>
+<SiteHeader />
 
-<main id="top">
+<main id="main-content">
 	<section class="hero" aria-labelledby="hero-title">
 		<div class="hero-copy">
 			<p class="eyebrow">Computational molecular science</p>
@@ -63,7 +57,18 @@
 			</p>
 			<div class="affiliation-logos" aria-label="Affiliations">
 				{#each logos as logo}
-					<img src={asset(logo.src)} alt={logo.alt} />
+					{#if logo.href}
+						<a
+							href={logo.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label={`Visit ${logo.name} website`}
+						>
+							<img src={asset(logo.src)} alt={logo.alt} />
+						</a>
+					{:else}
+						<img src={asset(logo.src)} alt={logo.alt} />
+					{/if}
 				{/each}
 			</div>
 			<p class="hero-description">{group.description}</p>
@@ -72,36 +77,25 @@
 				<a class="button secondary" href="#contact">Get in touch</a>
 			</div>
 		</div>
-
-		<div class="hero-visual" aria-hidden="true">
-			<div class="orbital orbital-a"></div>
-			<div class="orbital orbital-b"></div>
-			<div class="orbital orbital-c"></div>
-			<div class="node node-a"></div>
-			<div class="node node-b"></div>
-			<div class="node node-c"></div>
-			<div class="node node-d"></div>
-			<div class="spectrum"></div>
-		</div>
 	</section>
 
 	<section class="intro-band" aria-label="Research positioning">
-		<div>
+		<div class="reveal" use:reveal>
 			<span class="metric">4</span>
 			<span>Quantum dot research pillars</span>
 		</div>
-		<div>
+		<div class="reveal" use:reveal>
 			<span class="metric">5</span>
 			<span>Active software and platform projects</span>
 		</div>
-		<div>
+		<div class="reveal" use:reveal>
 			<span class="metric">BCMaterials</span>
 			<span>UPV/EHU Science Park, Leioa</span>
 		</div>
 	</section>
 
 	<section class="section" id="research">
-		<div class="section-heading">
+		<div class="section-heading reveal" use:reveal>
 			<p class="eyebrow">Activities</p>
 			<h2>Research themes</h2>
 			<p>
@@ -110,8 +104,12 @@
 			</p>
 		</div>
 		<div class="research-grid">
-			{#each researchAreas as area}
-				<article class="research-card">
+			{#each researchAreas as area, index}
+				<article
+					class="research-card reveal"
+					use:reveal
+					style="transition-delay: {Math.min(index, 6) * 70}ms"
+				>
 					<p>{area.kicker}</p>
 					<h3>{area.title}</h3>
 					<span>{area.description}</span>
@@ -128,15 +126,22 @@
 	<section class="section split" id="projects">
 		<div class="section-heading sticky-heading">
 			<p class="eyebrow">Current work</p>
-			<h2>Featured projects</h2>
+			<h2>Research programmes</h2>
 			<p>
-				Current platforms and methods for computational quantum dot nanochemistry.
+				Scientific questions that connect our atomistic methods, machine learning, and
+				experiment-facing nanomaterials research.
 			</p>
 		</div>
 		<div class="project-list">
 			{#each projects as project, index}
-				<article class="project-card">
-					<span class="project-index">0{index + 1}</span>
+				<article
+					class="project-card reveal"
+					use:reveal
+					style="transition-delay: {Math.min(index, 6) * 70}ms"
+				>
+					<span class="project-media">
+						<span class="project-index">0{index + 1}</span>
+					</span>
 					<div>
 						<p>{project.application} / {project.status}</p>
 						<h3>{project.title}</h3>
@@ -153,14 +158,14 @@
 								{project.linkLabel ?? 'Learn more'}
 							</a>
 						{/if}
-				</div>
+					</div>
 				</article>
 			{/each}
 		</div>
 	</section>
 
 	<section class="section" id="people">
-		<div class="section-heading">
+		<div class="section-heading reveal" use:reveal>
 			<p class="eyebrow">Team</p>
 			<h2>People</h2>
 			<p>
@@ -169,9 +174,18 @@
 			</p>
 		</div>
 		<div class="people-grid">
-			{#each people as member}
-				<article class="person-card">
-					<div class="avatar" aria-hidden="true">{member.name.slice(0, 1)}</div>
+			{#each people as member, index}
+				<article
+					class="person-card reveal"
+					use:reveal
+					style="transition-delay: {Math.min(index, 6) * 70}ms"
+				>
+					<div class="avatar">
+						<span aria-hidden="true">{initials(member.name)}</span>
+						{#if member.photo}
+							<img src={asset(member.photo)} alt={member.name} loading="lazy" onerror={hideMissing} />
+						{/if}
+					</div>
 					<p>{member.role}</p>
 					<h3>{member.name}</h3>
 					<span>{member.focus}</span>
@@ -179,16 +193,28 @@
 			{/each}
 		</div>
 		<div class="alumni-block">
-			<div class="section-heading compact-heading">
+			<div class="section-heading compact-heading reveal" use:reveal>
 				<p class="eyebrow">Former members</p>
 				<h2>Alumni</h2>
 			</div>
 			<div class="alumni-grid">
-				{#each alumni as member}
-					<article class="alumni-card">
-						<p>{member.role}</p>
-						<h3>{member.name}</h3>
-						<span>{member.focus}</span>
+				{#each alumni as member, index}
+					<article
+						class="alumni-card reveal"
+						use:reveal
+						style="transition-delay: {Math.min(index, 6) * 60}ms"
+					>
+						<div class="avatar avatar-small">
+							<span aria-hidden="true">{initials(member.name)}</span>
+							{#if member.photo}
+								<img src={asset(member.photo)} alt={member.name} loading="lazy" onerror={hideMissing} />
+							{/if}
+						</div>
+						<div>
+							<p>{member.role}</p>
+							<h3>{member.name}</h3>
+							<span>{member.focus}</span>
+						</div>
 					</article>
 				{/each}
 			</div>
@@ -196,17 +222,21 @@
 	</section>
 
 	<section class="section publications-section" id="publications">
-		<div class="section-heading">
+		<div class="section-heading reveal" use:reveal>
 			<p class="eyebrow">Selected outputs</p>
 			<h2>Highlighted publications</h2>
 			<p>
-				A curated selection from the full Scopus publication export. The complete list is
-				available in the publications tab.
+				A curated selection from Ivan Infante's Scopus publication export dated 9 July 2026.
+				The complete record is available on the publications page.
 			</p>
 		</div>
 		<div class="publication-list">
-			{#each highlightedPublications as publication}
-				<article class="publication">
+			{#each highlightedPublications as publication, index}
+				<article
+					class="publication reveal"
+					use:reveal
+					style="transition-delay: {Math.min(index, 6) * 70}ms"
+				>
 					<span>{publication.year}</span>
 					<div>
 						<h3>{publication.title}</h3>
@@ -223,7 +253,7 @@
 	</section>
 
 	<section class="section two-column" id="software">
-		<div>
+		<div class="reveal" use:reveal>
 			<p class="eyebrow">Reusable science</p>
 			<h2>Software and resources</h2>
 			<p>
@@ -232,10 +262,27 @@
 			</p>
 		</div>
 		<div class="software-stack">
-			{#each software as item}
-				<a class="software-card" href={item.link} target="_blank" rel="noreferrer">
-					<span>{item.linkLabel}</span>
-					<h3>{item.name}</h3>
+			{#each software as item, index}
+				<a
+					class="software-card reveal"
+					use:reveal
+					style="transition-delay: {Math.min(index, 6) * 70}ms"
+					href={item.link}
+					target="_blank"
+					rel="noreferrer"
+				>
+					<div class="software-head">
+						<span class="software-logo">
+							<span aria-hidden="true">{item.name.slice(0, 1)}</span>
+							{#if item.logo}
+								<img src={asset(item.logo)} alt={`${item.name} logo`} loading="lazy" onerror={hideMissing} />
+							{/if}
+						</span>
+						<div>
+							<span>{item.linkLabel}</span>
+							<h3>{item.name}</h3>
+						</div>
+					</div>
 					<p>{item.description}</p>
 					<ul class="tag-list" aria-label={`${item.name} capabilities`}>
 						{#each item.tags as tag}
@@ -248,12 +295,12 @@
 	</section>
 
 	<section class="section two-column news-contact">
-		<div id="news">
+		<div id="news" class="reveal" use:reveal>
 			<p class="eyebrow">Updates</p>
 			<h2>News</h2>
 			<div class="timeline">
-				{#each news as item}
-					<article>
+				{#each news as item, index}
+					<article class="reveal" use:reveal style="transition-delay: {Math.min(index, 6) * 70}ms">
 						<span>{item.date}</span>
 						<h3>{item.title}</h3>
 						<p>{item.description}</p>
@@ -261,7 +308,7 @@
 				{/each}
 			</div>
 		</div>
-		<div class="contact-panel" id="contact">
+		<div class="contact-panel reveal" use:reveal id="contact">
 			<p class="eyebrow">Contact</p>
 			<h2>Work with us</h2>
 			<p>{group.heroNote}</p>
@@ -290,101 +337,53 @@
 			</div>
 			<div class="contact-logos" aria-label="Affiliation logos">
 				{#each logos as logo}
-					<img src={asset(logo.src)} alt={logo.alt} />
+					{#if logo.href}
+						<a
+							href={logo.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label={`Visit ${logo.name} website`}
+						>
+							<img src={asset(logo.src)} alt={logo.alt} />
+						</a>
+					{:else}
+						<img src={asset(logo.src)} alt={logo.alt} />
+					{/if}
 				{/each}
 			</div>
+			<ContactForm />
 		</div>
 	</section>
 
-	<section class="section missing-info" aria-labelledby="missing-info-title">
-		<div class="section-heading">
-			<p class="eyebrow">To complete next</p>
-			<h2 id="missing-info-title">Missing details</h2>
-			<p>
-				These are the next pieces of information needed to turn the draft into a complete
-				public group webpage.
-			</p>
-		</div>
-		<ul>
-			{#each openQuestions as question}
-				<li>{question}</li>
-			{/each}
-		</ul>
-	</section>
 </main>
 
 <footer>
 	<span>{group.name}</span>
-	<a href="#top">Back to top</a>
+	<a href="#main-content">Back to top</a>
 </footer>
 
 <style>
-	.site-header {
-		position: sticky;
-		top: 0;
-		z-index: 10;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 24px;
-		padding: 18px clamp(18px, 4vw, 56px);
-		border-bottom: 1px solid rgba(23, 32, 28, 0.08);
-		background: rgba(247, 246, 241, 0.9);
-		backdrop-filter: blur(18px);
-	}
-
-	.brand {
-		display: inline-flex;
-		align-items: center;
-		gap: 10px;
-		font-weight: 800;
-		white-space: nowrap;
-	}
-
-	.brand-mark {
-		display: grid;
-		width: 40px;
-		height: 40px;
-		place-items: center;
-		border: 1px solid var(--ink);
-		border-radius: 50%;
-		font-size: 0.72rem;
-		letter-spacing: 0.08em;
-	}
-
-	nav {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-end;
-		gap: 8px 18px;
-		color: var(--muted);
-		font-size: 0.94rem;
-	}
-
-	nav a:hover,
 	footer a:hover {
 		color: var(--teal);
 	}
 
-	.header-right {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		gap: 22px;
+	.affiliation-logos a,
+	.contact-logos a {
+		display: inline-flex;
+		border-radius: 6px;
+		transition: opacity 0.2s ease, transform 0.2s ease;
 	}
 
-	.header-logos {
-		display: flex;
-		align-items: center;
-		gap: 12px;
+	.affiliation-logos a:hover,
+	.contact-logos a:hover {
+		transform: translateY(-2px);
+		opacity: 0.82;
 	}
 
-	.header-logos img {
-		width: auto;
-		max-width: 150px;
-		max-height: 32px;
-		object-fit: contain;
-		mix-blend-mode: multiply;
+	.affiliation-logos a:focus-visible,
+	.contact-logos a:focus-visible {
+		outline: 3px solid color-mix(in srgb, var(--teal) 45%, transparent);
+		outline-offset: 4px;
 	}
 
 	main {
@@ -392,16 +391,14 @@
 	}
 
 	.hero {
-		display: grid;
-		grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-		gap: clamp(32px, 6vw, 96px);
+		display: flex;
 		align-items: center;
-		min-height: calc(100vh - 78px);
+		min-height: clamp(580px, 78vh, 760px);
 		padding: clamp(44px, 7vw, 96px) clamp(20px, 6vw, 88px) clamp(28px, 4vw, 56px);
 	}
 
 	.hero-copy {
-		max-width: 760px;
+		width: 100%;
 	}
 
 	.eyebrow {
@@ -421,11 +418,11 @@
 	}
 
 	h1 {
+		max-width: 1500px;
 		margin-bottom: 24px;
-		font-size: clamp(3.3rem, 8vw, 7.5rem);
-		line-height: 0.92;
+		font-size: clamp(3.3rem, 6.4vw, 6.75rem);
+		line-height: 0.95;
 		letter-spacing: 0;
-		max-width: 880px;
 	}
 
 	h2 {
@@ -444,7 +441,7 @@
 	.lede {
 		max-width: 690px;
 		margin-bottom: 18px;
-		color: #31413a;
+		color: var(--fg);
 		font-size: clamp(1.35rem, 2.4vw, 2rem);
 		line-height: 1.22;
 	}
@@ -462,7 +459,7 @@
 	.pi-line {
 		max-width: 620px;
 		margin-bottom: 18px;
-		color: #31413a;
+		color: var(--fg);
 		font-weight: 800;
 	}
 
@@ -506,87 +503,8 @@
 
 	.button.secondary {
 		border: 1px solid var(--line);
-		background: rgba(255, 255, 255, 0.55);
-	}
-
-	.hero-visual {
-		position: relative;
-		min-height: 560px;
-		border-left: 1px solid var(--line);
-		background:
-			linear-gradient(90deg, rgba(23, 32, 28, 0.08) 1px, transparent 1px),
-			linear-gradient(rgba(23, 32, 28, 0.08) 1px, transparent 1px);
-		background-size: 42px 42px;
-	}
-
-	.orbital,
-	.node,
-	.spectrum {
-		position: absolute;
-	}
-
-	.orbital {
-		border: 1px solid rgba(23, 110, 114, 0.4);
-		border-radius: 50%;
-		transform: rotate(-22deg);
-	}
-
-	.orbital-a {
-		inset: 12% 8% 18% 6%;
-	}
-
-	.orbital-b {
-		inset: 23% 20% 28% 16%;
-		border-color: rgba(187, 111, 79, 0.45);
-		transform: rotate(28deg);
-	}
-
-	.orbital-c {
-		inset: 36% 10% 14% 38%;
-		border-color: rgba(201, 154, 63, 0.55);
-	}
-
-	.node {
-		width: 18px;
-		height: 18px;
-		border-radius: 50%;
-		background: var(--teal);
-		box-shadow: 0 0 0 10px rgba(23, 110, 114, 0.12);
-	}
-
-	.node-a {
-		left: 24%;
-		top: 24%;
-	}
-
-	.node-b {
-		right: 18%;
-		top: 40%;
-		background: var(--clay);
-	}
-
-	.node-c {
-		left: 42%;
-		bottom: 18%;
-		background: var(--gold);
-	}
-
-	.node-d {
-		right: 34%;
-		bottom: 36%;
-		background: var(--sage);
-	}
-
-	.spectrum {
-		right: 8%;
-		bottom: 8%;
-		width: min(220px, 42vw);
-		height: 120px;
-		border-bottom: 2px solid var(--ink);
-		background:
-			linear-gradient(to top, rgba(23, 110, 114, 0.24), transparent),
-			repeating-linear-gradient(90deg, transparent 0 12px, rgba(23, 32, 28, 0.35) 12px 14px);
-		clip-path: polygon(0 100%, 5% 80%, 10% 88%, 16% 40%, 22% 75%, 31% 18%, 40% 78%, 51% 28%, 62% 92%, 73% 54%, 85% 86%, 100% 62%, 100% 100%);
+		background: var(--noise), var(--panel);
+		backdrop-filter: var(--glass);
 	}
 
 	.intro-band {
@@ -594,7 +512,8 @@
 		grid-template-columns: repeat(3, 1fr);
 		border-top: 1px solid var(--line);
 		border-bottom: 1px solid var(--line);
-		background: #edece4;
+		background: var(--noise), var(--panel);
+		backdrop-filter: var(--glass);
 	}
 
 	.intro-band div {
@@ -610,7 +529,7 @@
 	}
 
 	.metric {
-		color: var(--ink);
+		color: var(--fg);
 		font-size: clamp(1.7rem, 3vw, 2.6rem);
 		font-weight: 900;
 		line-height: 1;
@@ -637,9 +556,30 @@
 	.person-card,
 	.software-card,
 	.contact-panel {
-		border: 1px solid var(--line);
+		border: 1px solid rgba(255, 255, 255, 0.6);
 		border-radius: var(--radius);
-		background: rgba(255, 255, 255, 0.72);
+		background: var(--noise), var(--panel);
+		backdrop-filter: var(--glass);
+		box-shadow:
+			inset 0 1px 0 rgba(255, 255, 255, 0.5),
+			0 12px 30px -22px rgba(23, 32, 28, 0.35);
+	}
+
+	.research-card,
+	.project-card,
+	.person-card {
+		transition:
+			transform 160ms ease,
+			border-color 160ms ease,
+			box-shadow 160ms ease;
+	}
+
+	.research-card:hover,
+	.project-card:hover,
+	.person-card:hover {
+		transform: translateY(-3px);
+		border-color: rgba(23, 110, 114, 0.45);
+		box-shadow: 0 18px 40px -28px rgba(23, 32, 28, 0.5);
 	}
 
 	.research-card {
@@ -681,11 +621,11 @@
 	}
 
 	.research-card li {
-		border: 1px solid var(--line);
+		border: 1px solid rgba(255, 255, 255, 0.6);
 		border-radius: 999px;
 		padding: 7px 10px;
-		background: #f7f6f1;
-		color: #405049;
+		background: var(--noise), rgba(255, 255, 255, 0.32);
+		color: var(--muted);
 		font-size: 0.82rem;
 	}
 
@@ -714,6 +654,18 @@
 		padding: 24px;
 	}
 
+	.project-media {
+		position: relative;
+		display: grid;
+		width: 72px;
+		height: 72px;
+		place-items: center;
+		overflow: hidden;
+		border-radius: 12px;
+		background: var(--noise), rgba(255, 255, 255, 0.32);
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+	}
+
 	.project-index {
 		color: var(--clay);
 		font-size: 1.6rem;
@@ -730,11 +682,11 @@
 	}
 
 	.tag-list li {
-		border: 1px solid var(--line);
+		border: 1px solid rgba(255, 255, 255, 0.6);
 		border-radius: 999px;
 		padding: 7px 10px;
-		background: #f7f6f1;
-		color: #405049;
+		background: var(--noise), rgba(255, 255, 255, 0.32);
+		color: var(--muted);
 		font-size: 0.8rem;
 	}
 
@@ -768,6 +720,9 @@
 	}
 
 	.alumni-card {
+		display: flex;
+		align-items: flex-start;
+		gap: 14px;
 		border-top: 1px solid var(--line);
 		padding: 18px 0;
 	}
@@ -787,32 +742,48 @@
 	}
 
 	.avatar {
+		position: relative;
 		display: grid;
-		width: 72px;
-		height: 72px;
+		width: 84px;
+		height: 84px;
 		margin-bottom: 22px;
 		place-items: center;
+		overflow: hidden;
 		border-radius: 50%;
-		background: #d8dfd2;
+		background: linear-gradient(150deg, #d8dfd2, #c3d3c9);
+		box-shadow: inset 0 0 0 1px rgba(23, 32, 28, 0.08);
 		color: var(--ink);
-		font-size: 1.5rem;
+		font-size: 1.6rem;
 		font-weight: 900;
+		letter-spacing: 0.02em;
 	}
 
-	.publications-section {
-		background: #17201c;
-		color: white;
+	.avatar img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 
-	.publications-section .eyebrow,
-	.publications-section .section-heading p {
-		color: #a6d5ca;
+	.avatar-small {
+		width: 52px;
+		height: 52px;
+		margin-bottom: 0;
+		flex: 0 0 auto;
+		font-size: 1rem;
 	}
 
 	.publication-list {
 		display: grid;
-		gap: 1px;
-		background: rgba(255, 255, 255, 0.16);
+		border: 1px solid rgba(255, 255, 255, 0.6);
+		border-radius: var(--radius);
+		padding: 4px clamp(20px, 3vw, 32px);
+		background: var(--noise), var(--panel);
+		backdrop-filter: var(--glass);
+		box-shadow:
+			inset 0 1px 0 rgba(255, 255, 255, 0.5),
+			0 12px 30px -22px rgba(23, 32, 28, 0.35);
 	}
 
 	.publication {
@@ -820,24 +791,28 @@
 		grid-template-columns: 110px 1fr;
 		gap: 24px;
 		padding: 24px 0;
-		background: #17201c;
+		border-top: 1px solid var(--line);
+	}
+
+	.publication:first-child {
+		border-top: 0;
 	}
 
 	.publication > span {
-		color: #a6d5ca;
+		color: var(--teal);
 		font-weight: 900;
 	}
 
 	.publication a,
 	.publication-link {
-		color: #a6d5ca;
+		color: var(--teal);
 		font-weight: 900;
 	}
 
 	.publication-link {
 		display: inline-flex;
 		margin-top: 26px;
-		border: 1px solid rgba(166, 213, 202, 0.45);
+		border: 1px solid var(--line);
 		border-radius: 999px;
 		padding: 11px 15px;
 	}
@@ -854,12 +829,56 @@
 		color: inherit;
 		transition:
 			transform 160ms ease,
-			border-color 160ms ease;
+			border-color 160ms ease,
+			box-shadow 160ms ease;
 	}
 
 	.software-card:hover {
 		border-color: var(--teal);
 		transform: translateY(-2px);
+		box-shadow: 0 18px 40px -28px rgba(23, 32, 28, 0.5);
+	}
+
+	.software-head {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 16px;
+	}
+
+	.software-head > div {
+		display: grid;
+		gap: 2px;
+	}
+
+	.software-head h3 {
+		margin-bottom: 0;
+	}
+
+	.software-logo {
+		position: relative;
+		display: grid;
+		width: 54px;
+		height: 54px;
+		flex: 0 0 auto;
+		place-items: center;
+		overflow: hidden;
+		border-radius: 12px;
+		background: var(--noise), rgba(255, 255, 255, 0.32);
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+		color: var(--teal);
+		font-size: 1.35rem;
+		font-weight: 900;
+	}
+
+	.software-logo img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		padding: 7px;
+		object-fit: contain;
+		background: #ffffff;
 	}
 
 	.timeline article {
@@ -876,7 +895,7 @@
 
 	.contact-panel {
 		padding: clamp(24px, 4vw, 40px);
-		background: #e8eadf;
+		background: var(--noise), var(--panel-strong);
 	}
 
 	dl {
@@ -905,8 +924,7 @@
 		margin-top: 28px;
 	}
 
-	.profile-links a,
-	.missing-info li {
+	.profile-links a {
 		border: 1px solid var(--line);
 		border-radius: 999px;
 		background: rgba(255, 255, 255, 0.68);
@@ -933,23 +951,6 @@
 		mix-blend-mode: multiply;
 	}
 
-	.missing-info {
-		background: #eeeee6;
-	}
-
-	.missing-info ul {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 10px;
-		padding: 0;
-		margin: 0;
-		list-style: none;
-	}
-
-	.missing-info li {
-		padding: 10px 14px;
-		color: #405049;
-	}
 
 	footer {
 		display: flex;
@@ -960,23 +961,28 @@
 		color: var(--muted);
 	}
 
+	.reveal {
+		opacity: 0;
+		transform: translateY(26px);
+		transition:
+			opacity 640ms ease,
+			transform 640ms ease;
+	}
+
+	.reveal:global(.is-visible) {
+		opacity: 1;
+		transform: none;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.reveal {
+			opacity: 1;
+			transform: none;
+			transition: none;
+		}
+	}
+
 	@media (max-width: 980px) {
-		.site-header {
-			align-items: flex-start;
-			flex-direction: column;
-		}
-
-		.header-right {
-			align-items: flex-start;
-			flex-direction: column;
-			gap: 12px;
-		}
-
-		nav {
-			justify-content: flex-start;
-		}
-
-		.hero,
 		.split,
 		.two-column {
 			grid-template-columns: 1fr;
@@ -984,12 +990,6 @@
 
 		.hero {
 			min-height: auto;
-		}
-
-		.hero-visual {
-			min-height: 380px;
-			border-left: 0;
-			border-top: 1px solid var(--line);
 		}
 
 		.research-grid,
@@ -1004,20 +1004,6 @@
 	}
 
 	@media (max-width: 640px) {
-		.site-header {
-			padding: 14px 18px;
-		}
-
-		nav {
-			gap: 8px 12px;
-			font-size: 0.86rem;
-		}
-
-		.header-logos img {
-			max-width: 120px;
-			max-height: 28px;
-		}
-
 		.hero {
 			padding-top: 38px;
 		}
@@ -1033,10 +1019,6 @@
 
 		.button {
 			width: 100%;
-		}
-
-		.hero-visual {
-			min-height: 300px;
 		}
 
 		.intro-band,

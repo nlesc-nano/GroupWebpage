@@ -7,15 +7,20 @@
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	--ink: #17201c;
+	--fg: #17201c;
 	--muted: #5b655f;
 	--paper: #f7f6f1;
-	--panel: #ffffff;
+	--panel: rgba(255, 255, 255, 0.4);
+	--panel-strong: rgba(255, 255, 255, 0.62);
 	--line: #dfe2d8;
 	--sage: #6d8f75;
 	--teal: #176e72;
 	--clay: #bb6f4f;
 	--gold: #c99a3f;
-	--radius: 8px;
+	--radius: 14px;
+	--blur: 46px;
+	--glass: blur(var(--blur)) saturate(190%);
+	--noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.03 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 * {
@@ -45,6 +50,24 @@ textarea {
 
 ::selection {
 	background: #cadbc5;
+}
+
+.skip-link {
+	position: fixed;
+	top: 12px;
+	left: 12px;
+	z-index: 100;
+	padding: 10px 14px;
+	border-radius: 6px;
+	background: var(--ink);
+	color: white;
+	font-weight: 800;
+	transform: translateY(-160%);
+	transition: transform 140ms ease;
+}
+
+.skip-link:focus {
+	transform: translateY(0);
 }
 
 .sr-only {

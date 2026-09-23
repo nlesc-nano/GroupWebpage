@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { resolve, asset } from '$app/paths';
-	import { group, logos } from '$lib/content/site';
+	import { resolve } from '$app/paths';
+	import SiteHeader from '$lib/components/SiteHeader.svelte';
+	import { reveal } from '$lib/actions/reveal';
+	import { group } from '$lib/content/site';
 	import rawPublications from '$lib/content/publications.json';
 	import { formatVenue, type PublicationRecord } from '$lib/content/publicationTypes';
 
@@ -20,48 +22,38 @@
 
 <svelte:head>
 	<title>Publications | {group.shortName}</title>
+	<meta
+		name="description"
+		content="Ivan Infante's publication record from the Scopus export dated 9 July 2026."
+	/>
+	<meta property="og:title" content={`Publications | ${group.shortName}`} />
+	<meta
+		property="og:description"
+		content="Ivan Infante's publication record from the Scopus export dated 9 July 2026."
+	/>
+	<meta name="twitter:title" content={`Publications | ${group.shortName}`} />
 </svelte:head>
 
-<header class="site-header">
-	<a class="brand" href={resolve('/')} aria-label="{group.name} home">
-		<span class="brand-mark">{group.logoMark}</span>
-		<span>{group.shortName}</span>
-	</a>
-	<div class="header-right">
-		<div class="header-logos" aria-label="Affiliations">
-			{#each logos as logo}
-				<img src={asset(logo.src)} alt={logo.alt} />
-			{/each}
-		</div>
-		<nav aria-label="Primary navigation">
-			<a href={`${resolve('/')}#research`}>Research</a>
-			<a href={`${resolve('/')}#projects`}>Projects</a>
-			<a href={`${resolve('/')}#people`}>People</a>
-			<a aria-current="page" href={resolve('/publications/')}>Publications</a>
-			<a href={`${resolve('/')}#software`}>Software</a>
-			<a href={`${resolve('/')}#contact`}>Contact</a>
-		</nav>
-	</div>
-</header>
+<SiteHeader currentPage="publications" />
 
-<main>
+<main id="main-content">
 	<section class="page-hero">
 		<p class="eyebrow">Publication record</p>
 		<h1>Publications</h1>
 		<p>
-			Full publication list generated from the Scopus BibTeX export. Records are grouped by year
-			and sorted newest first.
+			Ivan Infante's publication record, generated from a Scopus BibTeX export dated 9 July
+			2026. Records are grouped by year and sorted newest first.
 		</p>
 		<div class="publication-stats">
-			<div>
+			<div class="reveal" use:reveal>
 				<span>{publications.length}</span>
 				<p>Total records</p>
 			</div>
-			<div>
+			<div class="reveal" use:reveal style="transition-delay: 70ms">
 				<span>{publications.filter((publication) => publication.highlighted).length}</span>
 				<p>Highlighted on homepage</p>
 			</div>
-			<div>
+			<div class="reveal" use:reveal style="transition-delay: 140ms">
 				<span>{group.shortName}</span>
 				<p>{group.affiliation}</p>
 			</div>
@@ -76,8 +68,13 @@
 					<span>{yearPublications.length} publications</span>
 				</div>
 				<div class="publication-list">
-					{#each yearPublications as publication}
-						<article class:highlighted={publication.highlighted} class="publication-card">
+					{#each yearPublications as publication, index}
+						<article
+							class:highlighted={publication.highlighted}
+							class="publication-card reveal"
+							use:reveal
+							style="transition-delay: {Math.min(index, 5) * 60}ms"
+						>
 							<div class="publication-meta">
 								<span>{publication.type}</span>
 								{#if publication.highlighted}
@@ -113,73 +110,8 @@
 </footer>
 
 <style>
-	.site-header {
-		position: sticky;
-		top: 0;
-		z-index: 10;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 24px;
-		padding: 18px clamp(18px, 4vw, 56px);
-		border-bottom: 1px solid rgba(23, 32, 28, 0.08);
-		background: rgba(247, 246, 241, 0.9);
-		backdrop-filter: blur(18px);
-	}
-
-	.brand {
-		display: inline-flex;
-		align-items: center;
-		gap: 10px;
-		font-weight: 800;
-		white-space: nowrap;
-	}
-
-	.brand-mark {
-		display: grid;
-		width: 40px;
-		height: 40px;
-		place-items: center;
-		border: 1px solid var(--ink);
-		border-radius: 50%;
-		font-size: 0.72rem;
-		letter-spacing: 0.08em;
-	}
-
-	nav {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-end;
-		gap: 8px 18px;
-		color: var(--muted);
-		font-size: 0.94rem;
-	}
-
-	nav a:hover,
-	nav a[aria-current='page'],
 	footer a:hover {
 		color: var(--teal);
-	}
-
-	.header-right {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		gap: 22px;
-	}
-
-	.header-logos {
-		display: flex;
-		align-items: center;
-		gap: 12px;
-	}
-
-	.header-logos img {
-		width: auto;
-		max-width: 150px;
-		max-height: 32px;
-		object-fit: contain;
-		mix-blend-mode: multiply;
 	}
 
 	.page-hero {
@@ -220,20 +152,29 @@
 	.publication-stats {
 		display: grid;
 		grid-template-columns: 0.6fr 0.8fr 1.4fr;
-		gap: 1px;
 		margin-top: 36px;
-		background: var(--line);
+		border: 1px solid rgba(255, 255, 255, 0.6);
+		border-radius: var(--radius);
+		background: var(--noise), var(--panel-strong);
+		backdrop-filter: var(--glass);
+		box-shadow:
+			inset 0 1px 0 rgba(255, 255, 255, 0.5),
+			0 12px 30px -22px rgba(23, 32, 28, 0.35);
 	}
 
 	.publication-stats div {
 		padding: 22px;
-		background: #edece4;
+		border-right: 1px solid var(--line);
+	}
+
+	.publication-stats div:last-child {
+		border-right: 0;
 	}
 
 	.publication-stats span {
 		display: block;
 		margin-bottom: 8px;
-		color: var(--ink);
+		color: var(--fg);
 		font-size: clamp(1.7rem, 3vw, 2.5rem);
 		font-weight: 900;
 		line-height: 1;
@@ -284,15 +225,19 @@
 	}
 
 	.publication-card {
-		border: 1px solid var(--line);
+		border: 1px solid rgba(255, 255, 255, 0.6);
 		border-radius: var(--radius);
 		padding: clamp(20px, 3vw, 30px);
-		background: rgba(255, 255, 255, 0.72);
+		background: var(--noise), var(--panel);
+		backdrop-filter: var(--glass);
+		box-shadow:
+			inset 0 1px 0 rgba(255, 255, 255, 0.5),
+			0 12px 30px -22px rgba(23, 32, 28, 0.35);
 	}
 
 	.publication-card.highlighted {
-		border-color: rgba(23, 110, 114, 0.45);
-		background: #eef5ef;
+		border-color: color-mix(in srgb, var(--teal) 45%, transparent);
+		background: color-mix(in srgb, var(--teal) 16%, var(--panel));
 	}
 
 	.publication-meta {
@@ -321,7 +266,7 @@
 	}
 
 	.ivan {
-		color: var(--ink);
+		color: var(--fg);
 		font-weight: 900;
 	}
 
@@ -349,25 +294,40 @@
 		color: var(--muted);
 	}
 
+	.reveal {
+		opacity: 0;
+		transform: translateY(26px);
+		transition:
+			opacity 640ms ease,
+			transform 640ms ease;
+	}
+
+	.reveal:global(.is-visible) {
+		opacity: 1;
+		transform: none;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.reveal {
+			opacity: 1;
+			transform: none;
+			transition: none;
+		}
+	}
+
 	@media (max-width: 900px) {
-		.site-header {
-			align-items: flex-start;
-			flex-direction: column;
-		}
-
-		.header-right {
-			align-items: flex-start;
-			flex-direction: column;
-			gap: 12px;
-		}
-
-		nav {
-			justify-content: flex-start;
-		}
-
 		.publication-stats,
 		.year-group {
 			grid-template-columns: 1fr;
+		}
+
+		.publication-stats div {
+			border-right: 0;
+			border-bottom: 1px solid var(--line);
+		}
+
+		.publication-stats div:last-child {
+			border-bottom: 0;
 		}
 
 		.year-heading {
@@ -376,20 +336,6 @@
 	}
 
 	@media (max-width: 640px) {
-		.site-header {
-			padding: 14px 18px;
-		}
-
-		nav {
-			gap: 8px 12px;
-			font-size: 0.86rem;
-		}
-
-		.header-logos img {
-			max-width: 120px;
-			max-height: 28px;
-		}
-
 		h1 {
 			font-size: clamp(3rem, 18vw, 4.5rem);
 		}
