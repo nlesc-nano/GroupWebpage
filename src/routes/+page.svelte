@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve, asset } from '$app/paths';
 	import {
 		alumni,
 		group,
@@ -21,7 +22,7 @@
 		{ href: '#research', label: 'Research' },
 		{ href: '#projects', label: 'Projects' },
 		{ href: '#people', label: 'People' },
-		{ href: '/publications', label: 'Publications' },
+		{ href: resolve('/publications/'), label: 'Publications' },
 		{ href: '#software', label: 'Software' },
 		{ href: '#contact', label: 'Contact' }
 	];
@@ -39,7 +40,7 @@
 	<div class="header-right">
 		<div class="header-logos" aria-label="Affiliations">
 			{#each logos as logo}
-				<img src={logo.src} alt={logo.alt} />
+				<img src={asset(logo.src)} alt={logo.alt} />
 			{/each}
 		</div>
 		<nav aria-label="Primary navigation">
@@ -62,7 +63,7 @@
 			</p>
 			<div class="affiliation-logos" aria-label="Affiliations">
 				{#each logos as logo}
-					<img src={logo.src} alt={logo.alt} />
+					<img src={asset(logo.src)} alt={logo.alt} />
 				{/each}
 			</div>
 			<p class="hero-description">{group.description}</p>
@@ -152,7 +153,7 @@
 								{project.linkLabel ?? 'Learn more'}
 							</a>
 						{/if}
-					</div>
+				</div>
 				</article>
 			{/each}
 		</div>
@@ -218,7 +219,7 @@
 				</article>
 			{/each}
 		</div>
-		<a class="publication-link" href="/publications">View all {allPublications.length} publications</a>
+		<a class="publication-link" href={resolve('/publications/')}>View all {allPublications.length} publications</a>
 	</section>
 
 	<section class="section two-column" id="software">
@@ -289,7 +290,7 @@
 			</div>
 			<div class="contact-logos" aria-label="Affiliation logos">
 				{#each logos as logo}
-					<img src={logo.src} alt={logo.alt} />
+					<img src={asset(logo.src)} alt={logo.alt} />
 				{/each}
 			</div>
 		</div>
