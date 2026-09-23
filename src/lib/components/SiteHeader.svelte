@@ -8,7 +8,6 @@
 	const home = resolve('/');
 	const navItems = [
 		{ href: `${home}#research`, label: 'Research' },
-		{ href: `${home}#projects`, label: 'Projects' },
 		{ href: `${home}#people`, label: 'People' },
 		{ href: resolve('/publications/'), label: 'Publications', page: 'publications' },
 		{ href: `${home}#software`, label: 'Software' },

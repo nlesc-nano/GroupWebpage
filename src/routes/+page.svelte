@@ -10,7 +10,6 @@
 		news,
 		people,
 		profiles,
-		projects,
 		researchAreas,
 		software
 	} from '$lib/content/site';
@@ -77,12 +76,24 @@
 				<a class="button secondary" href="#contact">Get in touch</a>
 			</div>
 		</div>
+		{#if group.heroImage}
+			<div class="hero-visual reveal" use:reveal>
+				<img
+					src={asset(group.heroImage)}
+					alt="Atomistic colloidal quantum dot with ligand shell"
+					width="900"
+					height="900"
+					loading="eager"
+					decoding="async"
+				/>
+			</div>
+		{/if}
 	</section>
 
 	<section class="intro-band" aria-label="Research positioning">
 		<div class="reveal" use:reveal>
 			<span class="metric">4</span>
-			<span>Quantum dot research pillars</span>
+			<span>Research directions</span>
 		</div>
 		<div class="reveal" use:reveal>
 			<span class="metric">5</span>
@@ -96,8 +107,8 @@
 
 	<section class="section" id="research">
 		<div class="section-heading reveal" use:reveal>
-			<p class="eyebrow">Activities</p>
-			<h2>Research themes</h2>
+			<p class="eyebrow">Research</p>
+			<h2>Research directions</h2>
 			<p>
 				We combine atomistic modelling, electronic structure theory, machine learning, and
 				open software to understand and design colloidal quantum dots.
@@ -110,54 +121,34 @@
 					use:reveal
 					style="transition-delay: {Math.min(index, 6) * 70}ms"
 				>
-					<p>{area.kicker}</p>
-					<h3>{area.title}</h3>
-					<span>{area.description}</span>
-					<ul>
-						{#each area.methods as method}
-							<li>{method}</li>
-						{/each}
-					</ul>
-				</article>
-			{/each}
-		</div>
-	</section>
-
-	<section class="section split" id="projects">
-		<div class="section-heading sticky-heading">
-			<p class="eyebrow">Current work</p>
-			<h2>Research programmes</h2>
-			<p>
-				Scientific questions that connect our atomistic methods, machine learning, and
-				experiment-facing nanomaterials research.
-			</p>
-		</div>
-		<div class="project-list">
-			{#each projects as project, index}
-				<article
-					class="project-card reveal"
-					use:reveal
-					style="transition-delay: {Math.min(index, 6) * 70}ms"
-				>
-					<span class="project-media">
-						<span class="project-index">0{index + 1}</span>
-					</span>
-					<div>
-						<p>{project.application} / {project.status}</p>
-						<h3>{project.title}</h3>
-						<span>{project.description}</span>
-						{#if project.tags}
-							<ul class="tag-list" aria-label={`${project.title} keywords`}>
-								{#each project.tags as tag}
-									<li>{tag}</li>
-								{/each}
-							</ul>
+					{#if area.image}
+						<div class="research-card-media">
+							<img
+								src={asset(area.image)}
+								alt=""
+								loading="lazy"
+								decoding="async"
+								onerror={hideMissing}
+							/>
+						</div>
+					{/if}
+					<div class="research-card-body">
+						<div class="research-card-meta">
+							<p class="research-kicker">{area.kicker}</p>
+							{#if area.status}
+								<span class="status-badge">{area.status}</span>
+							{/if}
+						</div>
+						{#if area.question}
+							<p class="research-question">{area.question}</p>
 						{/if}
-						{#if project.link}
-							<a class="inline-link" href={project.link} target="_blank" rel="noreferrer">
-								{project.linkLabel ?? 'Learn more'}
-							</a>
-						{/if}
+						<h3>{area.title}</h3>
+						<span class="research-desc">{area.description}</span>
+						<ul>
+							{#each area.methods as method}
+								<li>{method}</li>
+							{/each}
+						</ul>
 					</div>
 				</article>
 			{/each}
@@ -391,7 +382,9 @@
 	}
 
 	.hero {
-		display: flex;
+		display: grid;
+		grid-template-columns: minmax(0, 1.15fr) minmax(240px, 0.85fr);
+		gap: clamp(28px, 5vw, 64px);
 		align-items: center;
 		min-height: clamp(580px, 78vh, 760px);
 		padding: clamp(44px, 7vw, 96px) clamp(20px, 6vw, 88px) clamp(28px, 4vw, 56px);
@@ -399,6 +392,21 @@
 
 	.hero-copy {
 		width: 100%;
+		min-width: 0;
+	}
+
+	.hero-visual {
+		display: grid;
+		place-items: center;
+		min-width: 0;
+	}
+
+	.hero-visual img {
+		width: min(100%, 900px);
+		height: auto;
+		max-height: min(520px, 70vh);
+		object-fit: contain;
+		filter: drop-shadow(0 28px 48px rgba(23, 32, 28, 0.22));
 	}
 
 	.eyebrow {
@@ -584,13 +592,80 @@
 
 	.research-card {
 		display: flex;
-		min-height: 360px;
+		min-height: 0;
 		flex-direction: column;
-		padding: 24px;
+		padding: 0;
+		overflow: hidden;
 	}
 
-	.research-card p,
-	.project-card p,
+	.research-card-media {
+		aspect-ratio: 16 / 9;
+		overflow: hidden;
+		background: linear-gradient(160deg, rgba(216, 223, 210, 0.65), rgba(195, 211, 201, 0.4));
+	}
+
+	.research-card-media img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		display: block;
+	}
+
+	.research-card-body {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		padding: 20px 22px 22px;
+	}
+
+	.research-card-meta {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		margin-bottom: 10px;
+	}
+
+	.research-kicker {
+		margin: 0;
+		color: var(--teal);
+		font-size: 0.78rem;
+		font-weight: 800;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	.status-badge {
+		flex: 0 0 auto;
+		border: 1px solid rgba(23, 110, 114, 0.35);
+		border-radius: 999px;
+		padding: 4px 9px;
+		background: rgba(23, 110, 114, 0.1);
+		color: var(--teal);
+		font-size: 0.72rem;
+		font-weight: 800;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+	}
+
+	.research-question {
+		margin: 0 0 10px;
+		color: var(--fg);
+		font-size: 0.98rem;
+		font-weight: 750;
+		line-height: 1.35;
+	}
+
+	.research-card h3 {
+		margin-bottom: 10px;
+	}
+
+	.research-desc {
+		color: var(--muted);
+		line-height: 1.6;
+	}
+
 	.person-card p,
 	.software-card span {
 		margin-bottom: 12px;
@@ -601,8 +676,6 @@
 		text-transform: uppercase;
 	}
 
-	.research-card span,
-	.project-card span,
 	.person-card span,
 	.software-card p,
 	.publication p,
@@ -618,6 +691,7 @@
 		padding: 0;
 		margin: auto 0 0;
 		list-style: none;
+		padding-top: 16px;
 	}
 
 	.research-card li {
@@ -989,7 +1063,14 @@
 		}
 
 		.hero {
+			grid-template-columns: 1fr;
 			min-height: auto;
+		}
+
+		.hero-visual {
+			order: -1;
+			max-width: 420px;
+			margin-inline: auto;
 		}
 
 		.research-grid,

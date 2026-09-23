@@ -3,6 +3,9 @@ export type ResearchArea = {
 	kicker: string;
 	description: string;
 	methods: string[];
+	image?: string;
+	question?: string;
+	status?: string;
 };
 
 export type Project = {
@@ -65,7 +68,8 @@ export const group = {
 	description:
 		'InfanteLab develops computational nanochemistry, artificial intelligence, and digital platforms for realistic colloidal quantum dots and semiconductor nanocrystals.',
 	heroNote:
-		'We welcome collaborations across theory, simulation, synthesis, spectroscopy, device physics, and data-driven materials discovery.'
+		'We welcome collaborations across theory, simulation, synthesis, spectroscopy, device physics, and data-driven materials discovery.',
+	heroImage: '/figures/hero-qd.png'
 };
 
 // Formbricks setup for the collaboration contact form (Settings -> Workspace for
@@ -98,32 +102,44 @@ export const logos: Logo[] = [
 
 export const researchAreas: ResearchArea[] = [
 	{
-		title: 'Artificial Intelligence for Quantum Dot Discovery',
-		kicker: 'AI-accelerated nanocrystal design',
+		title: 'AI-accelerated quantum-dot discovery',
+		kicker: 'AI',
+		question: 'Can machine-learning force fields reach experimental QD sizes and timescales?',
 		description:
-			'We develop next-generation artificial intelligence methodologies that enable atomistic simulations of realistic quantum dots at unprecedented length and time scales. By combining active learning, universal machine-learning force fields, and digital-twin concepts, we accelerate the discovery and optimization of semiconductor nanocrystals for optoelectronics, sensing, photocatalysis, and quantum technologies.',
-		methods: ['Machine Learning Force Fields', 'Active Learning', 'Digital Twins']
+			'We develop next-generation AI methodologies—active learning, universal machine-learning force fields, and digital-twin concepts—that extend realistic quantum-dot simulations to experimentally relevant sizes and time scales, accelerating discovery for optoelectronics, sensing, photocatalysis, and quantum technologies.',
+		methods: ['Machine Learning Force Fields', 'Active Learning', 'Digital Twins'],
+		image: '/figures/direction-ai.png',
+		status: 'Active'
 	},
 	{
-		title: 'Atomistic Modelling of Colloidal Quantum Dots',
-		kicker: 'Realistic models from atoms to properties',
+		title: 'Realistic surfaces, defects, and trap states',
+		kicker: 'Surface chemistry',
+		question: 'How do ligands, oxidation, and under-coordinated sites control losses?',
 		description:
-			'We develop realistic atomistic models of semiconductor quantum dots to understand how finite size, crystal structure, composition, and surface chemistry determine their electronic and optical properties. Our work combines first-principles electronic structure methods with molecular dynamics simulations to bridge theory and experiment across a broad range of semiconductor nanocrystals.',
-		methods: ['Density Functional Theory', 'Molecular Dynamics', 'Electronic Structure']
+			'The surface ultimately determines colloidal quantum-dot performance. We connect ligand binding, oxidation, surface reconstruction, and under-coordinated sites with charge localization, non-radiative losses, and photoluminescence efficiency across II-VI, III-V, IV-VI, and halide perovskite nanocrystals.',
+		methods: ['Surface Chemistry', 'Trap States', 'Photoluminescence'],
+		image: '/figures/direction-surfaces.png',
+		status: 'Active'
 	},
 	{
-		title: 'Surface Chemistry and Heterostructured Nanocrystals',
-		kicker: 'Interfaces, ligands, defects, and traps',
+		title: 'Core/shell and heterostructured nanocrystals',
+		kicker: 'Interfaces',
+		question: 'How do composition, strain, and interfaces shape confinement?',
 		description:
-			'The surface ultimately determines the performance of colloidal quantum dots. We investigate ligand binding, surface reconstructions, oxidation, defects, and core/shell interfaces to understand and engineer trap states, charge localization, and excitonic properties. Our research spans II-VI, III-V, IV-VI, and halide perovskite nanocrystals with a strong focus on realistic atomistic models.',
-		methods: ['Surface Chemistry', 'Core/Shell Quantum Dots', 'Interface Engineering']
+			'We investigate how composition, morphology, strain, core/shell interfaces, and ligand environments control carrier confinement and excited-state properties. Atomistic models bridge finite size, crystal structure, and electronic structure to experiment-facing heterostructure design.',
+		methods: ['Core/Shell QDs', 'Heterostructures', 'Excited States'],
+		image: '/figures/direction-coreshell.png',
+		status: 'Active'
 	},
 	{
-		title: 'Scientific Software and Digital Platforms',
-		kicker: 'Open tools for computational nanochemistry',
+		title: 'Open tools and digital twins',
+		kicker: 'Software',
+		question: 'How do we make realistic QD simulation reproducible and open?',
 		description:
-			'Our group develops computational software that enables reproducible, accessible, and scalable simulations of colloidal quantum dots. We build tools covering the entire computational workflow, from atomistic model generation and electronic structure analysis to machine-learning training and cloud-based digital platforms, helping transform computational nanochemistry into an open and data-driven discipline.',
-		methods: ['Scientific Software', 'Computational Workflows', 'Open Science']
+			'We build open software spanning atomistic model generation, electronic-structure analysis, machine-learning training, and cloud digital platforms—connecting reproducible construction, simulation, and data-driven optimization so computational nanochemistry stays accessible and theory–experiment ready.',
+		methods: ['Scientific Software', 'Workflows', 'Open Science'],
+		image: '/figures/direction-software.png',
+		status: 'Active'
 	}
 ];
 
