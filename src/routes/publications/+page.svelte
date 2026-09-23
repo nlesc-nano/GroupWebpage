@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve, asset } from '$app/paths';
 	import { group, logos } from '$lib/content/site';
 	import rawPublications from '$lib/content/publications.json';
 	import { formatVenue, type PublicationRecord } from '$lib/content/publicationTypes';
@@ -22,23 +23,23 @@
 </svelte:head>
 
 <header class="site-header">
-	<a class="brand" href="/" aria-label="{group.name} home">
+	<a class="brand" href={resolve('/')} aria-label="{group.name} home">
 		<span class="brand-mark">{group.logoMark}</span>
 		<span>{group.shortName}</span>
 	</a>
 	<div class="header-right">
 		<div class="header-logos" aria-label="Affiliations">
 			{#each logos as logo}
-				<img src={logo.src} alt={logo.alt} />
+				<img src={asset(logo.src)} alt={logo.alt} />
 			{/each}
 		</div>
 		<nav aria-label="Primary navigation">
-			<a href="/#research">Research</a>
-			<a href="/#projects">Projects</a>
-			<a href="/#people">People</a>
-			<a aria-current="page" href="/publications">Publications</a>
-			<a href="/#software">Software</a>
-			<a href="/#contact">Contact</a>
+			<a href={`${resolve('/')}#research`}>Research</a>
+			<a href={`${resolve('/')}#projects`}>Projects</a>
+			<a href={`${resolve('/')}#people`}>People</a>
+			<a aria-current="page" href={resolve('/publications/')}>Publications</a>
+			<a href={`${resolve('/')}#software`}>Software</a>
+			<a href={`${resolve('/')}#contact`}>Contact</a>
 		</nav>
 	</div>
 </header>
@@ -108,7 +109,7 @@
 
 <footer>
 	<span>{group.name}</span>
-	<a href="/">Home</a>
+	<a href={resolve('/')}>Home</a>
 </footer>
 
 <style>
