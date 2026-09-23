@@ -406,9 +406,7 @@
 		height: auto;
 		max-height: min(520px, 70vh);
 		object-fit: contain;
-		filter: drop-shadow(0 12px 28px rgba(40, 55, 45, 0.08));
-		-webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 48%, #000 42%, transparent 78%);
-		mask-image: radial-gradient(ellipse 72% 70% at 50% 48%, #000 42%, transparent 78%);
+		filter: drop-shadow(0 14px 32px rgba(40, 55, 45, 0.10));
 	}
 
 	.eyebrow {
