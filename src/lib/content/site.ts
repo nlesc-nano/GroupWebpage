@@ -90,7 +90,7 @@ export const logos: Logo[] = [
 	},
 	{
 		name: 'Ikerbasque',
-		src: '/logos/ikerbasque-logo.jpg',
+		src: '/logos/ikerbasque-logo.png',
 		alt: 'Ikerbasque logo',
 		href: 'https://www.ikerbasque.net/en/ivan-infante'
 	}

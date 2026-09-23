@@ -134,7 +134,6 @@
 		max-width: 150px;
 		max-height: 32px;
 		object-fit: contain;
-		mix-blend-mode: multiply;
 	}
 
 	nav {

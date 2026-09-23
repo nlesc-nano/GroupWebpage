@@ -476,7 +476,7 @@
 		max-width: min(280px, 100%);
 		max-height: 54px;
 		object-fit: contain;
-		mix-blend-mode: multiply;
+		/* transparent logos */
 	}
 
 	.hero-actions {
@@ -948,7 +948,7 @@
 		max-height: 70px;
 		object-fit: contain;
 		object-position: left center;
-		mix-blend-mode: multiply;
+		/* transparent logos */
 	}
 
 

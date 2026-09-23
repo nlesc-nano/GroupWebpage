@@ -18,7 +18,9 @@ export default defineConfig({
 			}),
 			paths: {
 				base,
-				relative: true
+				// Absolute from site root so nested routes like /publications/
+				// do not resolve ./_app and ./logos under the wrong folder.
+				relative: false
 			},
 			trailingSlash: 'always'
 		})
