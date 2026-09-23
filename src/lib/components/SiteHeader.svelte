@@ -24,7 +24,7 @@
 
 <header class="site-header">
 	<a class="brand" href={resolve("/")} aria-label="{group.name} home" onclick={closeMenu}>
-		<img class="brand-logo" src={asset(group.logo)} alt="" width="320" height="215" />
+		<img class="brand-logo" src={asset(group.logo)} alt="" width="813" height="197" />
 	</a>
 
 	<button
@@ -101,9 +101,8 @@
 	.brand-logo {
 		display: block;
 		width: auto;
-		height: 54px;
+		height: 72px;
 		object-fit: contain;
-		mix-blend-mode: multiply;
 	}
 
 	.header-panel {
@@ -238,7 +237,7 @@
 
 	@media (max-width: 640px) {
 		.brand-logo {
-			height: 46px;
+			height: 56px;
 		}
 
 		.header-logos img {
