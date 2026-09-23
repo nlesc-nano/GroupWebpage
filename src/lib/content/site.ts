@@ -170,12 +170,6 @@ export const people: Person[] = [
 		photo: '/photos/ivan-infante.jpg'
 	},
 	{
-		name: 'Vikas Kumar',
-		role: 'Postdoc',
-		focus: 'ML force fields development for low bandgap materials',
-		photo: '/photos/vikas-kumar.jpg'
-	},
-	{
 		name: 'Zain Ul Abideen',
 		role: 'PhD student',
 		focus: 'Developer of the Orchestr.AI platform',
@@ -214,6 +208,12 @@ export const people: Person[] = [
 ];
 
 export const alumni: Person[] = [
+	{
+		name: 'Vikas Kumar',
+		role: 'Postdoc',
+		focus: 'ML force fields development for low bandgap materials',
+		photo: '/photos/vikas-kumar.jpg'
+	},
 	{
 		name: 'Jordi Llusar',
 		role: 'Postdoc',
