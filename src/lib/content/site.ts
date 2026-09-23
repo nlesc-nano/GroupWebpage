@@ -132,12 +132,12 @@ export const researchAreas: ResearchArea[] = [
 		status: 'Active'
 	},
 	{
-		title: 'Open tools and digital twins',
+		title: 'Open source software',
 		kicker: 'Software',
 		question: 'How do we make realistic QD simulation reproducible and open?',
 		description:
-			'We build open software spanning atomistic model generation, electronic-structure analysis, machine-learning training, and cloud digital platforms—connecting reproducible construction, simulation, and data-driven optimization so computational nanochemistry stays accessible and theory–experiment ready.',
-		methods: ['Scientific Software', 'Workflows', 'Open Science'],
+			'We develop open-source software spanning atomistic model generation, electronic-structure analysis, machine-learning training, and cloud digital platforms—so computational nanochemistry stays reproducible, accessible, and ready to connect with experiment.',
+		methods: ['Open Source', 'Workflows', 'Digital Platforms'],
 		image: '/figures/direction-software.png',
 		status: 'Active'
 	}
