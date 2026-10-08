@@ -51,6 +51,25 @@ function normalizeTitle(value) {
 		.trim();
 }
 
+// Known Scopus export artifacts (lost spaces after subscripts, mangled diacritics).
+const textCorrections = [
+	[/\bZnCl2in\b/g, 'ZnCl2 in'],
+	[/\bSu\?ess\b/g, 'Süess']
+];
+
+function fixScopusText(value) {
+	let fixed = value;
+	for (const [pattern, replacement] of textCorrections) fixed = fixed.replace(pattern, replacement);
+	return fixed;
+}
+
+function fixTitle(value) {
+	// Scopus drops the space after a subscripted formula, e.g. "CsPbBr3Nanocrystals".
+	// Element symbols are at most two letters, so a digit followed by a capitalised
+	// word of 3+ letters is always a glued word, never part of a formula.
+	return fixScopusText(value).replace(/(\d)([A-Z][a-z]{2,})/g, '$1 $2');
+}
+
 function slugify(value) {
 	return normalizeTitle(value).replace(/\s+/g, '-').slice(0, 90);
 }
@@ -131,12 +150,12 @@ function parseEntry(rawEntry, sourceOrder) {
 		fields[key] = value;
 	}
 
-	const title = fields.title ?? '';
+	const title = fixTitle(fields.title ?? '');
 	const year = Number.parseInt(fields.year ?? '', 10);
 	const doi = fields.doi ?? '';
 	const authors = (fields.author ?? '')
 		.split(/\s+and\s+/)
-		.map(cleanValue)
+		.map((author) => fixScopusText(cleanValue(author)))
 		.filter(Boolean);
 
 	return {

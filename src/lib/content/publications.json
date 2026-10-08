@@ -35,9 +35,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-105021369393&doi=10.1002%2fadfm.202520228&partnerID=40&md5=b429b7387aabb9d3ba864e3e6d5ef450",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 3; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 4; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 23
+    "sourceOrder": 22
   },
   {
     "id": "2026-halide-exchange-arrest-enables-reabsorption-free-cspbcl3-cspbi3-perovskite-core-shell-nano",
@@ -71,9 +71,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-105028249672&doi=10.1002%2fadvs.202520883&partnerID=40&md5=f98edfca2bbb66ca73d6d9f56d3b191f",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 1; All Open Access, Gold Open Access, Green Open Access",
+    "citationNote": "Cited by: 3; All Open Access, Gold Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 28
+    "sourceOrder": 27
   },
   {
     "id": "2026-unravelling-mixed-organic-halide-perovskite-degradation-under-extrinsic-factors",
@@ -104,9 +104,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-105024125938&doi=10.1002%2fsmll.202509525&partnerID=40&md5=268c4115073a5bfb1a0c2a2684a2f185",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 3; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 4; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 35
+    "sourceOrder": 34
   },
   {
     "id": "2026-halide-perovskite-chalcohalide-nanocrystal-heterostructures-as-a-platform-for-the-synthesi",
@@ -141,7 +141,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 2; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 65
+    "sourceOrder": 64
   },
   {
     "id": "2026-interfacial-reconstructions-and-engineering-in-iii-v-ii-vi-core-shell-quantum-dots",
@@ -167,9 +167,35 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-105036273649&doi=10.1021%2facsenergylett.6c00422&partnerID=40&md5=5b390611b4e0d70b041d2ba8558e3e65",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 0; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 1; All Open Access, Green Open Access",
     "highlighted": true,
-    "sourceOrder": 85
+    "sourceOrder": 84
+  },
+  {
+    "id": "2026-surface-orbitals-and-facet-tolerance-in-iii-v-quantum-dots",
+    "bibtexKey": "De Vlamynck202621984",
+    "entryKind": "ARTICLE",
+    "type": "Article",
+    "year": 2026,
+    "title": "Surface Orbitals and Facet Tolerance in III-V Quantum Dots",
+    "authors": [
+      "De Vlamynck, Norick",
+      "Llusar, Jordi",
+      "Infante, Ivan",
+      "Hens, Zeger"
+    ],
+    "journal": "ACS nano",
+    "volume": "20",
+    "number": "31",
+    "pages": "21984-21996",
+    "doi": "10.1021/acsnano.6c06931",
+    "doiUrl": "https://doi.org/10.1021/acsnano.6c06931",
+    "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-105046982511&doi=10.1021%2facsnano.6c06931&partnerID=40&md5=271edf9114f249891e28d36881f8fd55",
+    "source": "Scopus",
+    "publicationStage": "Final",
+    "citationNote": "Cited by: 1; All Open Access, Green Open Access",
+    "highlighted": false,
+    "sourceOrder": 90
   },
   {
     "id": "2025-surface-modified-cspbbr3-nanocrystals-enable-free-radical-thermal-polymerization-of-effici",
@@ -210,12 +236,12 @@
     "sourceOrder": 3
   },
   {
-    "id": "2025-direct-observation-of-the-exciton-polaron-in-single-cspbbr3quantum-dots",
+    "id": "2025-direct-observation-of-the-exciton-polaron-in-single-cspbbr3-quantum-dots",
     "bibtexKey": "Shen202528372",
     "entryKind": "ARTICLE",
     "type": "Article",
     "year": 2025,
-    "title": "Direct Observation of the Exciton-Polaron in Single CsPbBr3Quantum Dots",
+    "title": "Direct Observation of the Exciton-Polaron in Single CsPbBr3 Quantum Dots",
     "authors": [
       "Shen, Zhou",
       "Samoli, Margarita",
@@ -258,9 +284,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-105013294510&doi=10.1021%2facsnano.5c06716&partnerID=40&md5=0f3a120464b8590550ed19fd1429cdad",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 3; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 6; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 17
+    "sourceOrder": 16
   },
   {
     "id": "2025-charge-transfer-from-perovskite-quantum-dots-to-multifunctional-ligands-with-tethered-mole",
@@ -289,9 +315,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-105005320757&doi=10.1021%2facsenergylett.5c00881&partnerID=40&md5=81faedd60a6b65de9ac8b1efaff32bd5",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 7; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 9; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 24
+    "sourceOrder": 23
   },
   {
     "id": "2025-overcoming-the-luminescence-efficiency-limitations-of-inp-magic-sized-clusters",
@@ -325,9 +351,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-105026440296&doi=10.1021%2fjacs.5c13963&partnerID=40&md5=02cc47e152d496192aba1a411d6c92a7",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 2",
+    "citationNote": "Cited by: 3",
     "highlighted": false,
-    "sourceOrder": 30
+    "sourceOrder": 29
   },
   {
     "id": "2025-fuzzy-band-structure-of-quantum-dots-by-bloch-orbital-expansion-unconventional-insights-in",
@@ -350,9 +376,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-86000389398&doi=10.1021%2facsnano.4c17941&partnerID=40&md5=2dad7c031138dabf8829d1cf393c0696",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 6; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 7; All Open Access, Green Open Access",
     "highlighted": true,
-    "sourceOrder": 32
+    "sourceOrder": 31
   },
   {
     "id": "2025-metal-free-heteroatom-doping-of-carbon-nitride-for-enhanced-photocatalytic-hydrogen-peroxi",
@@ -380,9 +406,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-105019680922&doi=10.1016%2fj.nanoen.2025.111551&partnerID=40&md5=91e8a3058a0c13b4f9cf5ae3b47c8df2",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 18; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 31; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 43
+    "sourceOrder": 42
   },
   {
     "id": "2025-olefin-ligand-metathesis-for-colloidal-emissive-nanocrystals-with-enhanced-stability-and-p",
@@ -412,7 +438,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 1; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 49
+    "sourceOrder": 48
   },
   {
     "id": "2025-efficient-energy-transfer-from-quantum-dots-to-closely-bound-dye-molecules-without-spectra",
@@ -440,17 +466,17 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85209770396&doi=10.1002%2fanie.202420658&partnerID=40&md5=baa0991221759b9969ad1dfd1995064c",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 14; All Open Access, Bronze Open Access",
+    "citationNote": "Cited by: 15",
     "highlighted": false,
-    "sourceOrder": 50
+    "sourceOrder": 49
   },
   {
-    "id": "2025-correction-to-exogenous-metal-cations-in-the-synthesis-of-cspbbr3nanocrystals-and-their-in",
+    "id": "2025-correction-to-exogenous-metal-cations-in-the-synthesis-of-cspbbr3-nanocrystals-and-their-i",
     "bibtexKey": "Li202535182",
     "entryKind": "ARTICLE",
     "type": "Erratum",
     "year": 2025,
-    "title": "Correction to \"Exogenous Metal Cations in the Synthesis of CsPbBr3Nanocrystals and Their Interplay with Tertiary Amines\"",
+    "title": "Correction to \"Exogenous Metal Cations in the Synthesis of CsPbBr3 Nanocrystals and Their Interplay with Tertiary Amines\"",
     "authors": [
       "Li, Zhanzhao",
       "Goldoni, Luca",
@@ -476,7 +502,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 0",
     "highlighted": false,
-    "sourceOrder": 55
+    "sourceOrder": 54
   },
   {
     "id": "2025-unveiling-the-role-of-zncl2-in-enhancing-the-photoluminescence-efficiency-of-amino-as-base",
@@ -510,9 +536,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-105018025556&doi=10.1021%2facsnano.5c10371&partnerID=40&md5=4875672f4ac2923091ff9ac516ad740d",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 2; All Open Access, Green Open Access, Hybrid Gold Open Access",
-    "highlighted": false,
-    "sourceOrder": 58
+    "citationNote": "Cited by: 5; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "highlighted": true,
+    "sourceOrder": 57
   },
   {
     "id": "2025-colloidal-quantum-dots-for-optoelectronics",
@@ -542,9 +568,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-105010620555&doi=10.1038%2fs43586-025-00413-y&partnerID=40&md5=fa93d6c19fa5bd6c9af935b990b00198",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 46; All Open Access, Green Open Access",
-    "highlighted": false,
-    "sourceOrder": 67
+    "citationNote": "Cited by: 68; All Open Access, Green Open Access",
+    "highlighted": true,
+    "sourceOrder": 66
   },
   {
     "id": "2025-improving-the-stability-of-colloidal-cspbbr3-nanocrystals-with-an-alkylphosphonium-bromide",
@@ -576,9 +602,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-105003743451&doi=10.1021%2facsenergylett.5c00124&partnerID=40&md5=7117f245406b471589b6d67fe9c46b92",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 23; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 28; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 75
+    "sourceOrder": 74
   },
   {
     "id": "2025-prospects-of-nanoscience-with-nanocrystals-2025-edition",
@@ -625,9 +651,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-105016086581&doi=10.1021%2facsnano.5c07838&partnerID=40&md5=72b5087b02c005a44f81b28cc1232d3f",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 33; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 47; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 89
+    "sourceOrder": 88
   },
   {
     "id": "2024-surface-reconstructions-in-ii-vi-quantum-dots",
@@ -652,7 +678,7 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85182003731&doi=10.1021%2facsnano.3c09265&partnerID=40&md5=1b495523393c4c3bc106dc100c82b146",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 32; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 34; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": true,
     "sourceOrder": 5
   },
@@ -681,9 +707,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85206017243&doi=10.1021%2fjacs.4c08565&partnerID=40&md5=2f9a25956f6f47a3d44ef3e39debebbf",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 23; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 30; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 46
+    "sourceOrder": 45
   },
   {
     "id": "2024-perovskite-nanocrystals-initiate-one-step-oxygen-tolerant-pet-raft-polymerization-of-highl",
@@ -717,7 +743,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 13; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 60
+    "sourceOrder": 59
   },
   {
     "id": "2024-ultrafast-nanocomposite-scintillators-based-on-cd-enhanced-cspbcl3-nanocrystals-in-polymer",
@@ -752,9 +778,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85191365562&doi=10.1021%2facsenergylett.4c00778&partnerID=40&md5=74d3d2f74a8cbd8c452dfaebe2c44b3a",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 32; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 33; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 73
+    "sourceOrder": 72
   },
   {
     "id": "2024-atomically-precise-surface-chemistry-of-zirconium-and-hafnium-metal-oxo-clusters-beyond-ca",
@@ -784,9 +810,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85206324192&doi=10.1039%2fd4sc03859b&partnerID=40&md5=ae7a3c7c2dff1d9679b0964945c2ce41",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 10; All Open Access, Gold Open Access, Green Open Access",
+    "citationNote": "Cited by: 11; All Open Access, Gold Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 76
+    "sourceOrder": 75
   },
   {
     "id": "2024-lead-free-halide-perovskite-materials-and-optoelectronic-devices-progress-and-prospective",
@@ -835,9 +861,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85174925667&doi=10.1002%2fadfm.202307896&partnerID=40&md5=463bdaeef6a820b07bfdae2ae18b80e9",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 276; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 316; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 79
+    "sourceOrder": 78
   },
   {
     "id": "2024-exogenous-metal-cations-in-the-synthesis-of-cspbbr3-nanocrystals-and-their-interplay-with-",
@@ -869,9 +895,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85198956095&doi=10.1021%2fjacs.4c03084&partnerID=40&md5=0135536c65e98d9a7051a8a621eae957",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 12; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 14; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 80
+    "sourceOrder": 79
   },
   {
     "id": "2024-amino-arsine-and-amino-phosphine-based-synthesis-of-inas-inp-znse-core-shell-shell-quantum",
@@ -902,7 +928,7 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85203321619&doi=10.1002%2faenm.202402246&partnerID=40&md5=aef9091fc46005dc889690b0624b265c",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 7; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 10; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
     "sourceOrder": 98
   },
@@ -937,7 +963,7 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85163300177&doi=10.1002%2fadma.202303621&partnerID=40&md5=8c0f95d35976b561c1e287ec38657bf8",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 39; All Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 43; All Open Access, Hybrid Gold Open Access",
     "highlighted": false,
     "sourceOrder": 6
   },
@@ -973,7 +999,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 24; All Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 8
+    "sourceOrder": 7
   },
   {
     "id": "2023-direct-band-gap-chalcohalide-semiconductors-quaternary-agbiscl2-nanocrystals",
@@ -1010,9 +1036,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85179604931&doi=10.1021%2facs.chemmater.3c01403&partnerID=40&md5=363498b6dfc2be60d47b24d77e535ad3",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 24; All Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 26; All Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 11
+    "sourceOrder": 10
   },
   {
     "id": "2023-light-emission-from-low-dimensional-pb-free-perovskite-related-metal-halide-nanocrystals",
@@ -1038,9 +1064,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85143413261&doi=10.1002%2fadom.202202005&partnerID=40&md5=e1331fb52585424ddecf093c4b7f0833",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 40",
+    "citationNote": "Cited by: 43",
     "highlighted": false,
-    "sourceOrder": 20
+    "sourceOrder": 19
   },
   {
     "id": "2023-localizing-oleylamine-ligands-on-amine-halide-copassivated-indium-phosphide-nanocrystals",
@@ -1063,9 +1089,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85162024774&doi=10.1021%2facs.chemmater.3c00565&partnerID=40&md5=1b4b24bcb260d80ea8945cb03f1d507c",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 11; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 12; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 21
+    "sourceOrder": 20
   },
   {
     "id": "2023-high-performance-alkaline-water-electrolyzers-based-on-ru-perturbed-cu-nanoplatelets-catho",
@@ -1097,9 +1123,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85166598393&doi=10.1038%2fs41467-023-40319-5&partnerID=40&md5=05e1ff907d5388c128a56c7230286bd8",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 101; All Open Access, Gold Open Access, Green Open Access",
+    "citationNote": "Cited by: 118; All Open Access, Gold Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 44
+    "sourceOrder": 43
   },
   {
     "id": "2023-colloidal-inas-tetrapods-impact-of-surfactants-on-the-shape-control",
@@ -1133,7 +1159,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 19; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 59
+    "sourceOrder": 58
   },
   {
     "id": "2023-surface-chemistry-of-lead-halide-perovskite-colloidal-nanocrystals",
@@ -1156,9 +1182,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85164210254&doi=10.1021%2facs.accounts.3c00174&partnerID=40&md5=1c2379a81b9d15bf3413029912d8fb32",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 113; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 131; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": true,
-    "sourceOrder": 61
+    "sourceOrder": 60
   },
   {
     "id": "2023-classical-force-field-parameters-for-inp-and-inas-quantum-dots-with-various-surface-passiv",
@@ -1184,8 +1210,8 @@
     "source": "Scopus",
     "publicationStage": "Final",
     "citationNote": "Cited by: 8; All Open Access, Green Open Access",
-    "highlighted": false,
-    "sourceOrder": 68
+    "highlighted": true,
+    "sourceOrder": 67
   },
   {
     "id": "2023-ligand-dynamics-on-the-surface-of-cdse-nanocrystals",
@@ -1210,9 +1236,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85151901992&doi=10.1039%2fd2nr06681e&partnerID=40&md5=76a81614155ace4cd3a35f2b99ccebf6",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 22; All Open Access, Bronze Open Access",
-    "highlighted": false,
-    "sourceOrder": 72
+    "citationNote": "Cited by: 23; All Open Access, Bronze Open Access",
+    "highlighted": true,
+    "sourceOrder": 71
   },
   {
     "id": "2023-guilty-as-charged-the-role-of-undercoordinated-indium-in-electron-charged-indium-phosphide",
@@ -1236,9 +1262,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85172425985&doi=10.1021%2facsnano.3c07029&partnerID=40&md5=d5b31960f114be857e06242878f12c4e",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 19; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 26; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 78
+    "sourceOrder": 77
   },
   {
     "id": "2023-ru-cu-nanoheterostructures-for-efficient-hydrogen-evolution-reaction-in-alkaline-water-ele",
@@ -1274,9 +1300,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85174585930&doi=10.1021%2fjacs.3c06726&partnerID=40&md5=1562a7a2b1b5dea51837b295c223e482",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 140; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 164; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 87
+    "sourceOrder": 86
   },
   {
     "id": "2022-colloidal-bismuth-chalcohalide-nanocrystals",
@@ -1312,17 +1338,17 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85126051297&doi=10.1002%2fanie.202201747&partnerID=40&md5=8dd965b70e59521bbef9b3428fe0fb53",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 49; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 50; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
     "sourceOrder": 0
   },
   {
-    "id": "2022-classical-force-field-parameters-for-cspbbr3perovskite-nanocrystals",
+    "id": "2022-classical-force-field-parameters-for-cspbbr3-perovskite-nanocrystals",
     "bibtexKey": "Pascazio20229898",
     "entryKind": "ARTICLE",
     "type": "Article",
     "year": 2022,
-    "title": "Classical Force-Field Parameters for CsPbBr3Perovskite Nanocrystals",
+    "title": "Classical Force-Field Parameters for CsPbBr3 Perovskite Nanocrystals",
     "authors": [
       "Pascazio, Roberta",
       "Zaccaria, Francesco",
@@ -1340,7 +1366,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 16; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 14
+    "sourceOrder": 13
   },
   {
     "id": "2022-cesium-manganese-bromide-nanocrystal-sensitizers-for-broadband-vis-to-nir-downshifting",
@@ -1374,15 +1400,15 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 77; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 26
+    "sourceOrder": 25
   },
   {
-    "id": "2022-alloying-bi-doped-cs2ag1-xnaxincl6nanocrystals-with-k-cations-modulates-surface-ligands-de",
+    "id": "2022-alloying-bi-doped-cs2ag1-xnaxincl6-nanocrystals-with-k-cations-modulates-surface-ligands-d",
     "bibtexKey": "Liu20228567",
     "entryKind": "ARTICLE",
     "type": "Article",
     "year": 2022,
-    "title": "Alloying Bi-Doped Cs2Ag1- xNaxInCl6Nanocrystals with K+Cations Modulates Surface Ligands Density and Photoluminescence Efficiency",
+    "title": "Alloying Bi-Doped Cs2Ag1- xNaxInCl6 Nanocrystals with K+Cations Modulates Surface Ligands Density and Photoluminescence Efficiency",
     "authors": [
       "Liu, Zheming",
       "Zito, Juliette",
@@ -1403,9 +1429,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85140991082&doi=10.1021%2facs.nanolett.2c03112&partnerID=40&md5=3e4c6310b51fee02cf883478e1202566",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 30; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 32; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 29
+    "sourceOrder": 28
   },
   {
     "id": "2022-limits-of-defect-tolerance-in-perovskite-nanocrystals-effect-of-local-electrostatic-potent",
@@ -1432,9 +1458,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85133106458&doi=10.1021%2fjacs.2c02027&partnerID=40&md5=2c32e97e9812f2f169fe7426fd584b14",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 78; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 81; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 56
+    "sourceOrder": 55
   },
   {
     "id": "2022-halide-perovskites-as-disposable-epitaxial-templates-for-the-phase-selective-synthesis-of-",
@@ -1470,17 +1496,17 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85133656086&doi=10.1038%2fs41467-022-31699-1&partnerID=40&md5=70943b7b95fe2c1547ea2007d3bd0476",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 44; All Open Access, Gold Open Access, Green Open Access",
+    "citationNote": "Cited by: 48; All Open Access, Gold Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 66
+    "sourceOrder": 65
   },
   {
-    "id": "2022-cu-mn2-energy-transfer-in-cu-mn-coalloyed-cs3zncl5colloidal-nanocrystals",
+    "id": "2022-cu-mn2-energy-transfer-in-cu-mn-coalloyed-cs3zncl5-colloidal-nanocrystals",
     "bibtexKey": "Liu20228603",
     "entryKind": "ARTICLE",
     "type": "Article",
     "year": 2022,
-    "title": "Cu+→ Mn2+Energy Transfer in Cu, Mn Coalloyed Cs3ZnCl5Colloidal Nanocrystals",
+    "title": "Cu+→ Mn2+Energy Transfer in Cu, Mn Coalloyed Cs3ZnCl5 Colloidal Nanocrystals",
     "authors": [
       "Liu, Ying",
       "Zaffalon, Matteo L.",
@@ -1505,9 +1531,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85139130043&doi=10.1021%2facs.chemmater.2c01578&partnerID=40&md5=7bfb304c8ba158d18e71747c16578688",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 34; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 35; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 77
+    "sourceOrder": 76
   },
   {
     "id": "2022-ultra-narrow-room-temperature-emission-from-single-cspbbr3-perovskite-quantum-dots",
@@ -1538,17 +1564,17 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85130636290&doi=10.1038%2fs41467-022-30016-0&partnerID=40&md5=d05f6de35da52b9cf41273c7e8135018",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 217; All Open Access, Gold Open Access, Green Open Access",
+    "citationNote": "Cited by: 233; All Open Access, Gold Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 86
+    "sourceOrder": 85
   },
   {
-    "id": "2022-correction-colloidal-bi-doped-cs2ag1-xnaxincl6nanocrystals-undercoordinated-surface-cl-ion",
+    "id": "2022-correction-colloidal-bi-doped-cs2ag1-xnaxincl6-nanocrystals-undercoordinated-surface-cl-io",
     "bibtexKey": "Zhang20221756",
     "entryKind": "ARTICLE",
     "type": "Erratum",
     "year": 2022,
-    "title": "Correction: Colloidal Bi-Doped Cs2Ag1- xNaxInCl6Nanocrystals: Undercoordinated Surface Cl Ions Limit Their Light Emission Efficiency (ACS Mater. Lett. (2020) 2 : 11 (1442−1449) DOI: 10.1021/acsmaterialslett.0c00359)",
+    "title": "Correction: Colloidal Bi-Doped Cs2Ag1- xNaxInCl6 Nanocrystals: Undercoordinated Surface Cl Ions Limit Their Light Emission Efficiency (ACS Mater. Lett. (2020) 2 : 11 (1442−1449) DOI: 10.1021/acsmaterialslett.0c00359)",
     "authors": [
       "Zhang, Baowei",
       "Wang, Mengjiao",
@@ -1572,17 +1598,17 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85137859111&doi=10.1021%2facsmaterialslett.2c00568&partnerID=40&md5=750afc1f64978d6978936d8ca26b9690",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 2; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 3; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 90
+    "sourceOrder": 89
   },
   {
-    "id": "2022-the-reactivity-of-cspbbr3nanocrystals-toward-acid-base-ligands",
+    "id": "2022-the-reactivity-of-cspbbr3-nanocrystals-toward-acid-base-ligands",
     "bibtexKey": "Zaccaria20221444",
     "entryKind": "ARTICLE",
     "type": "Article",
     "year": 2022,
-    "title": "The Reactivity of CsPbBr3Nanocrystals toward Acid/Base Ligands",
+    "title": "The Reactivity of CsPbBr3 Nanocrystals toward Acid/Base Ligands",
     "authors": [
       "Zaccaria, Francesco",
       "Zhang, Baowei",
@@ -1604,7 +1630,7 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85123348616&doi=10.1021%2facsnano.1c09603&partnerID=40&md5=4ff6d493cdc334d8ca10ecbb713c2afa",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 86; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 97; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
     "sourceOrder": 91
   },
@@ -1635,12 +1661,12 @@
     "sourceOrder": 92
   },
   {
-    "id": "2022-zncl2mediated-synthesis-of-inas-nanocrystals-with-aminoarsine",
+    "id": "2022-zncl2-mediated-synthesis-of-inas-nanocrystals-with-aminoarsine",
     "bibtexKey": "Zhu202210515",
     "entryKind": "ARTICLE",
     "type": "Article",
     "year": 2022,
-    "title": "ZnCl2Mediated Synthesis of InAs Nanocrystals with Aminoarsine",
+    "title": "ZnCl2 Mediated Synthesis of InAs Nanocrystals with Aminoarsine",
     "authors": [
       "Zhu, Dongxu",
       "Bellato, Fulvio",
@@ -1662,17 +1688,17 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85132022273&doi=10.1021%2fjacs.2c02994&partnerID=40&md5=73088210d49ddcb65b8a21f3e2953b1b",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 61; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 65; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
     "sourceOrder": 93
   },
   {
-    "id": "2021-isolated-sbcl6-3-octahedra-are-the-only-active-emitters-in-rb7sb3cl16nanocrystals",
+    "id": "2021-isolated-sbcl6-3-octahedra-are-the-only-active-emitters-in-rb7sb3cl16-nanocrystals",
     "bibtexKey": "Zhang20213952",
     "entryKind": "ARTICLE",
     "type": "Article",
     "year": 2021,
-    "title": "Isolated [SbCl6]3-Octahedra Are the only Active Emitters in Rb7Sb3Cl16Nanocrystals",
+    "title": "Isolated [SbCl6]3-Octahedra Are the only Active Emitters in Rb7Sb3Cl16 Nanocrystals",
     "authors": [
       "Zhang, Baowei",
       "Pinchetti, Valerio",
@@ -1695,7 +1721,7 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85118688162&doi=10.1021%2facsenergylett.1c01662&partnerID=40&md5=7ca86fe0d498fc931efb18c99b1d9912",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 28; All Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 29; All Open Access, Hybrid Gold Open Access",
     "highlighted": false,
     "sourceOrder": 1
   },
@@ -1719,9 +1745,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85103475202&doi=10.1021%2facs.accounts.0c00765&partnerID=40&md5=18aa923dd43035aeb0e7b74c10d47592",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 68; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 72; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 13
+    "sourceOrder": 12
   },
   {
     "id": "2021-are-there-good-alternatives-to-lead-halide-perovskite-nanocrystals",
@@ -1745,15 +1771,15 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 70",
     "highlighted": false,
-    "sourceOrder": 16
+    "sourceOrder": 15
   },
   {
-    "id": "2021-fast-intrinsic-emission-quenching-in-cs4pbbr6nanocrystals",
+    "id": "2021-fast-intrinsic-emission-quenching-in-cs4pbbr6-nanocrystals",
     "bibtexKey": "Petralanda20218619",
     "entryKind": "ARTICLE",
     "type": "Article",
     "year": 2021,
-    "title": "Fast Intrinsic Emission Quenching in Cs4PbBr6Nanocrystals",
+    "title": "Fast Intrinsic Emission Quenching in Cs4PbBr6 Nanocrystals",
     "authors": [
       "Petralanda, Urko",
       "Biffi, Giulia",
@@ -1772,9 +1798,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85118132719&doi=10.1021%2facs.nanolett.1c02537&partnerID=40&md5=9ea95e0b218d7e74ce587b26c3e4a11f",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 21; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 25; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 18
+    "sourceOrder": 17
   },
   {
     "id": "2021-guidelines-for-the-characterization-of-metal-halide-nanocrystals",
@@ -1799,9 +1825,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85107820740&doi=10.1016%2fj.trechm.2021.05.001&partnerID=40&md5=d3e187d3e06cf1ce6e3a163c024d75bd",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 12",
+    "citationNote": "Cited by: 13",
     "highlighted": false,
-    "sourceOrder": 19
+    "sourceOrder": 18
   },
   {
     "id": "2021-ligand-adsorption-energy-and-the-postpurification-surface-chemistry-of-colloidal-metal-cha",
@@ -1828,7 +1854,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 23; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 33
+    "sourceOrder": 32
   },
   {
     "id": "2021-shape-electronic-structure-and-trap-states-in-indium-phosphide-quantum-dots",
@@ -1852,9 +1878,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85114356597&doi=10.1021%2facs.chemmater.1c01795&partnerID=40&md5=c3d01dc53aeb5c90af0f6c3a5a1864d9",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 51",
+    "citationNote": "Cited by: 54",
     "highlighted": false,
-    "sourceOrder": 38
+    "sourceOrder": 37
   },
   {
     "id": "2021-effect-of-ligands-and-solvents-on-the-stability-of-electron-charged-cdse-colloidal-quantum",
@@ -1879,9 +1905,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85118919121&doi=10.1021%2facs.jpcc.1c07464&partnerID=40&md5=229afcd893e46eb68b6921eeac102d57",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 46; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 49; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 52
+    "sourceOrder": 51
   },
   {
     "id": "2021-dynamic-formation-of-metal-based-traps-in-photoexcited-colloidal-quantum-dots-and-their-re",
@@ -1905,9 +1931,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85106441199&doi=10.1021%2facs.chemmater.1c00561&partnerID=40&md5=0cbaa721cf080e6f2bf4ee880eef13af",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 36; All Open Access, Bronze Open Access, Green Open Access",
+    "citationNote": "Cited by: 37; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 54
+    "sourceOrder": 53
   },
   {
     "id": "2021-sb-doped-metal-halide-nanocrystals-a-0d-versus-3d-comparison",
@@ -1936,9 +1962,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85108432535&doi=10.1021%2facsenergylett.1c00789&partnerID=40&md5=f0c195c04438a3c8c31119e59487fe0a",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 154; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 163; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 64
+    "sourceOrder": 63
   },
   {
     "id": "2021-acid-base-mediated-ligand-exchange-on-near-infrared-absorbing-indium-based-iii-v-colloidal",
@@ -1966,9 +1992,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85103465690&doi=10.1021%2fjacs.0c12871&partnerID=40&md5=c2242e13787e87748dc749f890173f9d",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 61",
+    "citationNote": "Cited by: 63",
     "highlighted": false,
-    "sourceOrder": 74
+    "sourceOrder": 73
   },
   {
     "id": "2021-an-overview-of-computational-studies-on-colloidal-semiconductor-nanocrystals",
@@ -1991,9 +2017,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85106560810&doi=10.2533%2fCHIMIA.2021.427&partnerID=40&md5=592959e4c8a852b75f5b33c16f5d110d",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 9; All Open Access, Gold Open Access, Green Open Access",
+    "citationNote": "Cited by: 10; All Open Access, Gold Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 82
+    "sourceOrder": 81
   },
   {
     "id": "2021-halide-perovskite-lead-chalcohalide-nanocrystal-heterostructures",
@@ -2027,17 +2053,17 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85099915500&doi=10.1021%2fjacs.0c10916&partnerID=40&md5=378682ac45cea4a3686d4a4ad343146e",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 108; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 115; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 88
+    "sourceOrder": 87
   },
   {
-    "id": "2020-bright-blue-emitting-cu-doped-cs2zncl4colloidal-nanocrystals",
+    "id": "2020-bright-blue-emitting-cu-doped-cs2zncl4-colloidal-nanocrystals",
     "bibtexKey": "Zhu20205897",
     "entryKind": "ARTICLE",
     "type": "Article",
     "year": 2020,
-    "title": "Bright Blue Emitting Cu-Doped Cs2ZnCl4Colloidal Nanocrystals",
+    "title": "Bright Blue Emitting Cu-Doped Cs2ZnCl4 Colloidal Nanocrystals",
     "authors": [
       "Zhu, Dongxu",
       "Zaffalon, Matteo L.",
@@ -2061,9 +2087,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85092236894&doi=10.1021%2facs.chemmater.0c02017&partnerID=40&md5=5b9f2d8cd5c90e3ccf0691385f0e3c03",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 109; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 113; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 12
+    "sourceOrder": 11
   },
   {
     "id": "2020-cs3cu4in2cl13-nanocrystals-a-perovskite-related-structure-with-inorganic-clusters-at-a-sit",
@@ -2095,17 +2121,17 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85076758694&doi=10.1021%2facs.inorgchem.9b02834&partnerID=40&md5=5411c0fd74c33aef13195b9958f619ab",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 25; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 26; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 25
+    "sourceOrder": 24
   },
   {
-    "id": "2020-compositional-tuning-of-carrier-dynamics-in-cs2na1-xagxbicl6double-perovskite-nanocrystals",
+    "id": "2020-compositional-tuning-of-carrier-dynamics-in-cs2na1-xagxbicl6-double-perovskite-nanocrystal",
     "bibtexKey": "Zhu20201840",
     "entryKind": "ARTICLE",
     "type": "Article",
     "year": 2020,
-    "title": "Compositional Tuning of Carrier Dynamics in Cs2Na1- xAgxBiCl6Double-Perovskite Nanocrystals",
+    "title": "Compositional Tuning of Carrier Dynamics in Cs2Na1- xAgxBiCl6 Double-Perovskite Nanocrystals",
     "authors": [
       "Zhu, Dongxu",
       "Zito, Juliette",
@@ -2130,9 +2156,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85085770913&doi=10.1021%2facsenergylett.0c00914&partnerID=40&md5=a95dbebcbb5c445e47f9a0d7af63b5da",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 87; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 91; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 27
+    "sourceOrder": 26
   },
   {
     "id": "2020-near-edge-ligand-stripping-and-robust-radiative-exciton-recombination-in-cdse-cds-core-cro",
@@ -2160,17 +2186,17 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85084379904&doi=10.1021%2facs.jpclett.0c00870&partnerID=40&md5=a9bc8f2470928a049e66b3714e3e9a68",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 37; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 39; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 31
+    "sourceOrder": 30
   },
   {
-    "id": "2020-colloidal-bi-doped-cs2ag1-xnaxincl6nanocrystals-undercoordinated-surface-cl-ions-limit-the",
+    "id": "2020-colloidal-bi-doped-cs2ag1-xnaxincl6-nanocrystals-undercoordinated-surface-cl-ions-limit-th",
     "bibtexKey": "Zhang20201442",
     "entryKind": "ARTICLE",
     "type": "Article",
     "year": 2020,
-    "title": "Colloidal Bi-Doped Cs2Ag1- xNaxInCl6Nanocrystals: Undercoordinated Surface Cl Ions Limit their Light Emission Efficiency",
+    "title": "Colloidal Bi-Doped Cs2Ag1- xNaxInCl6 Nanocrystals: Undercoordinated Surface Cl Ions Limit their Light Emission Efficiency",
     "authors": [
       "Zhang, Baowei",
       "Wang, Mengjiao",
@@ -2194,9 +2220,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85097334349&doi=10.1021%2facsmaterialslett.0c00359&partnerID=40&md5=b163fe567e79ecfacc3d115cb6dc9282",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 51; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 52; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 40
+    "sourceOrder": 39
   },
   {
     "id": "2020-phonon-mediated-and-weakly-size-dependent-electron-and-hole-cooling-in-cspbbr3-nanocrystal",
@@ -2227,9 +2253,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85080060811&doi=10.1021%2facs.nanolett.9b05051&partnerID=40&md5=d9e7b24a460416b1d45042d4758931a3",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 56; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 57; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 41
+    "sourceOrder": 40
   },
   {
     "id": "2020-directional-anisotropy-of-the-vibrational-modes-in-2d-layered-perovskites",
@@ -2249,7 +2275,7 @@
       "Arciniegas, Milena P.",
       "Krahne, Roman"
     ],
-    "journal": "ACS nano",
+    "journal": "ACS Nano",
     "volume": "14",
     "number": "4",
     "pages": "4689-4697",
@@ -2258,9 +2284,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85084167649&doi=10.1021%2facsnano.0c00435&partnerID=40&md5=3317bf887d950184d5e160cd18da1a3e",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 131; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 133; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 48
+    "sourceOrder": 47
   },
   {
     "id": "2020-electronic-structure-engineering-achieved-via-organic-ligands-in-silicon-nanocrystals",
@@ -2284,9 +2310,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85092106696&doi=10.1021%2facs.chemmater.0c00443&partnerID=40&md5=ac789d86db5fb1b0eb56875244ecfc22",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 29; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 30; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 83
+    "sourceOrder": 82
   },
   {
     "id": "2020-nanocrystals-of-lead-chalcohalides-a-series-of-kinetically-trapped-metastable-nanostructur",
@@ -2324,17 +2350,17 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85085909364&doi=10.1021%2fjacs.0c03577&partnerID=40&md5=077dab69cd11469ecac79c65adfbecf8",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 58; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 61; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
     "sourceOrder": 94
   },
   {
-    "id": "2020-alloy-cscd-xpb1-xbr3perovskite-nanocrystals-the-role-of-surface-passivation-in-preserving-",
+    "id": "2020-alloy-cscd-xpb1-xbr3-perovskite-nanocrystals-the-role-of-surface-passivation-in-preserving",
     "bibtexKey": "Imran202010641",
     "entryKind": "ARTICLE",
     "type": "Article",
     "year": 2020,
-    "title": "Alloy CsCd xPb1- xBr3Perovskite Nanocrystals: The Role of Surface Passivation in Preserving Composition and Blue Emission",
+    "title": "Alloy CsCd xPb1- xBr3 Perovskite Nanocrystals: The Role of Surface Passivation in Preserving Composition and Blue Emission",
     "authors": [
       "Imran, Muhammad",
       "Ramade, Julien",
@@ -2358,7 +2384,7 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85097785219&doi=10.1021%2facs.chemmater.0c03825&partnerID=40&md5=33e6f59492d83374b6021d769a5d0c80",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 66; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 68; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
     "sourceOrder": 97
   },
@@ -2390,9 +2416,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85074591072&doi=10.1021%2facs.chemmater.9b03529&partnerID=40&md5=b3d33a2851db15d14dab44ddcb919245",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 179",
+    "citationNote": "Cited by: 182; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 10
+    "sourceOrder": 9
   },
   {
     "id": "2019-role-of-surface-reduction-in-the-formation-of-traps-in-n-doped-ii-vi-semiconductor-nanocry",
@@ -2416,9 +2442,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85068057787&doi=10.1021%2facs.chemmater.9b01395&partnerID=40&md5=c336e1e66f72b7c6d2d988ecc8c40c35",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 68; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 70; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 22
+    "sourceOrder": 21
   },
   {
     "id": "2019-fully-inorganic-ruddlesden-popper-double-cl-i-and-triple-cl-br-i-lead-halide-perovskite-na",
@@ -2448,9 +2474,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85063458568&doi=10.1021%2facs.chemmater.9b00489&partnerID=40&md5=8b3ef334a85fd90292b654940b0668db",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 78; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 83; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 34
+    "sourceOrder": 33
   },
   {
     "id": "2019-emissive-bi-doped-double-perovskite-cs2ag1-xnaxincl6-nanocrystals",
@@ -2482,9 +2508,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85071060989&doi=10.1021%2facsenergylett.9b01274&partnerID=40&md5=31af81591ced2519f9fac0e0558d2617",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 246",
+    "citationNote": "Cited by: 251",
     "highlighted": false,
-    "sourceOrder": 36
+    "sourceOrder": 35
   },
   {
     "id": "2019-resurfacing-halide-perovskite-nanocrystals-optoelectronic-devices-require-tailored-ligands",
@@ -2507,9 +2533,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85066862052&doi=10.1126%2fscience.aax5825&partnerID=40&md5=92a86076a441ed2b093429998c180306",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 180",
+    "citationNote": "Cited by: 183",
     "highlighted": false,
-    "sourceOrder": 37
+    "sourceOrder": 36
   },
   {
     "id": "2019-ruthenium-decorated-cobalt-selenide-nanocrystals-for-hydrogen-evolution",
@@ -2537,9 +2563,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85078548819&doi=10.1021%2facsanm.9b01205&partnerID=40&md5=ee4c0da47a4847986590381a6a4a5649",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 38",
+    "citationNote": "Cited by: 38; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 39
+    "sourceOrder": 38
   },
   {
     "id": "2019-po-containing-molecules-in-fusion-and-fission-reactors",
@@ -2564,9 +2590,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85066883096&doi=10.1021%2facs.jpclett.9b00824&partnerID=40&md5=f4eeda7f5d7324ce5f52b127f0971bbf",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 17; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 18; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 42
+    "sourceOrder": 41
   },
   {
     "id": "2019-rationalizing-and-controlling-the-surface-structure-and-electronic-passivation-of-cesium-l",
@@ -2597,15 +2623,15 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85058177905&doi=10.1021%2facsenergylett.8b01669&partnerID=40&md5=951fa9b2cea7de00dc78c49bb1ec4a1f",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 429; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 441; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 45
+    "sourceOrder": 44
   },
   {
     "id": "2019-spectrally-resolved-ultrafast-exciton-transfer-in-mixed-perovskite-quantum-wells",
     "bibtexKey": "Proppe2019419",
     "entryKind": "ARTICLE",
-    "type": "Article",
+    "type": "Letter",
     "year": 2019,
     "title": "Spectrally Resolved Ultrafast Exciton Transfer in Mixed Perovskite Quantum Wells",
     "authors": [
@@ -2634,9 +2660,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85060281699&doi=10.1021%2facs.jpclett.9b00018&partnerID=40&md5=fb2a7c575d4c20c64b822ee304fd7b11",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 97; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 100; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 47
+    "sourceOrder": 46
   },
   {
     "id": "2019-ultrathin-orthorhombic-pbs-nanosheets",
@@ -2668,7 +2694,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 48",
     "highlighted": false,
-    "sourceOrder": 51
+    "sourceOrder": 50
   },
   {
     "id": "2019-qmflows-a-tool-kit-for-interoperable-parallel-workflows-in-quantum-chemistry",
@@ -2694,9 +2720,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85070180253&doi=10.1021%2facs.jcim.9b00384&partnerID=40&md5=1878be72f3b4bdc581913262a797f1ab",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 48; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 49; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 53
+    "sourceOrder": 52
   },
   {
     "id": "2019-elucidating-the-trends-in-reactivity-of-aza-1-3-dipolar-cycloadditions",
@@ -2725,7 +2751,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 48; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 70
+    "sourceOrder": 69
   },
   {
     "id": "2019-defects-in-lead-halide-perovskite-nanocrystals-analogies-and-many-differences-with-the-bul",
@@ -2748,9 +2774,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85074405878&doi=10.1021%2facsenergylett.9b01945&partnerID=40&md5=92115b8c2586dc149e4a6e0306d596c2",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 137; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 144; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 71
+    "sourceOrder": 70
   },
   {
     "id": "2019-stable-ligand-coordination-at-the-surface-of-colloidal-cspbbr3-nanocrystals",
@@ -2780,7 +2806,7 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85068114249&doi=10.1021%2facs.jpclett.9b01634&partnerID=40&md5=20dc796c219b1e6985ffec2cac6edf5e",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 96",
+    "citationNote": "Cited by: 97",
     "highlighted": false,
     "sourceOrder": 95
   },
@@ -2811,7 +2837,7 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85064411909&doi=10.1021%2facsenergylett.9b00140&partnerID=40&md5=0d50a255b6f33c41c6d8023af77db8a0",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 224; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 231; All Open Access, Green Open Access",
     "highlighted": false,
     "sourceOrder": 96
   },
@@ -2841,7 +2867,7 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85054636976&doi=10.1021%2fjacs.8b07566&partnerID=40&md5=f0631d2bd6f5115e56d431da4b2abd68",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 152",
+    "citationNote": "Cited by: 156",
     "highlighted": false,
     "sourceOrder": 2
   },
@@ -2873,33 +2899,6 @@
     "sourceOrder": 4
   },
   {
-    "id": "2018-ligand-displacement-exposes-binding-site-heterogeneity-on-cdse-nanocrystal-surfaces",
-    "bibtexKey": "Drijvers20181178",
-    "entryKind": "ARTICLE",
-    "type": "Article",
-    "year": 2018,
-    "title": "Ligand Displacement Exposes Binding Site Heterogeneity on CdSe Nanocrystal Surfaces",
-    "authors": [
-      "Drijvers, Emile",
-      "De Roo, Jonathan",
-      "Martins, José C.",
-      "Infante, Ivan",
-      "Hens, Zeger"
-    ],
-    "journal": "Chemistry of Materials",
-    "volume": "30",
-    "number": "3",
-    "pages": "1178-1186",
-    "doi": "10.1021/acs.chemmater.7b05362",
-    "doiUrl": "https://doi.org/10.1021/acs.chemmater.7b05362",
-    "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85042059073&doi=10.1021%2facs.chemmater.7b05362&partnerID=40&md5=abe07769c2f9f0ef8625d4f9377ce9dd",
-    "source": "Scopus",
-    "publicationStage": "Final",
-    "citationNote": "Cited by: 139; All Open Access, Green Open Access",
-    "highlighted": false,
-    "sourceOrder": 7
-  },
-  {
     "id": "2018-finding-and-fixing-traps-in-ii-vi-and-iii-v-colloidal-quantum-dots-the-importance-of-z-typ",
     "bibtexKey": "Kirkwood201815712",
     "entryKind": "ARTICLE",
@@ -2926,9 +2925,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85056731083&doi=10.1021%2fjacs.8b07783&partnerID=40&md5=0c4c15c4111c7328842c3b867b878a10",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 267; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 276; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 9
+    "sourceOrder": 8
   },
   {
     "id": "2018-the-surface-chemistry-of-colloidal-hgse-nanocrystals-toward-stoichiometric-quantum-dots-by",
@@ -2956,9 +2955,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85056593037&doi=10.1021%2facs.chemmater.8b02908&partnerID=40&md5=feb4adff8d5ec39de309031335c65cfb",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 33",
+    "citationNote": "Cited by: 34",
     "highlighted": false,
-    "sourceOrder": 15
+    "sourceOrder": 14
   },
   {
     "id": "2018-tuning-electron-phonon-interactions-in-nanocrystals-through-surface-termination",
@@ -2984,9 +2983,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85045016023&doi=10.1021%2facs.nanolett.7b04729&partnerID=40&md5=af912b2758a5a6fd621bd2065eca4207",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 80; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 81; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 57
+    "sourceOrder": 56
   },
   {
     "id": "2018-the-phosphine-oxide-route-toward-lead-halide-perovskite-nanocrystals",
@@ -3016,9 +3015,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85055638493&doi=10.1021%2fjacs.8b08978&partnerID=40&md5=f5d359d45069b0d824f52753dc1562c5",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 162; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 164; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 62
+    "sourceOrder": 61
   },
   {
     "id": "2018-probing-solvent-ligand-interactions-in-colloidal-nanocrystals-by-the-nmr-line-broadening",
@@ -3050,22 +3049,22 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85051831274&doi=10.1021%2facs.chemmater.8b02523&partnerID=40&md5=733267dd0451d9309c8a378d39000d70",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 153; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 158; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 63
+    "sourceOrder": 62
   },
   {
     "id": "2018-colloidal-cspbx3-x-cl-br-i-nanocrystals-2-0-zwitterionic-capping-ligands-for-improved-dura",
     "bibtexKey": "Krieg2018641",
     "entryKind": "ARTICLE",
-    "type": "Article",
+    "type": "Letter",
     "year": 2018,
     "title": "Colloidal CsPbX3 (X = Cl, Br, I) Nanocrystals 2.0: Zwitterionic Capping Ligands for Improved Durability and Stability",
     "authors": [
       "Krieg, Franziska",
       "Ochsenbein, Stefan T.",
       "Yakunin, Sergii",
-      "Ten Brinck, Stephanie",
+      "ten Brinck, Stephanie",
       "Aellen, Philipp",
       "Süess, Adrian",
       "Clerc, Baptiste",
@@ -3086,9 +3085,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85043471305&doi=10.1021%2facsenergylett.8b00035&partnerID=40&md5=d4659655a2ea1bb714e14d98a79b314f",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 840; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 854; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 69
+    "sourceOrder": 68
   },
   {
     "id": "2018-highly-emissive-self-trapped-excitons-in-fully-inorganic-zero-dimensional-tin-halides",
@@ -3118,17 +3117,17 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85051021628&doi=10.1002%2fanie.201806452&partnerID=40&md5=33dd60149f49c7de9070deb92f659f90",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 322; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 327; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 81
+    "sourceOrder": 80
   },
   {
-    "id": "2018-shape-pure-nearly-monodispersed-cspbbr-3-nanocubes-prepared-using-secondary-aliphatic-amin",
+    "id": "2018-shape-pure-nearly-monodispersed-cspbbr3-nanocubes-prepared-using-secondary-aliphatic-amine",
     "bibtexKey": "Imran20187822",
     "entryKind": "ARTICLE",
-    "type": "Article",
+    "type": "Letter",
     "year": 2018,
-    "title": "Shape-Pure, Nearly Monodispersed CsPbBr 3 Nanocubes Prepared Using Secondary Aliphatic Amines",
+    "title": "Shape-Pure, Nearly Monodispersed CsPbBr3 Nanocubes Prepared Using Secondary Aliphatic Amines",
     "authors": [
       "Imran, Muhammad",
       "Ijaz, Palvasha",
@@ -3151,9 +3150,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85056716780&doi=10.1021%2facs.nanolett.8b03598&partnerID=40&md5=ce6be7ebaa04e4ba8097821a3eeeb3b0",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 167; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 168; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 84
+    "sourceOrder": 83
   },
   {
     "id": "2018-hot-electron-transfer-in-quantum-dot-heterojunction-films",
@@ -3185,9 +3184,36 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85048533161&doi=10.1038%2fs41467-018-04623-9&partnerID=40&md5=6c9c575e28bf55d9ed59540977d01b61",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 69; All Open Access, Gold Open Access, Green Open Access",
+    "citationNote": "Cited by: 70; All Open Access, Gold Open Access, Green Open Access",
     "highlighted": false,
     "sourceOrder": 99
+  },
+  {
+    "id": "2018-ligand-displacement-exposes-binding-site-heterogeneity-on-cdse-nanocrystal-surfaces",
+    "bibtexKey": "Drijvers20181178",
+    "entryKind": "ARTICLE",
+    "type": "Article",
+    "year": 2018,
+    "title": "Ligand Displacement Exposes Binding Site Heterogeneity on CdSe Nanocrystal Surfaces",
+    "authors": [
+      "Drijvers, Emile",
+      "De Roo, Jonathan",
+      "Martins, José C.",
+      "Infante, Ivan",
+      "Hens, Zeger"
+    ],
+    "journal": "Chemistry of Materials",
+    "volume": "30",
+    "number": "3",
+    "pages": "1178-1186",
+    "doi": "10.1021/acs.chemmater.7b05362",
+    "doiUrl": "https://doi.org/10.1021/acs.chemmater.7b05362",
+    "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85042059073&doi=10.1021%2facs.chemmater.7b05362&partnerID=40&md5=abe07769c2f9f0ef8625d4f9377ce9dd",
+    "source": "Scopus",
+    "publicationStage": "Final",
+    "citationNote": "Cited by: 141; All Open Access, Green Open Access",
+    "highlighted": false,
+    "sourceOrder": 106
   },
   {
     "id": "2018-continuous-wave-infrared-optical-gain-and-amplified-spontaneous-emission-at-ultralow-thres",
@@ -3217,9 +3243,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85038583072&doi=10.1038%2fNMAT5000&partnerID=40&md5=8c23599bd1e8018ea59ef02059181844",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 129; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 132; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 153
+    "sourceOrder": 154
   },
   {
     "id": "2017-force-field-parametrization-of-colloidal-cdse-nanocrystals-using-an-adaptive-rate-monte-ca",
@@ -3270,7 +3296,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 59",
     "highlighted": false,
-    "sourceOrder": 123
+    "sourceOrder": 124
   },
   {
     "id": "2017-surface-traps-in-colloidal-quantum-dots-a-combined-experimental-and-theoretical-perspectiv",
@@ -3292,9 +3318,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85031780013&doi=10.1021%2facs.jpclett.7b02193&partnerID=40&md5=db5434a1d50eb0f4363a47a80c9f6e5d",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 297; All Open Access, Green Open Access, Hybrid Gold Open Access",
+    "citationNote": "Cited by: 304; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 124
+    "sourceOrder": 125
   },
   {
     "id": "2017-binding-and-packing-in-two-component-colloidal-quantum-dot-ligand-shells-linear-versus-bra",
@@ -3321,9 +3347,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85014657568&doi=10.1021%2fjacs.6b11328&partnerID=40&md5=cd5828fd2c4a053baa0ec60b34a9fa96",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 69",
+    "citationNote": "Cited by: 71",
     "highlighted": false,
-    "sourceOrder": 145
+    "sourceOrder": 146
   },
   {
     "id": "2017-on-the-origin-of-surface-traps-in-colloidal-ii-vi-semiconductor-nanocrystals",
@@ -3347,9 +3373,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85018524519&doi=10.1021%2facs.chemmater.6b04648&partnerID=40&md5=cfdb74f512d670d161e4e031d3ed0e51",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 293; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 302; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 161
+    "sourceOrder": 162
   },
   {
     "id": "2016-surface-termination-morphology-and-bright-photoluminescence-of-cesium-lead-halide-perovski",
@@ -3371,9 +3397,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85015181215&doi=10.1021%2facsenergylett.6b00595&partnerID=40&md5=da17d01ac051385b523ae12dedd48edb",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 241",
+    "citationNote": "Cited by: 243",
     "highlighted": false,
-    "sourceOrder": 138
+    "sourceOrder": 139
   },
   {
     "id": "2016-chemically-triggered-formation-of-two-dimensional-epitaxial-quantum-dot-superlattices",
@@ -3404,7 +3430,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 53; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 143
+    "sourceOrder": 144
   },
   {
     "id": "2015-electronic-structure-of-ni2e2-complexes-e-s-se-te-and-a-global-analysis-of-m2e2-compounds-",
@@ -3433,7 +3459,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 27",
     "highlighted": false,
-    "sourceOrder": 109
+    "sourceOrder": 110
   },
   {
     "id": "2015-the-electronic-structure-of-the-al3-anion-is-it-aromatic",
@@ -3461,7 +3487,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 24",
     "highlighted": false,
-    "sourceOrder": 114
+    "sourceOrder": 115
   },
   {
     "id": "2015-the-effect-of-tio2-surface-on-the-electron-injection-efficiency-in-pbs-quantum-dot-solar-c",
@@ -3488,7 +3514,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 23",
     "highlighted": false,
-    "sourceOrder": 117
+    "sourceOrder": 118
   },
   {
     "id": "2015-first-principles-modeling-of-core-shell-quantum-dot-sensitized-solar-cells",
@@ -3511,9 +3537,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-84930941925&doi=10.1021%2facs.jpcc.5b02987&partnerID=40&md5=f0d31cf0af5cd89b3d148de6f74fb7bb",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 21",
+    "citationNote": "Cited by: 22",
     "highlighted": false,
-    "sourceOrder": 119
+    "sourceOrder": 120
   },
   {
     "id": "2015-density-of-trap-states-and-auger-mediated-electron-trapping-in-cdte-quantum-dot-solids",
@@ -3541,9 +3567,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-84929180020&doi=10.1021%2facs.nanolett.5b00050&partnerID=40&md5=16ea1df01cd84cd66c0d390cb5f6f12e",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 102",
+    "citationNote": "Cited by: 104; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 127
+    "sourceOrder": 128
   },
   {
     "id": "2015-theoretical-study-of-the-electronic-spectra-of-neutral-and-cationic-npo-and-npo2",
@@ -3567,7 +3593,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 7; All Open Access, Green Open Access, Hybrid Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 132
+    "sourceOrder": 133
   },
   {
     "id": "2015-quantum-chemical-calculations-and-experimental-investigations-of-molecular-actinide-oxides",
@@ -3594,7 +3620,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 135",
     "highlighted": false,
-    "sourceOrder": 136
+    "sourceOrder": 137
   },
   {
     "id": "2015-darker-than-black-pbs-quantum-dots-enhancing-optical-absorption-of-colloidal-semiconductor",
@@ -3620,9 +3646,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-84922794879&doi=10.1021%2fja510739q&partnerID=40&md5=f53689c1c6cad8cf8e9710881cf92932",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 168",
+    "citationNote": "Cited by: 173",
     "highlighted": false,
-    "sourceOrder": 139
+    "sourceOrder": 140
   },
   {
     "id": "2015-planar-pentacoordinate-carbons-in-cbe54-derivatives",
@@ -3649,9 +3675,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-84922118792&doi=10.1039%2fc4cp05659k&partnerID=40&md5=b2c86b7a16bfea525526f03288c77dcc",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 81",
+    "citationNote": "Cited by: 83",
     "highlighted": false,
-    "sourceOrder": 151
+    "sourceOrder": 152
   },
   {
     "id": "2014-epitaxially-connected-pbse-quantum-dot-films-controlled-neck-formation-and-optoelectronic-",
@@ -3680,7 +3706,7 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-84912554744&doi=10.1021%2fnn504679k&partnerID=40&md5=130e8d01fe95fab2fbbb8fb87a0947f0",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 124",
+    "citationNote": "Cited by: 125",
     "highlighted": false,
     "sourceOrder": 101
   },
@@ -3736,7 +3762,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 87",
     "highlighted": false,
-    "sourceOrder": 115
+    "sourceOrder": 116
   },
   {
     "id": "2014-an-intermediate-spin-nickel-hydride-complex-stemming-from-delocalized-ni2-h-2-bonding",
@@ -3764,7 +3790,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 15",
     "highlighted": false,
-    "sourceOrder": 134
+    "sourceOrder": 135
   },
   {
     "id": "2014-quantum-dot-photoactivation-of-pt-iv-anticancer-agents-evidence-of-an-electron-transfer-me",
@@ -3793,7 +3819,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 22",
     "highlighted": false,
-    "sourceOrder": 154
+    "sourceOrder": 155
   },
   {
     "id": "2013-electronic-spectroscopy-and-electronic-structure-of-diatomic-irsi",
@@ -3820,7 +3846,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 13",
     "highlighted": false,
-    "sourceOrder": 106
+    "sourceOrder": 107
   },
   {
     "id": "2013-theoretic-study-of-the-electronic-spectra-of-neutral-and-cationic-pao-and-pao2",
@@ -3845,7 +3871,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 10",
     "highlighted": false,
-    "sourceOrder": 112
+    "sourceOrder": 113
   },
   {
     "id": "2013-communication-chemical-bonding-in-carbon-dimer-isovalent-series-from-the-natural-orbital-f",
@@ -3874,7 +3900,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 40; All Open Access, Bronze Open Access",
     "highlighted": false,
-    "sourceOrder": 118
+    "sourceOrder": 119
   },
   {
     "id": "2013-molecules-with-high-bond-orders-and-ultrashort-bond-lengths-cru-mou-and-wu",
@@ -3900,7 +3926,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 10",
     "highlighted": false,
-    "sourceOrder": 125
+    "sourceOrder": 126
   },
   {
     "id": "2013-on-the-directionality-of-halogen-bonding",
@@ -3925,9 +3951,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-84881089530&doi=10.1039%2fc3cp50892g&partnerID=40&md5=850a3584658568b7cdd93641f0b98944",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 148",
+    "citationNote": "Cited by: 149",
     "highlighted": false,
-    "sourceOrder": 128
+    "sourceOrder": 129
   },
   {
     "id": "2013-a-dft-tddft-study-on-the-optoelectronic-properties-of-the-amine-capped-magic-cdse-13-nanoc",
@@ -3954,7 +3980,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 67",
     "highlighted": false,
-    "sourceOrder": 140
+    "sourceOrder": 141
   },
   {
     "id": "2012-unexpected-trends-in-halogen-bond-based-noncovalent-adducts",
@@ -3978,9 +4004,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-84863975118&doi=10.1039%2fc2cc33304j&partnerID=40&md5=b4cb33f017e42e336803811deeb34e37",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 141; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 143; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 121
+    "sourceOrder": 122
   },
   {
     "id": "2012-modeling-surface-passivation-of-zns-quantum-dots",
@@ -4006,7 +4032,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 32",
     "highlighted": false,
-    "sourceOrder": 131
+    "sourceOrder": 132
   },
   {
     "id": "2012-ion-energetics-in-electron-rich-nanoplasmas",
@@ -4031,7 +4057,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 6; All Open Access, Gold Open Access",
     "highlighted": false,
-    "sourceOrder": 144
+    "sourceOrder": 145
   },
   {
     "id": "2012-an-interpretation-of-the-absorption-and-emission-spectra-of-the-gold-dimer-using-modern-th",
@@ -4059,7 +4085,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 24",
     "highlighted": false,
-    "sourceOrder": 148
+    "sourceOrder": 149
   },
   {
     "id": "2012-a-first-principles-study-of-ii-vi-ii-zn-vi-o-s-se-te-semiconductor-nanostructures",
@@ -4086,7 +4112,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 52",
     "highlighted": false,
-    "sourceOrder": 156
+    "sourceOrder": 157
   },
   {
     "id": "2011-on-the-nature-of-actinide-and-lanthanide-metal-bonds-in-heterobimetallic-compounds",
@@ -4140,7 +4166,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 52",
     "highlighted": false,
-    "sourceOrder": 108
+    "sourceOrder": 109
   },
   {
     "id": "2011-electronic-structure-and-bonding-in-heteronuclear-dimers-of-v-cr-mo-and-w-a-casscf-caspt2-",
@@ -4165,7 +4191,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 14",
     "highlighted": false,
-    "sourceOrder": 110
+    "sourceOrder": 111
   },
   {
     "id": "2011-how-accurate-are-electronic-structure-methods-for-actinoid-chemistry",
@@ -4192,9 +4218,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-79955933974&doi=10.1007%2fs00214-011-0913-0&partnerID=40&md5=b168e9d7a6f8d358135c4949af9a4f96",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 70",
+    "citationNote": "Cited by: 73",
     "highlighted": false,
-    "sourceOrder": 126
+    "sourceOrder": 127
   },
   {
     "id": "2011-matrix-infrared-spectroscopy-and-a-theoretical-investigation-of-suo-and-us2",
@@ -4223,7 +4249,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 14",
     "highlighted": false,
-    "sourceOrder": 133
+    "sourceOrder": 134
   },
   {
     "id": "2011-pro-oxidant-activity-of-aluminum-stabilization-of-the-aluminum-superoxide-radical-ion",
@@ -4251,7 +4277,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 69",
     "highlighted": false,
-    "sourceOrder": 146
+    "sourceOrder": 147
   },
   {
     "id": "2011-erratum-on-the-nature-of-actinide-and-lanthanide-metal-bonds-in-heterobimetallic-compounds",
@@ -4279,7 +4305,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 0; All Open Access, Bronze Open Access",
     "highlighted": false,
-    "sourceOrder": 158
+    "sourceOrder": 159
   },
   {
     "id": "2010-ionization-energies-for-the-actinide-mono-and-dioxides-series-from-th-to-cm-theory-versus-",
@@ -4305,7 +4331,7 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-77952335400&doi=10.1021%2fjp1016328&partnerID=40&md5=077c38f540a9e7fb55a37a6b7d829e05",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 79",
+    "citationNote": "Cited by: 80; All Open Access, Green Open Access",
     "highlighted": false,
     "sourceOrder": 104
   },
@@ -4333,7 +4359,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 26",
     "highlighted": false,
-    "sourceOrder": 107
+    "sourceOrder": 108
   },
   {
     "id": "2010-equilibrium-mercury-isotope-fractionation-between-dissolved-hg-ii-species-and-thiol-bound-",
@@ -4359,9 +4385,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-77952906732&doi=10.1021%2fes100205t&partnerID=40&md5=263f8bcf878ebaef0cf475fbc242abaa",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 276",
+    "citationNote": "Cited by: 280",
     "highlighted": false,
-    "sourceOrder": 120
+    "sourceOrder": 121
   },
   {
     "id": "2010-aromaticity-in-all-metal-rings",
@@ -4386,7 +4412,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 7",
     "highlighted": false,
-    "sourceOrder": 122
+    "sourceOrder": 123
   },
   {
     "id": "2010-u-and-p4-reaction-products-a-quantum-chemical-and-matrix-isolation-spectroscopic-investiga",
@@ -4414,7 +4440,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 14",
     "highlighted": false,
-    "sourceOrder": 159
+    "sourceOrder": 160
   },
   {
     "id": "2009-matrix-infrared-spectroscopic-and-computational-investigation-of-late-lanthanide-metal-hyd",
@@ -4440,7 +4466,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 17; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 113
+    "sourceOrder": 114
   },
   {
     "id": "2009-the-chemiionization-reactions-ce-o-and-ce-o2-assignment-of-the-observed-chemielectron-band",
@@ -4466,7 +4492,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 23; All Open Access, Bronze Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 135
+    "sourceOrder": 136
   },
   {
     "id": "2009-binding-motifs-for-lanthanide-hydrides-a-combined-experimental-and-theoretical-study-of-th",
@@ -4492,7 +4518,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 30; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 152
+    "sourceOrder": 153
   },
   {
     "id": "2008-infrared-spectra-of-the-wh4-h2-4-complex-in-solid-hydrogen",
@@ -4542,9 +4568,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-38349084434&doi=10.1021%2fja0772647&partnerID=40&md5=004e89ef12bea33c6e33f8780abe639a",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 270",
+    "citationNote": "Cited by: 272",
     "highlighted": false,
-    "sourceOrder": 111
+    "sourceOrder": 112
   },
   {
     "id": "2008-a-theoretical-study-of-the-ground-state-and-lowest-excited-states-of-puo0-2-and-puo20-2",
@@ -4571,7 +4597,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 41; All Open Access, Bronze Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 141
+    "sourceOrder": 142
   },
   {
     "id": "2008-theoretical-study-of-the-gas-phase-chemiionization-reactions-la-o-and-la-o2",
@@ -4595,9 +4621,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-51849119353&doi=10.1021%2fjp804578d&partnerID=40&md5=fb0d8b658d43c63ff773de3e9b76583a",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 21; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 22; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 149
+    "sourceOrder": 150
   },
   {
     "id": "2008-infrared-spectroscopy-of-discrete-uranyl-anion-complexes",
@@ -4631,7 +4657,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 61; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 157
+    "sourceOrder": 158
   },
   {
     "id": "2008-is-fullerene-c60-large-enough-to-host-a-multiply-bonded-dimetal",
@@ -4654,9 +4680,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-44949098549&doi=10.1021%2fja800847j&partnerID=40&md5=6b4e79cc66249c7ab79235c8f586e37a",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 82; All Open Access, Green Open Access",
+    "citationNote": "Cited by: 83; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 160
+    "sourceOrder": 161
   },
   {
     "id": "2007-experimental-and-theoretical-evidence-for-u-c-6h-6-and-th-c-6h-6-complexes",
@@ -4684,7 +4710,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 31; All Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 129
+    "sourceOrder": 130
   },
   {
     "id": "2007-new-investigations-of-geometric-electronic-and-spectroscopic-properties-of-tetrapyrrolic-m",
@@ -4708,7 +4734,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 9",
     "highlighted": false,
-    "sourceOrder": 150
+    "sourceOrder": 151
   },
   {
     "id": "2007-a-fock-space-coupled-cluster-study-on-the-electronic-structure-of-the-uo2-uo2-u4-and-u5-sp",
@@ -4734,9 +4760,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-34848922369&doi=10.1063%2f1.2770699&partnerID=40&md5=1473fbcd0e3baca61000b5e4acd4ad0e",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 90; All Open Access, Bronze Open Access, Green Open Access",
+    "citationNote": "Cited by: 91; All Open Access, Bronze Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 155
+    "sourceOrder": 156
   },
   {
     "id": "2006-a-qm-mm-study-on-the-aqueous-solvation-of-the-tetrahydroxouranylate-uo2-oh-4-2-complex-ion",
@@ -4761,7 +4787,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 12",
     "highlighted": false,
-    "sourceOrder": 116
+    "sourceOrder": 117
   },
   {
     "id": "2006-on-the-performance-of-the-intermediate-hamiltonian-fock-space-coupled-cluster-method-on-li",
@@ -4784,9 +4810,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-33747613099&doi=10.1063%2f1.2244564&partnerID=40&md5=d47382e60fab4d3c083f838893a54897",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 69; All Open Access, Bronze Open Access, Green Open Access",
+    "citationNote": "Cited by: 70; All Open Access, Bronze Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 137
+    "sourceOrder": 138
   },
   {
     "id": "2004-the-importance-of-spin-orbit-coupling-and-electron-correlation-in-the-rationalization-of-t",
@@ -4810,7 +4836,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 32; All Open Access, Bronze Open Access, Green Open Access",
     "highlighted": false,
-    "sourceOrder": 130
+    "sourceOrder": 131
   },
   {
     "id": "2004-qm-mm-study-of-aqueous-solvation-of-the-uranyl-fluoride-uo-2f42-complex",
@@ -4832,9 +4858,9 @@
     "url": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-0942266529&doi=10.1002%2fjcc.10383&partnerID=40&md5=9de3f6f4b6a32c9267a1216f90f02efb",
     "source": "Scopus",
     "publicationStage": "Final",
-    "citationNote": "Cited by: 38",
+    "citationNote": "Cited by: 39",
     "highlighted": false,
-    "sourceOrder": 162
+    "sourceOrder": 163
   },
   {
     "id": "2003-role-of-methyl-substitution-on-the-spectroscopic-properties-of-porphyrazines-a-tddft-study",
@@ -4858,7 +4884,7 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 20",
     "highlighted": false,
-    "sourceOrder": 142
+    "sourceOrder": 143
   },
   {
     "id": "2003-a-first-theoretical-study-on-the-origin-of-the-metal-mediated-regioselective-opening-of-2-",
@@ -4884,6 +4910,6 @@
     "publicationStage": "Final",
     "citationNote": "Cited by: 13",
     "highlighted": false,
-    "sourceOrder": 147
+    "sourceOrder": 148
   }
 ]
