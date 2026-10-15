@@ -11,7 +11,8 @@
 		people,
 		profiles,
 		researchAreas,
-		software
+		software,
+		visitors
 	} from '$lib/content/site';
 	import rawPublications from '$lib/content/publications.json';
 	import { formatAuthors, formatVenue, type PublicationRecord } from '$lib/content/publicationTypes';
@@ -247,6 +248,35 @@
 							<p>{member.role}</p>
 							<h3>{member.name}</h3>
 							<span>{member.focus}</span>
+							{#if member.currentPosition}
+								<div class="alumni-position">
+									<span><strong>Current position:</strong> {member.currentPosition}</span>
+								</div>
+							{/if}
+						</div>
+					</article>
+				{/each}
+			</div>
+		</div>
+		<div class="visitors-block">
+			<div class="section-heading compact-heading reveal" use:reveal>
+				<p class="eyebrow">Guests and collaborators</p>
+				<h2>Visitors</h2>
+			</div>
+			<div class="visitors-grid">
+				{#each visitors as visitor, index}
+					<article
+						class="visitor-card reveal"
+						use:reveal
+						style="transition-delay: {Math.min(index, 6) * 60}ms"
+					>
+						<div>
+							<p>{visitor.role}</p>
+							<h3>{visitor.name}</h3>
+							<span>{visitor.focus}</span>
+							{#if visitor.period}
+								<span class="visitor-period">{visitor.period}</span>
+							{/if}
 						</div>
 					</article>
 				{/each}
@@ -779,6 +809,10 @@
 		margin-top: clamp(42px, 6vw, 76px);
 	}
 
+	.visitors-block {
+		margin-top: clamp(42px, 6vw, 76px);
+	}
+
 	.compact-heading {
 		margin-bottom: 22px;
 	}
@@ -813,6 +847,47 @@
 	.alumni-card span {
 		color: var(--muted);
 		line-height: 1.55;
+	}
+
+	.alumni-position {
+		margin-top: 10px;
+	}
+
+	.alumni-position strong {
+		color: var(--ink);
+		font-weight: 700;
+	}
+
+	.visitors-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 12px;
+	}
+
+	.visitor-card {
+		display: flex;
+		align-items: flex-start;
+		padding: 18px 0;
+		border-top: 1px solid var(--line);
+	}
+
+	.visitor-card p {
+		margin-bottom: 8px;
+		color: var(--clay);
+		font-size: 0.76rem;
+		font-weight: 800;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	.visitor-card span {
+		color: var(--muted);
+		line-height: 1.55;
+	}
+
+	.visitor-period {
+		display: block;
+		margin-top: 8px;
 	}
 
 	.avatar {
@@ -1075,7 +1150,8 @@
 
 		.research-grid,
 		.people-grid,
-		.alumni-grid {
+		.alumni-grid,
+		.visitors-grid {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 
@@ -1105,7 +1181,8 @@
 		.intro-band,
 		.research-grid,
 		.people-grid,
-		.alumni-grid {
+		.alumni-grid,
+		.visitors-grid {
 			grid-template-columns: 1fr;
 		}
 
