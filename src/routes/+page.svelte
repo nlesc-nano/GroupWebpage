@@ -220,8 +220,37 @@
 						{/if}
 					</div>
 					<p>{member.role}</p>
-					<h3>{member.name}</h3>
+					<h3>
+						{#if member.website}
+							<a
+								href={member.website}
+								target="_blank"
+								rel="noreferrer"
+								class="person-name-link"
+							>
+								{member.name}
+							</a>
+						{:else}
+							{member.name}
+						{/if}
+					</h3>
 					<span>{member.focus}</span>
+					{#if member.website}
+						<div class="person-website-wrapper">
+							<a
+								href={member.website}
+								target="_blank"
+								rel="noreferrer"
+								class="person-website-link"
+								aria-label={`Visit ${member.name}'s website`}
+							>
+								<span>Website</span>
+								<svg class="external-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M6 3h7v7M13 3L6 10" />
+								</svg>
+							</a>
+						</div>
+					{/if}
 				</article>
 			{/each}
 		</div>
@@ -245,8 +274,37 @@
 						</div>
 						<div>
 							<p>{member.role}</p>
-							<h3>{member.name}</h3>
+							<h3>
+								{#if member.website}
+									<a
+										href={member.website}
+										target="_blank"
+										rel="noreferrer"
+										class="person-name-link"
+									>
+										{member.name}
+									</a>
+								{:else}
+									{member.name}
+								{/if}
+							</h3>
 							<span>{member.focus}</span>
+							{#if member.website}
+								<div class="person-website-wrapper">
+									<a
+										href={member.website}
+										target="_blank"
+										rel="noreferrer"
+										class="person-website-link"
+										aria-label={`Visit ${member.name}'s website`}
+									>
+										<span>Website</span>
+										<svg class="external-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M6 3h7v7M13 3L6 10" />
+										</svg>
+									</a>
+								</div>
+							{/if}
 						</div>
 					</article>
 				{/each}
@@ -772,7 +830,70 @@
 	}
 
 	.person-card {
+		display: flex;
+		flex-direction: column;
 		padding: 22px;
+	}
+
+	.person-name-link {
+		color: inherit;
+		text-decoration: none;
+		transition: color 140ms ease;
+	}
+
+	.person-name-link:hover {
+		color: var(--teal);
+	}
+
+	.person-website-wrapper {
+		margin-top: 14px;
+	}
+
+	.person-website-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		font-size: 0.74rem;
+		font-weight: 800;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: var(--teal);
+		text-decoration: none;
+		padding: 5px 12px;
+		border-radius: 999px;
+		background: rgba(23, 110, 114, 0.08);
+		border: 1px solid rgba(23, 110, 114, 0.22);
+		transition:
+			background-color 150ms ease,
+			border-color 150ms ease,
+			transform 150ms ease,
+			box-shadow 150ms ease;
+	}
+
+	.person-website-link span {
+		color: var(--teal);
+		font-size: inherit;
+		font-weight: inherit;
+		letter-spacing: inherit;
+		line-height: 1;
+	}
+
+	.person-website-link:hover {
+		background: rgba(23, 110, 114, 0.16);
+		border-color: rgba(23, 110, 114, 0.45);
+		color: var(--teal);
+		transform: translateY(-1px);
+		box-shadow: 0 4px 14px -4px rgba(23, 110, 114, 0.22);
+	}
+
+	.person-website-link:hover span {
+		color: var(--teal);
+	}
+
+	.external-icon {
+		width: 12px;
+		height: 12px;
+		flex-shrink: 0;
 	}
 
 	.alumni-block {

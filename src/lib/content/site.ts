@@ -23,6 +23,7 @@ export type Person = {
 	role: string;
 	focus: string;
 	photo?: string;
+	website?: string;
 };
 
 export type ProfileLink = {
@@ -189,7 +190,8 @@ export const people: Person[] = [
 		name: 'Zain Ul Abideen',
 		role: 'PhD student',
 		focus: 'Developer of the Orchestr.AI platform',
-		photo: '/photos/zain-ul-abideen.jpg'
+		photo: '/photos/zain-ul-abideen.jpg',
+		website: 'https://zainulabideen.dev/'
 	},
 	{
 		name: 'Abdessamad El Adel',
