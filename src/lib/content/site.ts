@@ -22,8 +22,10 @@ export type Person = {
 	name: string;
 	role: string;
 	focus: string;
+	currentPosition?: string;
 	photo?: string;
 	website?: string;
+	period?: string;
 };
 
 export type ProfileLink = {
@@ -236,25 +238,29 @@ export const alumni: Person[] = [
 		name: 'Jordi Llusar',
 		role: 'Postdoc',
 		focus: 'Electronic structure and surface traps of core-only and core-shell quantum dots',
-		photo: '/photos/jordi-llusar.jpg'
+		photo: '/photos/jordi-llusar.jpg',
+		currentPosition: 'Technologist @ Italian Institute of Technology (IIT)'
 	},
 	{
 		name: 'Mario Fernandez-Pendas',
 		role: 'Postdoc',
 		focus: 'Developer of the Orchestr.AI platform',
-		photo: '/photos/mario-fernandez-pendas.jpg'
+		photo: '/photos/mario-fernandez-pendas.jpg',
+		currentPosition: 'Assistant Professor @ University of Basque Country(UPV/EHU)'
 	},
 	{
 		name: 'Roberta Pascazio',
 		role: 'PhD student',
 		focus: 'Atomistic large-scale simulations of quantum dots',
-		photo: '/photos/roberta-pascazio.jpg'
+		photo: '/photos/roberta-pascazio.jpg',
+		currentPosition: 'Postdoc @ University of California, Berkeley'
 	},
 	{
 		name: 'Juliette Zito',
 		role: 'PhD student',
 		focus: 'Electronic structure of quantum dots',
-		photo: '/photos/juliette-zito.jpg'
+		photo: '/photos/juliette-zito.jpg',
+		currentPosition: 'Postdoc @ University of Antwerp'
 	},
 	{
 		name: 'Francesco Zaccaria',
@@ -264,7 +270,8 @@ export const alumni: Person[] = [
 	{
 		name: 'Urko Petralanda',
 		role: 'Postdoc',
-		focus: 'Electronic structure of quantum dots'
+		focus: 'Electronic structure of quantum dots',
+		currentPosition: 'Assistant Professor @ University of Basque Country(UPV/EHU)'
 	},
 	{
 		name: 'Stephanie ten Brinck',
@@ -273,6 +280,66 @@ export const alumni: Person[] = [
 		photo: '/photos/stephanie-ten-brinck.jpg'
 	}
 ];
+
+
+export const visitors: Person[] = [
+	{
+		name: 'Changhyun Joo',
+		role: 'PhD student',
+		focus: 'KAIST, South Korea',
+		period: 'Sep 2026 - Feb 2027'
+	},
+	{
+		name: 'Beatriz Cuadrado Benavent',
+		role: 'PhD student',
+		focus: 'Software for Chemistry & Materials, Netherlands',
+		period: 'Sep-Nov 2026'
+	},
+	{
+		name: 'Jayashree Narayan',
+		role: 'PhD student',
+		focus: 'Free University of Berlin, Germany',
+		period: 'Sep-Oct 2026'
+	},
+	{
+		name: 'Rodolphe Curti',
+		role: 'PhD student',
+		focus: 'ENS Lyon, France',
+		period: 'Mar-Jul 2026'
+	},
+	{
+		name: 'Lucía Santiago Andrades',
+		role: 'PhD student',
+		focus: 'University of Sevilla, Spain',
+		period: 'May-Jun 2026'
+	},
+	{
+		name: 'Norick De Vlamynck',
+		role: 'PhD student',
+		focus: 'University of Ghent, Belgium',
+		period: 'Mar-Apr 2026'
+	},
+	{
+		name: 'Han Pingping',
+		role: 'PhD student',
+		focus: 'Dalian University of Technology, China',
+		period: 'Oct 2024 - Feb 2026'
+	},
+	{
+		name: 'Andrea Erroi',
+		role: 'PhD student',
+		focus: 'University of Milano-Bicocca, Italy',
+		period: 'Feb-Aug 2024'
+	},
+	{
+		name: 'Zeger Hens',
+		role: 'Principal Investigator',
+		focus: 'University of Ghent, Belgium',
+		period: 'Jan-Jun 2024'
+	}
+];
+
+
 
 export const profiles: ProfileLink[] = [
 	{ label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=fw_Uyi4AAAAJ&hl=en' },
